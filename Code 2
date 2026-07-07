@@ -10,21 +10,21 @@ campaignTrail_temp.questions_json = [
         "model": "campaign_trail.question",
         "pk": 1007,
         "fields": {
-            "description": "There was a mass shooting at a gay nightclub in Orlando overnight, perpetrated by a Muslim, resulting in 50 people killed. What is your reaction?"
+            "description": "Mitt stands on the podium of his inauguration, hands on the bible. You hold it next to him and look at both him and the crowd. They are there for him. He repeats the oath of office. He turns to the crowd,waving his hand, and goes to speak. This speech will be the defining moment for how his presidency will go. You sat down and listened as he spoke. You wondered what he'll say. He wanted to write this speech himself, he wanted it to be written entirely by the man they elected."
         }
     },
     {
         "model": "campaign_trail.question",
         "pk": 1006,
         "fields": {
-            "description": "The FBI director has handed down a severe criticism of Clinton's email practices while Secretary of State, though he declined to recommend any indictments. Do you have any comment?"
+            "description": "Mitt barely has been able to form his government before problems arose. The Senate is tied and the House is barely any better. The stress on him has been insurmountable, he focuses on his most important nominees to see if he could pass some bipartisan options. You go to him as he leans on the desk, you sit down in front of him and ask him who he plans to nominate. You try to help him think  through different options for this step."
         }
     },
     {
         "model": "campaign_trail.question",
         "pk": 1001,
         "fields": {
-            "description": "What was your rationale behind selecting Mike Pence as your running mate?"
+            "description": "Paul Ryan has been a less than successful V.P. While he has given some tie breaking votes it's clear that he's not cutting it. You believe that Mitt will do better to cut him off. He isn't even helping in Wisconsin that much. You tell him that he will do better to let him go and choose someone new. "
         }
     },
     {
@@ -249,7 +249,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5003,
         "fields": {
             "question": 1001,
-            "description": "Mike Pence is an incredible, incredible human being. He's been in there for many years, fighting for religious liberty, tax cuts, and a strong military."
+            "description": "I get your concern Ann, i really do. Maybe you're right but Ryan is too important to cut off now. Maybe earlier we could've but now it's too late."
         }
     },
     {
@@ -265,7 +265,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5013,
         "fields": {
             "question": 1006,
-            "description": "This investigation by our so-called FBI was a farce from start to finish. How can someone destroy massive amounts of evidence in the midst of a federal investigation and not be charged?"
+            "description": "We are weak. That's the truth Ann, all we need to do is have none of our senators and representatives vote against to pass them. I'm thinking Robert Zoellick for Secretary of State and Glen Hubbard for treasury."
         }
     },
     {
@@ -273,7 +273,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5014,
         "fields": {
             "question": 1006,
-            "description": "I'm deeply concerned about this whole episode. We don't know yet whether there was a crime or not, but you can be sure that a Trump Administration will be looking into this some more."
+            "description": "I'm deeply concerned about this whole situation, our administration needs wins right now and we simply aren't getting any. We need to pass nominations that are bold and excite the people. Rick Santorum could do the job, he was our primary opponent and could show unity for the future."
         }
     },
     {
@@ -281,7 +281,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5015,
         "fields": {
             "question": 1006,
-            "description": "I have the utmost respect for James Comey and our terrific agents in the FBI. It seems like Hillary may have gotten lucky on this one."
+            "description": "We need to stay calm, our nominees will pass regardless but we should choose an important position first to set the tone. Maybe Jeb Bush for secretary of the Treasury?"
         }
     },
     {
@@ -289,7 +289,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5016,
         "fields": {
             "question": 1007,
-            "description": "Around the world we have Islamic terror striking at innocent lives, while the Democrats do nothing. If this attack on the LGBT community, this vicious attack, isn't enough to make them wake up, then what is?"
+            "description": "My fellow Americans, we are standing at what will be a transformative presidency. Our country has seen moments of great division and we have moved past them. We will move past this too."
         }
     },
     {
@@ -297,7 +297,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5017,
         "fields": {
             "question": 1007,
-            "description": "Appreciate the congrats for being right on radical Islamic terrorism, I don't want congrats, I want toughness & vigilance. We must be smart!"
+            "description": "Today, we see change in action. Today, not only has the first Mormon president been elected, but America will move past the recession that Obama failed to deal with. We are standing today at a moment of extraordinary change."
         }
     },
     {
@@ -305,7 +305,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5018,
         "fields": {
             "question": 1007,
-            "description": "First of all, our hearts and prayers really go out to everyone affected by this shooting, and particularly the victims. But it would be a real tragedy if we used this incident as an excuse to restrict our constitutional rights."
+            "description": "He have seen what division and partisanship leads to. We need to be a nation open to negotiation and compromise. Compromise has a bad light but the truth is that it's the most basic function of a democracy. We need to show the world that despite challenges our democracy is the only system that truly works."
         }
     },
     {
@@ -313,7 +313,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5019,
         "fields": {
             "question": 1007,
-            "description": "What happened in Orlando last right was a terrible tragedy, and our thoughts and prayers go out to everyone affected."
+            "description": "What this election has shown is that the nation is divided. We need to work together as one unit in the next years. America isn't going to rip itself apart, not on my watch."
         }
     },
     {
@@ -6361,7 +6361,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 5013,
             "candidate": 200,
             "affected_candidate": 200,
-            "global_multiplier": 0.0015
+            "global_multiplier": 0.0005
         }
     },
     {
@@ -7181,7 +7181,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 5015,
             "candidate": 200,
             "affected_candidate": 201,
-            "global_multiplier": 0.001
+            "global_multiplier": 0.005
         }
     },
     {
@@ -7191,7 +7191,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 5015,
             "candidate": 200,
             "affected_candidate": 202,
-            "global_multiplier": -0.005
+            "global_multiplier": 0.01
         }
     },
     {
@@ -7211,7 +7211,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 5019,
             "candidate": 200,
             "affected_candidate": 200,
-            "global_multiplier": 0.002
+            "global_multiplier": 0.001
         }
     },
     {
@@ -7302,6 +7302,76 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 200,
             "affected_candidate": 201,
             "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 20684,
+        "fields": {
+            "answer": 5017,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 20687,
+        "fields": {
+            "answer": 5018,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "global_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 20688,
+        "fields": {
+            "answer": 5018,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "global_multiplier": 0.001
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 20689,
+        "fields": {
+            "answer": 5017,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "global_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 20692,
+        "fields": {
+            "answer": 5019,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "global_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 20697,
+        "fields": {
+            "answer": 5014,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "global_multiplier": -0.001
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 20698,
+        "fields": {
+            "answer": 5013,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "global_multiplier": 0.005
         }
     }
 ];
@@ -7959,66 +8029,6 @@ campaignTrail_temp.answer_score_issue_json = [
     },
     {
         "model": "campaign_trail.answer_score_issue",
-        "pk": 2781,
-        "fields": {
-            "answer": 5013,
-            "issue": 103,
-            "issue_score": -0.65,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2782,
-        "fields": {
-            "answer": 5014,
-            "issue": 103,
-            "issue_score": -0.5,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2783,
-        "fields": {
-            "answer": 5015,
-            "issue": 103,
-            "issue_score": -0.25,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2784,
-        "fields": {
-            "answer": 5018,
-            "issue": 103,
-            "issue_score": -0.55,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2785,
-        "fields": {
-            "answer": 5019,
-            "issue": 103,
-            "issue_score": -0.45,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2786,
-        "fields": {
-            "answer": 5019,
-            "issue": 104,
-            "issue_score": -0.55,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
         "pk": 2787,
         "fields": {
             "answer": 5020,
@@ -8577,7 +8587,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5001,
             "candidate": 200,
-            "answer_feedback": "People are mad at the results, they think that Mitt wasn't elected by either the popular vote or the electoral vote yet won the Presidency. You feel a pang in your heart at the thought of him taking it to heart."
+            "answer_feedback": "People are mad at the results, they think that Mitt wasn't elected by either the popular vote or the electoral vote yet won the Presidency. You feel a pang at the thought of him taking it to heart."
         }
     },
     {
@@ -8595,7 +8605,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5003,
             "candidate": 200,
-            "answer_feedback": "People note your emphasis of Pence's strong conservative credentials."
+            "answer_feedback": "You nod and leave, he's making a mistake but you don't want to push him. He's too important for you."
         }
     },
     {
@@ -8613,7 +8623,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5013,
             "candidate": 200,
-            "answer_feedback": "It might not be a bad idea to keep hammering away at Hillary. It could help you to make this a contest of who is more unpopular."
+            "answer_feedback": "While these aren't exactly controversial choices, they aren't easily accepted by Democrats. They pass nomination but Mitt doesn't  get many points"
         }
     },
     {
@@ -8622,7 +8632,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5014,
             "candidate": 200,
-            "answer_feedback": "It might not be a bad idea to keep hammering away at Hillary. It could help you to make this a contest of who is more unpopular."
+            "answer_feedback": "Mitt chose him for Secretary of the Interior, an interesting choice which does get him points, a few democrats flip to vote yes and he passes easily. The rest of the nominees are slightly mre difficult but pass anyway"
         }
     },
     {
@@ -8631,7 +8641,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5015,
             "candidate": 200,
-            "answer_feedback": "Some think you are too restained on this issue, if that's easy to believe."
+            "answer_feedback": "You feel like Mitt is thinking wrong and you tell him but he reassures you. The Bush name is tainted and Jeb barely passes due to Ryan's tie breaking vote. People feel like Mitt is just a continuation of Bush politics."
         }
     },
     {
@@ -8640,7 +8650,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5016,
             "candidate": 200,
-            "answer_feedback": "You raise some eyebrows with this response, but maybe there's a point?"
+            "answer_feedback": "Mitt's Speech is very well seen. You read through articles about it and how people all the way from California to the Midwest seem to have accepted his step towards unity"
         }
     },
     {
@@ -8649,7 +8659,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5017,
             "candidate": 200,
-            "answer_feedback": "Many think this answer strikes the wrong tone in the aftermath of tragedy."
+            "answer_feedback": "Mitt's words are seen in a divisive light. He barely won on a technicality and attacking Obama is not what people wanted. His speech is not well reported by medias"
         }
     },
     {
@@ -8658,7 +8668,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5018,
             "candidate": 200,
-            "answer_feedback": "Those who love gun rights, love your answer. Others accuse you of politicizing this tragedy."
+            "answer_feedback": "You watch the news and hear mixed opinions. Some on the far right hate it, others more towards the center support it. The media calls it an attempt at unity which seems to work."
         }
     },
     {
@@ -8667,7 +8677,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5019,
             "candidate": 200,
-            "answer_feedback": "This is a safe, standard response to such events."
+            "answer_feedback": "The media calls this a \"call to action\" speech which isn't necessarily a bad thing. Most people seem to be of agreement that it's a good thing."
         }
     },
     {
@@ -9249,7 +9259,7 @@ campaignTrail_temp.answer_feedback_json = [
 ];
 
 campaignTrail_temp.candidate_image_url = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIF.BQqzU6UQZJJU6UxCjGisKQ%3Fpid%3DApi&f=1&ipt=898b3a12edc925d56bcd48be936cb04a5c110485cb94f44991a15d7eea1ee7db&ipo=images";
-campaignTrail_temp.running_mate_image_url = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthfvnext.bing.com%2Fth%2Fid%2FOIP.pw8HO67ogVzB9A9UiZOMdwHaD4%3Fr%3D0%26cb%3Dthfvnextfalcon4%26pid%3DApi&f=1&ipt=939f28160f8d50032e5c05b439b82ab6059e2f8cbdb9f0c7d3a60b0ba58a8183&ipo=images";
+campaignTrail_temp.running_mate_image_url = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.Uf9yk7jVcqQyV1zCDO_O9wHaJd%3Fpid%3DApi&f=1&ipt=9157ba3dd3cee5ddf5fb1a1c438659f141af3a71125ffef6752eb573e229fa41&ipo=images";
 campaignTrail_temp.candidate_last_name = "Mitt";
 campaignTrail_temp.running_mate_last_name = "Romney";
 
@@ -9352,6 +9362,7 @@ function answerSwapper(pk1, pk2, takeEffects = true) {
     }
 }
 // CYOA Variables
+var Americandivision = 5;
 var GovernmentApproval = 30;
 var Wins = 0;
 var RussianAgression = 0;
@@ -9362,18 +9373,48 @@ cyoAdventure = function (a) {
 
     // [JETS_CYOA_VARIABLE_EFFECTS_START]
     // +5 GovernmentApproval
-    if (ans == 5002) {
+    if ([5002, 5016, 5018, 5014].includes(ans)) {
         GovernmentApproval += 5;
     }
 
     // -5 GovernmentApproval
-    if (ans == 5001) {
+    if ([5001, 5017, 5015].includes(ans)) {
         GovernmentApproval -= 5;
     }
 
     // +10 GovernmentApproval
     if (ans == 5000) {
         GovernmentApproval += 10;
+    }
+
+    // -1 Americandivision
+    if ([5016, 5018].includes(ans)) {
+        Americandivision -= 1;
+    }
+
+    // -2 Americandivision
+    if ([5000, 5019].includes(ans)) {
+        Americandivision -= 2;
+    }
+
+    // +1 Americandivision
+    if ([5001, 5017, 5014].includes(ans)) {
+        Americandivision += 1;
+    }
+
+    // +1 GovernmentApproval
+    if ([5019, 5013].includes(ans)) {
+        GovernmentApproval += 1;
+    }
+
+    // +1 Wins
+    if ([5013, 5014, 5015].includes(ans)) {
+        Wins += 1;
+    }
+
+    // +2 Americandivision
+    if (ans == 5015) {
+        Americandivision += 2;
     }
     // [JETS_CYOA_VARIABLE_EFFECTS_END]
 }
@@ -9448,6 +9489,15 @@ cyoAdventure = function (a) {
                 [0, `The World is Calm`, "#ef4444"],
                 [2, `The Eyes are turning`, "#475569"],
                 [Infinity, `The fires are starting`, "#22c55e"],
+            ],
+        },
+    {
+            getValue: () => Americandivision,
+            label: `The State Of The Union`,
+            tiers: [
+                [1, `America is healing`, "#ef4444"],
+                [10, `America is uneasy`, "#475569"],
+                [Infinity, `America is growing dangerously divided`, "#22c55e"],
             ],
         }
     ];
@@ -9549,7 +9599,7 @@ campaignTrail_temp.jet_data = [{
         "canName": "Mitt",
         "canImage": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIF.BQqzU6UQZJJU6UxCjGisKQ%3Fpid%3DApi&f=1&ipt=898b3a12edc925d56bcd48be936cb04a5c110485cb94f44991a15d7eea1ee7db&ipo=images",
         "runName": "Romney",
-        "runImage": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthfvnext.bing.com%2Fth%2Fid%2FOIP.pw8HO67ogVzB9A9UiZOMdwHaD4%3Fr%3D0%26cb%3Dthfvnextfalcon4%26pid%3DApi&f=1&ipt=939f28160f8d50032e5c05b439b82ab6059e2f8cbdb9f0c7d3a60b0ba58a8183&ipo=images"
+        "runImage": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.Uf9yk7jVcqQyV1zCDO_O9wHaJd%3Fpid%3DApi&f=1&ipt=9157ba3dd3cee5ddf5fb1a1c438659f141af3a71125ffef6752eb573e229fa41&ipo=images"
     },
     "banner_enabled": true,
     "nicknames": {
@@ -9574,6 +9624,11 @@ campaignTrail_temp.jet_data = [{
             "id": 1783409229550,
             "name": "RussianAgression",
             "defaultValue": 0
+        },
+        "1783435003348": {
+            "id": 1783435003348,
+            "name": "Americandivision",
+            "defaultValue": 5
         }
     },
     "cyoa_campaign_data_enabled": true,
@@ -9607,6 +9662,16 @@ campaignTrail_temp.jet_data = [{
             "lowText": "The World is Calm",
             "midText": "The Eyes are turning",
             "highText": "The fires are starting"
+        },
+        "1783435015853": {
+            "id": 1783435015853,
+            "variable": "Americandivision",
+            "label": "The State Of The Union",
+            "lowMax": 1,
+            "midMax": 10,
+            "lowText": "America is healing",
+            "midText": "America is uneasy",
+            "highText": "America is growing dangerously divided"
         }
     },
     "cyoa_variable_effects": {
@@ -9630,57 +9695,134 @@ campaignTrail_temp.jet_data = [{
             "variable": "GovernmentApproval",
             "operation": "add",
             "amount": 10
+        },
+        "20680": {
+            "id": 20680,
+            "answer": 5016,
+            "variable": "GovernmentApproval",
+            "operation": "add",
+            "amount": 5
+        },
+        "20681": {
+            "id": 20681,
+            "answer": 5016,
+            "variable": "Americandivision",
+            "operation": "subtract",
+            "amount": 1
+        },
+        "20682": {
+            "id": 20682,
+            "answer": 5000,
+            "variable": "Americandivision",
+            "operation": "subtract",
+            "amount": 2
+        },
+        "20683": {
+            "id": 20683,
+            "answer": 5001,
+            "variable": "Americandivision",
+            "operation": "add",
+            "amount": 1
+        },
+        "20685": {
+            "id": 20685,
+            "answer": 5017,
+            "variable": "GovernmentApproval",
+            "operation": "subtract",
+            "amount": 5
+        },
+        "20686": {
+            "id": 20686,
+            "answer": 5017,
+            "variable": "Americandivision",
+            "operation": "add",
+            "amount": 1
+        },
+        "20690": {
+            "id": 20690,
+            "answer": 5018,
+            "variable": "GovernmentApproval",
+            "operation": "add",
+            "amount": 5
+        },
+        "20691": {
+            "id": 20691,
+            "answer": 5018,
+            "variable": "Americandivision",
+            "operation": "subtract",
+            "amount": 1
+        },
+        "20693": {
+            "id": 20693,
+            "answer": 5019,
+            "variable": "GovernmentApproval",
+            "operation": "add",
+            "amount": 1
+        },
+        "20694": {
+            "id": 20694,
+            "answer": 5019,
+            "variable": "Americandivision",
+            "operation": "subtract",
+            "amount": 2
+        },
+        "20695": {
+            "id": 20695,
+            "answer": 5013,
+            "variable": "GovernmentApproval",
+            "operation": "add",
+            "amount": 1
+        },
+        "20696": {
+            "id": 20696,
+            "answer": 5013,
+            "variable": "Wins",
+            "operation": "add",
+            "amount": 1
+        },
+        "20699": {
+            "id": 20699,
+            "answer": 5014,
+            "variable": "GovernmentApproval",
+            "operation": "add",
+            "amount": 5
+        },
+        "20700": {
+            "id": 20700,
+            "answer": 5014,
+            "variable": "Wins",
+            "operation": "add",
+            "amount": 1
+        },
+        "20701": {
+            "id": 20701,
+            "answer": 5014,
+            "variable": "Americandivision",
+            "operation": "add",
+            "amount": 1
+        },
+        "20702": {
+            "id": 20702,
+            "answer": 5015,
+            "variable": "GovernmentApproval",
+            "operation": "subtract",
+            "amount": 5
+        },
+        "20703": {
+            "id": 20703,
+            "answer": 5015,
+            "variable": "Wins",
+            "operation": "add",
+            "amount": 1
+        },
+        "20704": {
+            "id": 20704,
+            "answer": 5015,
+            "variable": "Americandivision",
+            "operation": "add",
+            "amount": 2
         }
     }
 }
 ]
-function switcheroo1() {
-        var id = e.candidate_json.map(p=>p.pk).indexOf(78)
-        e.candidate_json[id].fields.first_name = "Bernie"
-        e.candidate_json[id].fields.last_name = "Sanders" 
-        e.candidate_json[id].fields.color_hex = "#078d8d" 
-    }
-    function switcheroo2() {
-        var id = e.candidate_json.map(p=>p.pk).indexOf(78)
-        e.candidate_json[id].fields.first_name = "Bill"
-        e.candidate_json[id].fields.last_name = "Ayers"
-        campaignTrail_temp.candidate_json[id].fields.color_hex = "#490404"
-        var id = campaignTrail_temp.candidate_json.map(p=>p.pk).indexOf(77)
-        campaignTrail_temp.candidate_json[id].fields.color_hex = "#061b53"
-    }
-    function switcheroo3() {
-        var id = e.candidate_json.map(p=>p.pk).indexOf(78)
-        e.candidate_json[id].fields.first_name = "Hillary"
-        e.candidate_json[id].fields.last_name = "Clinton"   
-        e.candidate_json[id].fields.color_hex = "#124094" 
-    }
-    function switcheroo4() {
-        var id = e.candidate_json.map(p=>p.pk).indexOf(78)
-        e.candidate_json[id].fields.first_name = "Joe"
-        e.candidate_json[id].fields.last_name = "Biden"  
-        e.candidate_json[id].fields.color_hex = "#0943c0" 
-    
-    }
-    function switcheroo5() {
-        var id = campaignTrail_temp.candidate_json.map(p=>p.pk).indexOf(78)
-        campaignTrail_temp.candidate_json[id].fields.first_name = "Evan"
-        campaignTrail_temp.candidate_json[id].fields.last_name = "Bayh"
-        campaignTrail_temp.candidate_json[id].fields.color_hex = "#260e75"
-    
-    }
-    function switcheroo6() {
-        var id = e.candidate_json.map(p=>p.pk).indexOf(78)
-        e.candidate_json[id].fields.first_name = "Al"
-        e.candidate_json[id].fields.last_name = "Sharpton"  
-        e.candidate_json[id].fields.color_hex = "#808fd1" 
-    
-    }
-    function switcheroo7() {
-        var id = e.candidate_json.map(p=>p.pk).indexOf(78)
-        e.candidate_json[id].fields.first_name = "Edward"
-        e.candidate_json[id].fields.last_name = "Kennedy"   
-        e.candidate_json[id].fields.color_hex = "#4b5a82"
-        var id = campaignTrail_temp.candidate_json.map(p=>p.pk).indexOf(77)
-        campaignTrail_temp.candidate_json[id].fields.color_hex = "#8f3838"
-    
-    }
+
