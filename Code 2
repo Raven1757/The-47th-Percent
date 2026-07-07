@@ -3,14 +3,14 @@ campaignTrail_temp.questions_json = [
         "model": "campaign_trail.question",
         "pk": 1000,
         "fields": {
-            "description": "Your use of Twitter has garnered outsized attention in your run for the Republican nomination, but some advisors are leery of your erratic tendnecies on that site. How will you proceed?"
+            "description": "You wait in the campaign office while Mitt speaks on the phone with Paul Ryan. The polls seemed underwhelming but you knew that things could easily change. Mitt knew that too, he was restless for the last days, trying to do as much as physically possible. He was exhausted but he never let up. You went over to him as he ended the call and told him to sit down and relax while the results came in. The count felt slow but he was over performing significantly. In the end he got exactly 270 because of the technicality in Colorado.The headquarters exploded with cheers but Mitt wasn't cheering. He won because of that technicality and the people who would do him in for it. You wondered what he'd do to calm their fears."
         }
     },
     {
         "model": "campaign_trail.question",
         "pk": 1007,
         "fields": {
-            "description": "There was a mass shooting at a gay nightclub in Orlando overnight, perpetrated by a Muslim, resulting in 50 people killed. What is your reaction?"
+            "description": "Mitt stands on the podium of his inauguration, hands on the bible. You hold it next to him and look at both him and the crowd. They are there for him. He repeats the oath of office. He turns to the crowd,waving his hand, and goes to speak. This speech will be the defining moment for how his presidency will go. You sat down and listened as he spoke. You wondered what he'll say. He wanted to write this speech himself, he wanted it to be written entirely by the man they elected."
         }
     },
     {
@@ -225,7 +225,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5000,
         "fields": {
             "question": 1000,
-            "description": "These are the same people who said my campaign was hopeless and gave me terrible advice for the last year and a half. Not too smart!"
+            "description": "Our nation has been pushed to the brink twice in one election. I am here because I've been chosen. Maybe not by most of you, but I will govern for all of you. As Barrack Obama said, we are not a collection of blue and red states, we are the united states."
         }
     },
     {
@@ -233,7 +233,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5001,
         "fields": {
             "question": 1000,
-            "description": "In this day and age you gotta use social media. You gotta. Now I think we can all agree that a general election is different from a primary so I might tone it down a little on some things, but you gotta use social media."
+            "description": "We have clearly gotten the message. Obama is well liked and is more popular. That doesn't mean that we won't govern they way we are entitled to. I will listen to the people but we will not be discouraged"
         }
     },
     {
@@ -241,7 +241,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5002,
         "fields": {
             "question": 1000,
-            "description": "I'm the best thing that's happened to CNN since the Gulf War. If I stop tweeting for a couple of weeks, they'll run a story about me every hour asking why!"
+            "description": "This election is a realignment for America. We thought 2000 was the closest it could be but we were wrong. I will work to bridge the gaps this election has opened."
         }
     },
     {
@@ -289,7 +289,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5016,
         "fields": {
             "question": 1007,
-            "description": "Around the world we have Islamic terror striking at innocent lives, while the Democrats do nothing. If this attack on the LGBT community, this vicious attack, isn't enough to make them wake up, then what is?"
+            "description": "My fellow Americans, we are standing at what will be a transformative presidency. Our country has seen moments of great division and we have moved past them. We will move past this too."
         }
     },
     {
@@ -7146,16 +7146,6 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 3246,
-        "fields": {
-            "answer": 5001,
-            "candidate": 200,
-            "affected_candidate": 202,
-            "global_multiplier": -0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
         "pk": 3247,
         "fields": {
             "answer": 5002,
@@ -7261,7 +7251,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 5000,
             "candidate": 200,
             "affected_candidate": 200,
-            "global_multiplier": -0.025
+            "global_multiplier": -0.01
         }
     },
     {
@@ -7292,6 +7282,26 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 200,
             "affected_candidate": 202,
             "global_multiplier": -0.025
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 20674,
+        "fields": {
+            "answer": 5000,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 20675,
+        "fields": {
+            "answer": 5001,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "global_multiplier": 0.02
         }
     }
 ];
@@ -7909,32 +7919,12 @@ campaignTrail_temp.answer_score_issue_json = [
     },
     {
         "model": "campaign_trail.answer_score_issue",
-        "pk": 2767,
-        "fields": {
-            "answer": 5001,
-            "issue": 100,
-            "issue_score": -0.3,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2768,
-        "fields": {
-            "answer": 5001,
-            "issue": 103,
-            "issue_score": -0.3,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
         "pk": 2769,
         "fields": {
             "answer": 5002,
             "issue": 100,
-            "issue_score": -0.275,
-            "issue_importance": 2
+            "issue_score": -0.05,
+            "issue_importance": 0
         }
     },
     {
@@ -7943,8 +7933,8 @@ campaignTrail_temp.answer_score_issue_json = [
         "fields": {
             "answer": 5002,
             "issue": 103,
-            "issue_score": -0.275,
-            "issue_importance": 2
+            "issue_score": 0.01,
+            "issue_importance": 0
         }
     },
     {
@@ -8276,6 +8266,20 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue_score": -0.25,
             "issue_importance": 1
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 20676,
+        "fields": {
+            "answer": 5001,
+            "issue": 100,
+            "issue_score": 0.05,
+            "issue_importance": 0,
+            "affected_candidate": null,
+            "affected_candidate_shift": 0,
+            "affected_state": null,
+            "affected_state_shift": 0
+        }
     }
 ];
 
@@ -8564,7 +8568,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5000,
             "candidate": 200,
-            "answer_feedback": "More tweets. More pearl clutching from the media. Maybe you know something they don't?"
+            "answer_feedback": "Obama conceded soon after the victory was declared and Mitt using one of his quotes seemingly makes people more comfortable about his victory."
         }
     },
     {
@@ -8573,7 +8577,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5001,
             "candidate": 200,
-            "answer_feedback": "A couple of weeks go by, and commentators start murmuring about your \"pivot\" for the general election."
+            "answer_feedback": "People are mad at the results, they think that Mitt wasn't elected by either the popular vote or the electoral vote yet won the Presidency. You feel a pang in your heart at the thought of him taking it to heart."
         }
     },
     {
@@ -8582,7 +8586,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5002,
             "candidate": 200,
-            "answer_feedback": "Your advisors are happier, and the Washington Post even runs a cover story about your inactive Twitter account and the implications."
+            "answer_feedback": "Many people think this means Mitt will not run for a second term but you know him. He will run again, he doesn't give up when he's at the helm."
         }
     },
     {
@@ -8636,7 +8640,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5016,
             "candidate": 200,
-            "answer_feedback": "You raise some eyebrows with this response, but maybe there's a point?"
+            "answer_feedback": "Mitt's Speech is very well seen. You read through articles about it and how people all the way from California to the Midwest seem to have accepted his step towards unity"
         }
     },
     {
@@ -9348,6 +9352,7 @@ function answerSwapper(pk1, pk2, takeEffects = true) {
     }
 }
 // CYOA Variables
+var Americandivision = 5;
 var GovernmentApproval = 30;
 var Wins = 0;
 var RussianAgression = 0;
@@ -9355,6 +9360,38 @@ var RussianAgression = 0;
 cyoAdventure = function (a) {
     const ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1];
     e.noCounter = campaignTrail_temp.player_answers.length;
+
+    // [JETS_CYOA_VARIABLE_EFFECTS_START]
+    // +5 GovernmentApproval
+    if ([5002, 5016].includes(ans)) {
+        GovernmentApproval += 5;
+    }
+
+    // -5 GovernmentApproval
+    if (ans == 5001) {
+        GovernmentApproval -= 5;
+    }
+
+    // +10 GovernmentApproval
+    if (ans == 5000) {
+        GovernmentApproval += 10;
+    }
+
+    // -1 Americandivision
+    if (ans == 5016) {
+        Americandivision -= 1;
+    }
+
+    // -2 Americandivision
+    if (ans == 5000) {
+        Americandivision -= 2;
+    }
+
+    // +1 Americandivision
+    if (ans == 5001) {
+        Americandivision += 1;
+    }
+    // [JETS_CYOA_VARIABLE_EFFECTS_END]
 }
 
 // [JETS_CYOA_CAMPAIGN_DATA_START]
@@ -9404,11 +9441,11 @@ cyoAdventure = function (a) {
     const STATS = [
     {
             getValue: () => GovernmentApproval,
-            label: `The Mandate`,
+            label: `People's Support`,
             tiers: [
                 [40, `The Mandate is Failing`, "#ef4444"],
-                [55, `The Mandate is steady.`, "#475569"],
-                [Infinity, `The Mandare is flourishing`, "#22c55e"],
+                [55, `The Mandate is going steady.`, "#475569"],
+                [Infinity, `The Mandate is flourishing`, "#22c55e"],
             ],
         },
     {
@@ -9427,6 +9464,15 @@ cyoAdventure = function (a) {
                 [0, `The World is Calm`, "#ef4444"],
                 [2, `The Eyes are turning`, "#475569"],
                 [Infinity, `The fires are starting`, "#22c55e"],
+            ],
+        },
+    {
+            getValue: () => Americandivision,
+            label: `Americandivision`,
+            tiers: [
+                [1, `America is healing`, "#ef4444"],
+                [10, `America is divided`, "#475569"],
+                [Infinity, `America is growing dangerously divided`, "#22c55e"],
             ],
         }
     ];
@@ -9541,7 +9587,7 @@ campaignTrail_temp.jet_data = [{
     "cyoa_variables": {
         "1783409086700": {
             "id": 1783409086700,
-            "name": "Government Approval",
+            "name": "GovernmentApproval",
             "defaultValue": 30
         },
         "1783409155741": {
@@ -9551,21 +9597,26 @@ campaignTrail_temp.jet_data = [{
         },
         "1783409229550": {
             "id": 1783409229550,
-            "name": "Russian Agression",
+            "name": "RussianAgression",
             "defaultValue": 0
+        },
+        "1783435003348": {
+            "id": 1783435003348,
+            "name": "Americandivision",
+            "defaultValue": 5
         }
     },
     "cyoa_campaign_data_enabled": true,
     "cyoa_campaign_data_stats": {
         "1783409104178": {
             "id": 1783409104178,
-            "variable": "Government Approval",
-            "label": "The Mandate",
+            "variable": "GovernmentApproval",
+            "label": "People's Support",
             "lowMax": 40,
             "midMax": 55,
             "lowText": "The Mandate is Failing",
-            "midText": "The Mandate is steady.",
-            "highText": "The Mandare is flourishing"
+            "midText": "The Mandate is going steady.",
+            "highText": "The Mandate is flourishing"
         },
         "1783409168655": {
             "id": 1783409168655,
@@ -9579,13 +9630,74 @@ campaignTrail_temp.jet_data = [{
         },
         "1783409240069": {
             "id": 1783409240069,
-            "variable": "Russian Agression",
+            "variable": "RussianAgression",
             "label": "Foreign Threats",
             "lowMax": 0,
             "midMax": 2,
             "lowText": "The World is Calm",
             "midText": "The Eyes are turning",
             "highText": "The fires are starting"
+        },
+        "1783435015853": {
+            "id": 1783435015853,
+            "variable": "Americandivision",
+            "label": "Americandivision",
+            "lowMax": 1,
+            "midMax": 10,
+            "lowText": "America is healing",
+            "midText": "America is divided",
+            "highText": "America is growing dangerously divided"
+        }
+    },
+    "cyoa_variable_effects": {
+        "20677": {
+            "id": 20677,
+            "answer": 5002,
+            "variable": "GovernmentApproval",
+            "operation": "add",
+            "amount": 5
+        },
+        "20678": {
+            "id": 20678,
+            "answer": 5001,
+            "variable": "GovernmentApproval",
+            "operation": "subtract",
+            "amount": 5
+        },
+        "20679": {
+            "id": 20679,
+            "answer": 5000,
+            "variable": "GovernmentApproval",
+            "operation": "add",
+            "amount": 10
+        },
+        "20680": {
+            "id": 20680,
+            "answer": 5016,
+            "variable": "GovernmentApproval",
+            "operation": "add",
+            "amount": 5
+        },
+        "20681": {
+            "id": 20681,
+            "answer": 5016,
+            "variable": "Americandivision",
+            "operation": "subtract",
+            "amount": 1
+        },
+        "20682": {
+            "id": 20682,
+            "answer": 5000,
+            "variable": "Americandivision",
+            "operation": "subtract",
+            "amount": 2
+        },
+        "20683": {
+            "id": 20683,
+            "answer": 5001,
+            "variable": "Americandivision",
+            "operation": "add",
+            "amount": 1
         }
     }
 }
