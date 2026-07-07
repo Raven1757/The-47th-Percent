@@ -10,7 +10,7 @@ campaignTrail_temp.questions_json = [
         "model": "campaign_trail.question",
         "pk": 1007,
         "fields": {
-            "description": "Mitt stands on the podium of his inauguration, hands on the bible. You hold it next to him and look at both him and the crowd. They are there for him. He repeats the oath of office. He turns to the crowd,waving his hand, and goes to speak. This speech will be the defining moment for how his presidency will go. You sat down and listened as he spoke. You wondered what he'll say. He wanted to write this speech himself, he wanted it to be written entirely by the man they elected."
+            "description": "There was a mass shooting at a gay nightclub in Orlando overnight, perpetrated by a Muslim, resulting in 50 people killed. What is your reaction?"
         }
     },
     {
@@ -289,7 +289,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5016,
         "fields": {
             "question": 1007,
-            "description": "My fellow Americans, we are standing at what will be a transformative presidency. Our country has seen moments of great division and we have moved past them. We will move past this too."
+            "description": "Around the world we have Islamic terror striking at innocent lives, while the Democrats do nothing. If this attack on the LGBT community, this vicious attack, isn't enough to make them wake up, then what is?"
         }
     },
     {
@@ -8640,7 +8640,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5016,
             "candidate": 200,
-            "answer_feedback": "Mitt's Speech is very well seen. You read through articles about it and how people all the way from California to the Midwest seem to have accepted his step towards unity"
+            "answer_feedback": "You raise some eyebrows with this response, but maybe there's a point?"
         }
     },
     {
@@ -9352,7 +9352,6 @@ function answerSwapper(pk1, pk2, takeEffects = true) {
     }
 }
 // CYOA Variables
-var Americandivision = 5;
 var GovernmentApproval = 30;
 var Wins = 0;
 var RussianAgression = 0;
@@ -9363,7 +9362,7 @@ cyoAdventure = function (a) {
 
     // [JETS_CYOA_VARIABLE_EFFECTS_START]
     // +5 GovernmentApproval
-    if ([5002, 5016].includes(ans)) {
+    if (ans == 5002) {
         GovernmentApproval += 5;
     }
 
@@ -9375,21 +9374,6 @@ cyoAdventure = function (a) {
     // +10 GovernmentApproval
     if (ans == 5000) {
         GovernmentApproval += 10;
-    }
-
-    // -1 Americandivision
-    if (ans == 5016) {
-        Americandivision -= 1;
-    }
-
-    // -2 Americandivision
-    if (ans == 5000) {
-        Americandivision -= 2;
-    }
-
-    // +1 Americandivision
-    if (ans == 5001) {
-        Americandivision += 1;
     }
     // [JETS_CYOA_VARIABLE_EFFECTS_END]
 }
@@ -9464,15 +9448,6 @@ cyoAdventure = function (a) {
                 [0, `The World is Calm`, "#ef4444"],
                 [2, `The Eyes are turning`, "#475569"],
                 [Infinity, `The fires are starting`, "#22c55e"],
-            ],
-        },
-    {
-            getValue: () => Americandivision,
-            label: `Americandivision`,
-            tiers: [
-                [1, `America is healing`, "#ef4444"],
-                [10, `America is divided`, "#475569"],
-                [Infinity, `America is growing dangerously divided`, "#22c55e"],
             ],
         }
     ];
@@ -9599,11 +9574,6 @@ campaignTrail_temp.jet_data = [{
             "id": 1783409229550,
             "name": "RussianAgression",
             "defaultValue": 0
-        },
-        "1783435003348": {
-            "id": 1783435003348,
-            "name": "Americandivision",
-            "defaultValue": 5
         }
     },
     "cyoa_campaign_data_enabled": true,
@@ -9637,16 +9607,6 @@ campaignTrail_temp.jet_data = [{
             "lowText": "The World is Calm",
             "midText": "The Eyes are turning",
             "highText": "The fires are starting"
-        },
-        "1783435015853": {
-            "id": 1783435015853,
-            "variable": "Americandivision",
-            "label": "Americandivision",
-            "lowMax": 1,
-            "midMax": 10,
-            "lowText": "America is healing",
-            "midText": "America is divided",
-            "highText": "America is growing dangerously divided"
         }
     },
     "cyoa_variable_effects": {
@@ -9670,36 +9630,57 @@ campaignTrail_temp.jet_data = [{
             "variable": "GovernmentApproval",
             "operation": "add",
             "amount": 10
-        },
-        "20680": {
-            "id": 20680,
-            "answer": 5016,
-            "variable": "GovernmentApproval",
-            "operation": "add",
-            "amount": 5
-        },
-        "20681": {
-            "id": 20681,
-            "answer": 5016,
-            "variable": "Americandivision",
-            "operation": "subtract",
-            "amount": 1
-        },
-        "20682": {
-            "id": 20682,
-            "answer": 5000,
-            "variable": "Americandivision",
-            "operation": "subtract",
-            "amount": 2
-        },
-        "20683": {
-            "id": 20683,
-            "answer": 5001,
-            "variable": "Americandivision",
-            "operation": "add",
-            "amount": 1
         }
     }
 }
 ]
-
+function switcheroo1() {
+        var id = e.candidate_json.map(p=>p.pk).indexOf(78)
+        e.candidate_json[id].fields.first_name = "Bernie"
+        e.candidate_json[id].fields.last_name = "Sanders" 
+        e.candidate_json[id].fields.color_hex = "#078d8d" 
+    }
+    function switcheroo2() {
+        var id = e.candidate_json.map(p=>p.pk).indexOf(78)
+        e.candidate_json[id].fields.first_name = "Bill"
+        e.candidate_json[id].fields.last_name = "Ayers"
+        campaignTrail_temp.candidate_json[id].fields.color_hex = "#490404"
+        var id = campaignTrail_temp.candidate_json.map(p=>p.pk).indexOf(77)
+        campaignTrail_temp.candidate_json[id].fields.color_hex = "#061b53"
+    }
+    function switcheroo3() {
+        var id = e.candidate_json.map(p=>p.pk).indexOf(78)
+        e.candidate_json[id].fields.first_name = "Hillary"
+        e.candidate_json[id].fields.last_name = "Clinton"   
+        e.candidate_json[id].fields.color_hex = "#124094" 
+    }
+    function switcheroo4() {
+        var id = e.candidate_json.map(p=>p.pk).indexOf(78)
+        e.candidate_json[id].fields.first_name = "Joe"
+        e.candidate_json[id].fields.last_name = "Biden"  
+        e.candidate_json[id].fields.color_hex = "#0943c0" 
+    
+    }
+    function switcheroo5() {
+        var id = campaignTrail_temp.candidate_json.map(p=>p.pk).indexOf(78)
+        campaignTrail_temp.candidate_json[id].fields.first_name = "Evan"
+        campaignTrail_temp.candidate_json[id].fields.last_name = "Bayh"
+        campaignTrail_temp.candidate_json[id].fields.color_hex = "#260e75"
+    
+    }
+    function switcheroo6() {
+        var id = e.candidate_json.map(p=>p.pk).indexOf(78)
+        e.candidate_json[id].fields.first_name = "Al"
+        e.candidate_json[id].fields.last_name = "Sharpton"  
+        e.candidate_json[id].fields.color_hex = "#808fd1" 
+    
+    }
+    function switcheroo7() {
+        var id = e.candidate_json.map(p=>p.pk).indexOf(78)
+        e.candidate_json[id].fields.first_name = "Edward"
+        e.candidate_json[id].fields.last_name = "Kennedy"   
+        e.candidate_json[id].fields.color_hex = "#4b5a82"
+        var id = campaignTrail_temp.candidate_json.map(p=>p.pk).indexOf(77)
+        campaignTrail_temp.candidate_json[id].fields.color_hex = "#8f3838"
+    
+    }
