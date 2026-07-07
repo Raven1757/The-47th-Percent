@@ -124,6 +124,28 @@ campaignTrail_temp.candidate_json = [
             "description_as_running_mate": "'",
             "candidate_score": 1,
             "running_mate": false
+    }},
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 204,
+        "fields": {
+            "first_name": "Paul",
+            "last_name": "Ryan",
+            "election": 20,
+            "party": "Republican",
+            "state": "Wisconsim",
+            "priority": 1,
+            "description": "",
+            "color_hex": "#CCCCCC",
+            "secondary_color_hex": null,
+            "is_active": 0,
+            "image_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.Uf9yk7jVcqQyV1zCDO_O9wHaJd%3Fpid%3DApi&f=1&ipt=9157ba3dd3cee5ddf5fb1a1c438659f141af3a71125ffef6752eb573e229fa41&ipo=images",
+            "electoral_victory_message": "",
+            "electoral_loss_message": "",
+            "no_electoral_majority_message": "Majority?",
+            "description_as_running_mate": "",
+            "candidate_score": 1,
+            "running_mate": false
         }
     },
     {
@@ -236,6 +258,8 @@ function applyTheme(theme) {
 }
 
 corrr = '\n              <h2>The 47th Percent</h2>\n            ';
+
+corrr = '\n              <h2 style=" font-family: American Typewriter; ">The 47th Percent</h2>\n            ';
 
 const theme = nct_stuff.themes[nct_stuff.selectedTheme];
 
