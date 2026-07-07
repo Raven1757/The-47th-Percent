@@ -7,11 +7,11 @@ campaignTrail_temp.election_json = [
             "summary": "<p>The first Mormon president has had a less than graceful entry into the White House. Mitt Romney was barely elected, if even that, due to the Colorado fiasco. The news that broke the American electoral system. In a matter of mere days the election was thrown into cahos had it not been for Romney and Obama coming to an agreement. That which led to Romney winning. Now he holds the reigns of an entire country that thinks he is illegitimate and needs to steer it towards a new path. One he gets to decide.</p> \n<p>Romney needs to find his way and to see where he will go as president and to keep the little legitimacy he has.</p> \n",
             "image_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.eOMuCvyeXCtVf-TpfZli2wHaHa%3Fpid%3DApi&f=1&ipt=7d5fb0367be6257f0bda99eba72a5db93c85377a9b96119665c413199fbf9c76&ipo=images",
             "winning_electoral_vote_number": 270,
-            "advisor_url": "https://www.jetsimon.com/public/static/images/bannon-mook-2016.jpg",
+            "advisor_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthfvnext.bing.com%2Fth%2Fid%2FOIP.mYdtlC9Ys5zfDaf_g-jPMQHaEK%3Fcb%3Dthfvnextfalcon4%26pid%3DApi&f=1&ipt=755d67a11b0241b56c101a204f2a69fa6e0b734e9df5bd2f0f5d0c05028e810f&ipo=images",
             "recommended_reading": "<h4 style=\"margin-top: 0.5em;\">Articles</h4>FiveThirtyEight - <a href=\"http://projects.fivethirtyeight.com/2016-swing-the-election/\" target=\"_blank\"> What Would It Take To Turn Blue States Red?</a></br><a href=\"http://thehill.com/blogs/ballot-box/presidential-races/274317-anti-trump-forces-point-to-losing-match-ups-with-clinton\">Anti-Trump forces seize on grim polls for Clinton match-up</a></br><a href=\"http://www.slate.com/blogs/the_slatest/2016/02/24/donald_trump_could_beat_hillary_clinton_in_the_general.html\">Think Hillary Clinton Will Crush Donald Trump in the General Election? Don’t Be So Sure.</a></br><a href=\"http://www.slate.com/blogs/the_slatest/2016/03/01/hillary_clinton_plots_her_general_election_trump_strategy.html\">How Team Clinton Is Planning to Defeat Trump</a></br><a href=\"http://www.vox.com/2016/2/10/10961324/donald-trump-win-november\">Here's Donald Trump's Best Strategy for Winning the White House</a><h4>Books</h4>\nHillary Clinton - <a href=\"http://www.amazon.com/exec/obidos/ASIN/1476751471/amhius20-20\" target=\"_blank\">Hard Choices</a></br>\nHillary Clinton - <a href=\"http://www.amazon.com/exec/obidos/ASIN/0743222253/amhius20-20\" target=\"_blank\">Living History</a></br>\nDonald Trump - <a href=\"http://www.amazon.com/exec/obidos/ASIN/1501137964/amhius20-20\" target=\"_blank\">Crippled America: How to Make America Great Again</a></br>\nDonald Trump - <a href=\"http://www.amazon.com/exec/obidos/ASIN/0399594493/amhius20-20\" target=\"_blank\">The Art of the Deal</a></br>\nGary Johnson - <a href=\"http://www.amazon.com/exec/obidos/ASIN/B008PXW0C0/amhius20-20\" target=\"_blank\">Seven Principles of Good Government</a>",
             "has_visits": 1,
             "no_electoral_majority_image": "https://www.jetsimon.com/public/static/images/2012-no-majority.jpg",
-            "creator": "Dan Bryan",
+            "creator": "Raven1757",
             "display_year": "The 47th Percent",
             "recommended_reading_enabled": true
         }
@@ -1002,7 +1002,7 @@ function setupMusicPlayer() {
   const defaultSongs = [
     ["Lies In The Eyes Of Love", "Part Time", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bing.com%2Fth%3Fid%3DOIP.zTYJoCKlXdE9Yo4g2UMIWwHaHa%26w%3D120%26h%3D120%26c%3D1%26pid%3D5.1&f=1&nofb=1", "https://audio.jukehost.co.uk/019f3c4d-febe-72fd-8115-df1dae8e3f98"],
     ["Angel", "Massive Attack", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthfvnext.bing.com%2Fth%2Fid%2FOIP.AU3MIw_ey2oVEfRQcxUxSwHaHa%3Fr%3D0%26cb%3Dthfvnextfalcon4%26pid%3DApi&f=1&ipt=679309a9096247a1fd2170ac78b0da65911c6a5d4635ee2e19c8225e9682db27&ipo=images", "https://audio.jukehost.co.uk/019f3c50-e557-715b-ba29-28cbc7fdfef1"],
-    ["Holiday / Blvd of Broken Dreams", "Green Day", "https://upload.wikimedia.org/wikipedia/en/e/ed/Green_Day_-_American_Idiot_album_cover.png", "https://audio.jukehost.co.uk/8CLWokDOaUI0nDFrFmDUMBYHCRHrnCDG"],
+    ["Every Breath You Take", "The Police", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthf.bing.com%2Fth%2Fid%2FOIP.DdRGVFwx-ddtHkCmsxPSswHaHa%3Fcb%3Dthfc1falcon4%26pid%3DApi&f=1&ipt=653c4dd968ecd5a0b676f97bb602886c731614555f3282f883255b0bfabaf8ac&ipo=images", "https://audio.jukehost.co.uk/019f3d1c-9938-708d-a3f4-0cdc6e1846e4"],
     ["The Middle", "Jimmy Eat World", "https://resources.tidal.com/images/8434cc6f/7ce9/4558/bea8/af00b34dce36/320x320.jpg", "https://audio.jukehost.co.uk/VLIEj9gbu4y1WBgJjMKkdlckXQzAQsb8"],
     ["Saddest Girl Story", "The Starting Line", "https://resources.tidal.com/images/89571243/7a8b/4a85/945b/ec723866e109/320x320.jpg", "https://audio.jukehost.co.uk/A2jyXHWjaFVimqsqdgldYnBokmEV2Aup"],
     ["The Boy Who Blocked His Own Shot", "Brand New", "https://resources.tidal.com/images/1c1ba9d5/f47c/417d/86d3/48d46dac02db/320x320.jpg", "https://audio.jukehost.co.uk/5tx0d7xnGrJw3T2ue4r451SLrRUphlBd"],
@@ -1233,3 +1233,9 @@ function setupMusicPlayer() {
 }
 
 setupMusicPlayer();
+campaignTrail_temp.achievements = {
+  "Now is the Time" : {
+      "image" : "https://i.imgur.com/ZWVUPN1.png",
+      "description" : "Face Al Sharpton for re-election.",
+      "cannotBeCheated" : true
+  }}
