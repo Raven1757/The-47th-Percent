@@ -1000,8 +1000,8 @@ function setupMusicPlayer() {
   if (document.getElementById("player")) return;
 
   const defaultSongs = [
-    ["Two Words", "Kanye West, Mos Def, The Boys Choir Of Harlem", "https://upload.wikimedia.org/wikipedia/en/a/a3/Kanyewest_collegedropout.jpg", "https://audio.jukehost.co.uk/SeyciEFDB7FW27mwoe6eUPNtLoEjTEDa"],
-    ["Jesus of Suburbia", "Green Day", "https://upload.wikimedia.org/wikipedia/en/e/ed/Green_Day_-_American_Idiot_album_cover.png", "https://audio.jukehost.co.uk/ie5hY1Mg2vFmhLCg6B4SCkLxR7qPJj8X"],
+    ["Lies In The Eyes Of Love", "Part Time", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bing.com%2Fth%3Fid%3DOIP.zTYJoCKlXdE9Yo4g2UMIWwHaHa%26w%3D120%26h%3D120%26c%3D1%26pid%3D5.1&f=1&nofb=1", "https://audio.jukehost.co.uk/019f3c4d-febe-72fd-8115-df1dae8e3f98"],
+    ["Angel", "Massive Attack", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthfvnext.bing.com%2Fth%2Fid%2FOIP.AU3MIw_ey2oVEfRQcxUxSwHaHa%3Fr%3D0%26cb%3Dthfvnextfalcon4%26pid%3DApi&f=1&ipt=679309a9096247a1fd2170ac78b0da65911c6a5d4635ee2e19c8225e9682db27&ipo=images", "https://audio.jukehost.co.uk/019f3c50-e557-715b-ba29-28cbc7fdfef1"],
     ["Holiday / Blvd of Broken Dreams", "Green Day", "https://upload.wikimedia.org/wikipedia/en/e/ed/Green_Day_-_American_Idiot_album_cover.png", "https://audio.jukehost.co.uk/8CLWokDOaUI0nDFrFmDUMBYHCRHrnCDG"],
     ["The Middle", "Jimmy Eat World", "https://resources.tidal.com/images/8434cc6f/7ce9/4558/bea8/af00b34dce36/320x320.jpg", "https://audio.jukehost.co.uk/VLIEj9gbu4y1WBgJjMKkdlckXQzAQsb8"],
     ["Saddest Girl Story", "The Starting Line", "https://resources.tidal.com/images/89571243/7a8b/4a85/945b/ec723866e109/320x320.jpg", "https://audio.jukehost.co.uk/A2jyXHWjaFVimqsqdgldYnBokmEV2Aup"],
