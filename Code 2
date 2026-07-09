@@ -9940,25 +9940,7 @@ if(ans == 20720){
             campaignTrail_temp.running_mate_last_name="Haley"
             campaignTrail_temp.running_mate_image_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.qnx0kDxlhrOmcxYUbq2wTgHaJI%3Fpid%3DApi&f=1&ipt=a9f34b03e96a88912ea6ef5869534901b3720b77f7cb15582ee0b6440843bc69&ipo=images"
 }
-var HillaryInvestigation = 0;
 
-e.cyoa = true;
-
-function tunnel(new_q) {
-return e.questions_json[e.questions_json.map(f=>f.pk).indexOf(new_q)];
-}
-
-cyoAdventure = function (a) {
-ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length-1];
-
-if (ans == 5002 || ans == 5014) { // put the answers you want here
-ObamacareRepeal += 1;
-}
-
-if (ObamacareRepeal == 2) {
-campaignTrail_temp.questions_json[6] = tunnel(20768); // Put the pk of the question you want it to be replaced with.
-  }
-}
 }
 
 // [JETS_CYOA_CAMPAIGN_DATA_START]
@@ -10538,5 +10520,4 @@ campaignTrail_temp.jet_data = [{
     }
 }
 ]
-
 
