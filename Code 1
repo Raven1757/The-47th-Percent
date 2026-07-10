@@ -4,8 +4,8 @@ campaignTrail_temp.election_json = [
         "pk": 20,
         "fields": {
             "year": 2016,
-            "summary": "<p>The first Mormon president has had a less than graceful entry into the White House. Mitt Romney was barely elected, if even that, due to the Colorado fiasco. The news that broke the American electoral system. In a matter of mere days the election was thrown into cahos had it not been for Romney and Obama coming to an agreement. That which led to Romney winning. Now he holds the reigns of an entire country that thinks he is illegitimate and needs to steer it towards a new path. One he gets to decide.</p> \n<p>Romney needs to find his way and to see where he will go as president and to keep the little legitimacy he has.</p> \n",
-            "image_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.eOMuCvyeXCtVf-TpfZli2wHaHa%3Fpid%3DApi&f=1&ipt=7d5fb0367be6257f0bda99eba72a5db93c85377a9b96119665c413199fbf9c76&ipo=images",
+            "summary": "<p>The first Mormon president has had a less than graceful entry into the White House. Mitt Romney was barely elected, if even that, due to the Colorado fiasco. The news that broke the American electoral system. In a matter of mere days the election was thrown into chaos had it not been for Romney and Obama coming to an agreement. That which led to Romney winning. Now he holds the reigns of an entire country that thinks he is illegitimate and needs to steer it towards a new path. One he gets to decide.</p> \n<p>Romney needs to find his way and to see where he will go as president and to keep the little legitimacy he has.</p> \n",
+            "image_url": "https://i.imgur.com/0KPXG22.jpeg",
             "winning_electoral_vote_number": 270,
             "advisor_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthfvnext.bing.com%2Fth%2Fid%2FOIP.mYdtlC9Ys5zfDaf_g-jPMQHaEK%3Fcb%3Dthfvnextfalcon4%26pid%3DApi&f=1&ipt=755d67a11b0241b56c101a204f2a69fa6e0b734e9df5bd2f0f5d0c05028e810f&ipo=images",
             "recommended_reading": "<h4 style=\"margin-top: 0.5em;\">Articles</h4>FiveThirtyEight - <a href=\"http://projects.fivethirtyeight.com/2016-swing-the-election/\" target=\"_blank\"> What Would It Take To Turn Blue States Red?</a></br><a href=\"http://thehill.com/blogs/ballot-box/presidential-races/274317-anti-trump-forces-point-to-losing-match-ups-with-clinton\">Anti-Trump forces seize on grim polls for Clinton match-up</a></br><a href=\"http://www.slate.com/blogs/the_slatest/2016/02/24/donald_trump_could_beat_hillary_clinton_in_the_general.html\">Think Hillary Clinton Will Crush Donald Trump in the General Election? Don’t Be So Sure.</a></br><a href=\"http://www.slate.com/blogs/the_slatest/2016/03/01/hillary_clinton_plots_her_general_election_trump_strategy.html\">How Team Clinton Is Planning to Defeat Trump</a></br><a href=\"http://www.vox.com/2016/2/10/10961324/donald-trump-win-november\">Here's Donald Trump's Best Strategy for Winning the White House</a><h4>Books</h4>\nHillary Clinton - <a href=\"http://www.amazon.com/exec/obidos/ASIN/1476751471/amhius20-20\" target=\"_blank\">Hard Choices</a></br>\nHillary Clinton - <a href=\"http://www.amazon.com/exec/obidos/ASIN/0743222253/amhius20-20\" target=\"_blank\">Living History</a></br>\nDonald Trump - <a href=\"http://www.amazon.com/exec/obidos/ASIN/1501137964/amhius20-20\" target=\"_blank\">Crippled America: How to Make America Great Again</a></br>\nDonald Trump - <a href=\"http://www.amazon.com/exec/obidos/ASIN/0399594493/amhius20-20\" target=\"_blank\">The Art of the Deal</a></br>\nGary Johnson - <a href=\"http://www.amazon.com/exec/obidos/ASIN/B008PXW0C0/amhius20-20\" target=\"_blank\">Seven Principles of Good Government</a>",
@@ -210,7 +210,7 @@ jet_data = {
     "descriptionWindowTextColor": "#000000",
     "startButtonColor": "#e8e8e8",
     "bannerImageUrl": "https://preview.redd.it/how-would-a-romney-incumbency-sim-with-cyoa-go-how-would-v0-8i61delr2xjg1.jpeg?width=640&format=pjpg&auto=webp&s=33124ccfae0be9d78decb27a1029ecf969561e41",
-    "backgroundImageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthf.bing.com%2Fth%2Fid%2FOIP.qFCm1Pn1y3rojD_VLfa6AAHaEK%3Fcb%3Dthfc1falcon4%26pid%3DApi&f=1&ipt=1ea00f40ac12bc183fb6dd1a7afe910df660d0860201ea8ddc9b4d2bbddb691b&ipo=images",
+    "backgroundImageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.iH9thNs-uDjLIj0gPW89fQHaEK%3Fr%3D0%26pid%3DApi&f=1&ipt=7f91e9dbd2413a1811863b9cab34cafdeb8d30dad3bb2d8255647963c2681de2&ipo=images",
     "gameTitle": "The 47th Percent",
     "customQuote": "",
     "quoteTextColor": "#ffffff",
@@ -257,10 +257,10 @@ function applyTheme(theme) {
     document.head.appendChild(style);
 }
 
-corrr = '\n              <h2>The 47th Percent</h2>\n            ';
+{corrr = '\n              <h2>The 47th Percent</h2>\n            ';
 
-corrr = '\n              <h2 style=" font-family: American Typewriter; ">The 47th Percent</h2>\n            ';
-
+corrr = '\n              <h2 style=" font-family: Alex Brush regular; ">The 47th Percent</h2>\n            ';
+}
 const theme = nct_stuff.themes[nct_stuff.selectedTheme];
 
 // define / override theme values
@@ -268,7 +268,7 @@ theme.coloring_title     = "#c01c28";
 theme.coloring_window    = "#bfe6ff";
 theme.coloring_container = "#e01b24";
 theme.header_image = "https://preview.redd.it/how-would-a-romney-incumbency-sim-with-cyoa-go-how-would-v0-8i61delr2xjg1.jpeg?width=640&format=pjpg&auto=webp&s=33124ccfae0be9d78decb27a1029ecf969561e41";
-theme.body_background = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthf.bing.com%2Fth%2Fid%2FOIP.qFCm1Pn1y3rojD_VLfa6AAHaEK%3Fcb%3Dthfc1falcon4%26pid%3DApi&f=1&ipt=1ea00f40ac12bc183fb6dd1a7afe910df660d0860201ea8ddc9b4d2bbddb691b&ipo=images";
+theme.body_background = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.iH9thNs-uDjLIj0gPW89fQHaEK%3Fr%3D0%26pid%3DApi&f=1&ipt=7f91e9dbd2413a1811863b9cab34cafdeb8d30dad3bb2d8255647963c2681de2&ipo=images";
 
 applyTheme(theme);
 //#endcode
