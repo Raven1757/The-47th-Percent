@@ -31,7 +31,7 @@ campaignTrail_temp.questions_json = [
         "model": "campaign_trail.question",
         "pk": 1019,
         "fields": {
-            "description": "You sit with Mitt as he calls his advisors. They are planning the Obamacare repeal and if he should even try. You've seen that his relations with congress are too strained. You felt like you needed to try and convince him to let it go for a while and try to pass something else.",
+            "description": "You and Mitt talked it over. He knew that Obamacare was off the table for now. He needed another win. Both of you considered many options but the only one that made sense was the tax cut plan. Mitt knew he had the republicans for it, it was perfect.",
             "likelihood": 0.5
         }
     },
@@ -193,35 +193,42 @@ campaignTrail_temp.questions_json = [
         "model": "campaign_trail.question",
         "pk": 20664,
         "fields": {
-            "description": "put description here"
+            "description": "#ALTQuestions"
         }
     },
     {
         "model": "campaign_trail.question",
         "pk": 20665,
         "fields": {
-            "description": "put description here"
+            "description": "#BernieQuestions"
         }
     },
     {
         "model": "campaign_trail.question",
         "pk": 20666,
         "fields": {
-            "description": "put description here"
+            "description": "#ClintonQuestions"
         }
     },
     {
         "model": "campaign_trail.question",
         "pk": 20667,
         "fields": {
-            "description": "put description here"
+            "description": "#BidenQuestions"
         }
     },
     {
         "model": "campaign_trail.question",
         "pk": 20668,
         "fields": {
-            "description": "put description here"
+            "description": "#ObamaQuestions"
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 20819,
+        "fields": {
+            "description": "#AyersQuestions"
         }
     }
 ];
@@ -496,7 +503,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5060,
         "fields": {
             "question": 1019,
-            "description": "I hear you Ann, but we have put too much work into this. We have promised this to the people and we need to try a the very least."
+            "description": "I will work with Republicans to push a comprehensive tax reform through congress. Our population will benefit from it. "
         }
     },
     {
@@ -936,7 +943,7 @@ campaignTrail_temp.answers_json = [
         "pk": 20748,
         "fields": {
             "question": 1019,
-            "description": "Maybe you are right Ann. I'll think about it. Maybe we should do a smaller bill like infrastructure investment instead."
+            "description": "We don't have time for this. I need to focus on the repeal,working with the senators and representatives to make sure it passes and is replaced by Romneycare as soon as possible."
         }
     },
     {
@@ -953,6 +960,14 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 20768,
             "description": "Maybe you are right Ann. I'll think about it. Maybe we should do a smaller bill like infrastructure investment instead."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 20820,
+        "fields": {
+            "question": 20819,
+            "description": "New answer option"
         }
     }
 ];
@@ -7432,7 +7447,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 20748,
             "candidate": 200,
             "affected_candidate": 200,
-            "global_multiplier": 0.01
+            "global_multiplier": -0.01
         }
     },
     {
@@ -7452,7 +7467,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 20748,
             "candidate": 200,
             "affected_candidate": 202,
-            "global_multiplier": -0.005
+            "global_multiplier": 0.01
         }
     },
     {
@@ -8752,204 +8767,6 @@ campaignTrail_temp.answer_score_state_json = [
     },
     {
         "model": "campaign_trail.answer_score_state",
-        "pk": 20744,
-        "fields": {
-            "answer": 5060,
-            "state": 1008,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": -0.015
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20745,
-        "fields": {
-            "answer": 5060,
-            "state": 1009,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": -0.015
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20746,
-        "fields": {
-            "answer": 5060,
-            "state": 1032,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": -0.015
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20747,
-        "fields": {
-            "answer": 5060,
-            "state": 1042,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": -0.015
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20754,
-        "fields": {
-            "answer": 20748,
-            "state": 1005,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": 0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20755,
-        "fields": {
-            "answer": 20748,
-            "state": 1009,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": 0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20756,
-        "fields": {
-            "answer": 20748,
-            "state": 1014,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": 0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20757,
-        "fields": {
-            "answer": 20748,
-            "state": 1022,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": 0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20758,
-        "fields": {
-            "answer": 20748,
-            "state": 1027,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": 0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20759,
-        "fields": {
-            "answer": 20748,
-            "state": 1032,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": 0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20760,
-        "fields": {
-            "answer": 20748,
-            "state": 1034,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": 0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20761,
-        "fields": {
-            "answer": 20748,
-            "state": 1037,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": 0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20762,
-        "fields": {
-            "answer": 20748,
-            "state": 1045,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": 0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20763,
-        "fields": {
-            "answer": 20748,
-            "state": 1049,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": 0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20764,
-        "fields": {
-            "answer": 20748,
-            "state": 1021,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": 0.005
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20765,
-        "fields": {
-            "answer": 20748,
-            "state": 1029,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": 0.005
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20766,
-        "fields": {
-            "answer": 20748,
-            "state": 1030,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": 0.005
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20767,
-        "fields": {
-            "answer": 20748,
-            "state": 1036,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": 0.005
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
         "pk": 20779,
         "fields": {
             "answer": 5020,
@@ -9458,7 +9275,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5060,
             "candidate": 200,
-            "answer_feedback": "You watch the vote as senator Rand Paul breaks with the republicans and votes Nay. Mitt was saddened by the results but this didn't hurt his  resolve. You were proud of him for that"
+            "answer_feedback": "You watch the vote as senator Rand Paul breaks with the republicans and votes Nay citing concerns about fiscal stability. Mitt is furious, this was a never expected result which ruins his standing with the people."
         }
     },
     {
@@ -9881,7 +9698,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 20748,
             "candidate": 200,
-            "answer_feedback": "You watch the results. The bill easily passed and you saw how happy Mitt was but you knew he had wanted to try the repeal. No matter what, this helps him."
+            "answer_feedback": "You are disappointed that Mitt isn't following your advice but can't stay mad too long.  It's  better to over-prepare than not though it hurts him in the polls seemingly"
         }
     },
     {
@@ -10019,28 +9836,28 @@ cyoAdventure = function (a) {
     e.noCounter = campaignTrail_temp.player_answers.length;
 
     // [JETS_CYOA_VARIABLE_EFFECTS_START]
-    // +5 GovernmentApproval
-    if ([5002, 5016, 5018, 5014, 5004, 20769].includes(ans)) {
-        GovernmentApproval += 5;
+    // +2 GovernmentApproval
+    if ([5002, 5022].includes(ans)) {
+        GovernmentApproval += 2;
     }
 
     // -5 GovernmentApproval
-    if ([5001, 5017, 5015, 5003, 20720, 5060, 20770].includes(ans)) {
+    if ([5001, 5017, 5015, 5003, 20720, 20770, 5031].includes(ans)) {
         GovernmentApproval -= 5;
     }
 
-    // +10 GovernmentApproval
-    if ([5000, 20708].includes(ans)) {
-        GovernmentApproval += 10;
+    // +5 GovernmentApproval
+    if ([5000, 5016, 5018, 5014, 5004, 20769, 5021].includes(ans)) {
+        GovernmentApproval += 5;
     }
 
     // -1 Americandivision
-    if ([5016, 5018, 5003, 20769].includes(ans)) {
+    if ([5016, 5018, 5003, 20769, 5023].includes(ans)) {
         Americandivision -= 1;
     }
 
     // -2 Americandivision
-    if ([5000, 5019].includes(ans)) {
+    if ([5000, 5019, 5031, 5030].includes(ans)) {
         Americandivision -= 2;
     }
 
@@ -10055,18 +9872,28 @@ cyoAdventure = function (a) {
     }
 
     // +1 Wins
-    if ([5013, 5014, 5015, 20770, 20769].includes(ans)) {
+    if ([5013, 5014, 5015, 20770, 20769, 5021, 5020, 5030].includes(ans)) {
         Wins += 1;
     }
 
     // +2 Americandivision
-    if ([5015, 20708, 20770].includes(ans)) {
+    if ([5015, 20708, 5060, 20770, 5020, 5022].includes(ans)) {
         Americandivision += 2;
+    }
+
+    // +10 GovernmentApproval
+    if (ans == 20708) {
+        GovernmentApproval += 10;
     }
 
     // +1 Congressionalrelations
     if ([5014, 5000, 5002, 20769].includes(ans)) {
         Congressionalrelations += 1;
+    }
+
+    // -3 GovernmentApproval
+    if (ans == 5060) {
+        GovernmentApproval -= 3;
     }
 
     // -1 Wins
@@ -10075,8 +9902,28 @@ cyoAdventure = function (a) {
     }
 
     // +5 Americandivision
-    if (ans == 5060) {
+    if (ans == 5021) {
         Americandivision += 5;
+    }
+
+    // +3 GovernmentApproval
+    if (ans == 5020) {
+        GovernmentApproval += 3;
+    }
+
+    // -2 GovernmentApproval
+    if ([5023, 20748].includes(ans)) {
+        GovernmentApproval -= 2;
+    }
+
+    // -10 GovernmentApproval
+    if (ans == 5032) {
+        GovernmentApproval -= 10;
+    }
+
+    // +1 RussianAgression
+    if (ans == 5032) {
+        RussianAgression += 1;
     }
     // [JETS_CYOA_VARIABLE_EFFECTS_END]
     if(ans == 5004){
@@ -10246,9 +10093,9 @@ questionBanner.replaceWith(img);
             getValue: () => Americandivision,
             label: `The State Of The Union`,
             tiers: [
-                [1, `America is healing`, "#ef4444"],
+                [1, `America is growing dangerously divided`, "#ef4444"],
                 [10, `America is uneasy`, "#475569"],
-                [Infinity, `America is growing dangerously divided`, "#22c55e"],
+                [Infinity, `America is healing`, "#22c55e"],
             ],
         },
     {
@@ -10257,7 +10104,7 @@ questionBanner.replaceWith(img);
             tiers: [
                 [3, `Congress hates Romney`, "#ef4444"],
                 [5, `Congress is Neutral`, "#475569"],
-                [Infinity, `Congress is Happy`, "#22c55e"],
+                [Infinity, `Congress is open to negociations`, "#22c55e"],
             ],
         }
     ];
@@ -10434,9 +10281,9 @@ campaignTrail_temp.jet_data = [{
             "label": "The State Of The Union",
             "lowMax": 1,
             "midMax": 10,
-            "lowText": "America is healing",
+            "lowText": "America is growing dangerously divided",
             "midText": "America is uneasy",
-            "highText": "America is growing dangerously divided"
+            "highText": "America is healing"
         },
         "1783514308893": {
             "id": 1783514308893,
@@ -10446,7 +10293,7 @@ campaignTrail_temp.jet_data = [{
             "midMax": 5,
             "lowText": "Congress hates Romney",
             "midText": "Congress is Neutral",
-            "highText": "Congress is Happy"
+            "highText": "Congress is open to negociations"
         }
     },
     "cyoa_variable_effects": {
@@ -10455,7 +10302,7 @@ campaignTrail_temp.jet_data = [{
             "answer": 5002,
             "variable": "GovernmentApproval",
             "operation": "add",
-            "amount": 5
+            "amount": 2
         },
         "20678": {
             "id": 20678,
@@ -10469,7 +10316,7 @@ campaignTrail_temp.jet_data = [{
             "answer": 5000,
             "variable": "GovernmentApproval",
             "operation": "add",
-            "amount": 10
+            "amount": 5
         },
         "20680": {
             "id": 20680,
@@ -10679,7 +10526,7 @@ campaignTrail_temp.jet_data = [{
             "answer": 5060,
             "variable": "GovernmentApproval",
             "operation": "subtract",
-            "amount": 5
+            "amount": 3
         },
         "20742": {
             "id": 20742,
@@ -10693,7 +10540,7 @@ campaignTrail_temp.jet_data = [{
             "answer": 5060,
             "variable": "Americandivision",
             "operation": "add",
-            "amount": 5
+            "amount": 2
         },
         "20779": {
             "id": 20779,
@@ -10844,17 +10691,10 @@ campaignTrail_temp.jet_data = [{
         },
         "20821": {
             "id": 20821,
-            "answer": 5032,
-            "variable": "Americandivision",
-            "operation": "subtract",
-            "amount": 3
-        },
-        "20822": {
-            "id": 20822,
-            "answer": 5030,
+            "answer": 20748,
             "variable": "GovernmentApproval",
             "operation": "subtract",
-            "amount": 3
+            "amount": 2
         },
         "20823": {
             "id": 20823,
@@ -10873,4 +10713,5 @@ campaignTrail_temp.jet_data = [{
     }
 }
 ]
+
 
