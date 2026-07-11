@@ -9721,8 +9721,8 @@ campaignTrail_temp.answer_feedback_json = [
     }
 ];
 
-campaignTrail_temp.candidate_image_url = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIF.%252f%252fpgpuqohmoQv3goxlpsxw%26r%3D0%26pid%3DApi&f=1&ipt=f1ca213b6b9407752829a2bdc025b4d6b4ac2574c7706699102558fd9d1ffe92&ipo=images";
-campaignTrail_temp.running_mate_image_url = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.Uf9yk7jVcqQyV1zCDO_O9wHaJd%3Fpid%3DApi&f=1&ipt=9157ba3dd3cee5ddf5fb1a1c438659f141af3a71125ffef6752eb573e229fa41&ipo=images";
+campaignTrail_temp.candidate_image_url = "https://i.imgur.com/VaqFOaM.jpeg";
+campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/lDeUNoI.jpeg";
 campaignTrail_temp.candidate_last_name = "Romney";
 campaignTrail_temp.running_mate_last_name = "Ryan";
 
@@ -10204,9 +10204,9 @@ questionBanner.replaceWith(img);
 campaignTrail_temp.jet_data = [{
     "banner_data": {
         "canName": "Romney",
-        "canImage": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIF.%252f%252fpgpuqohmoQv3goxlpsxw%26r%3D0%26pid%3DApi&f=1&ipt=f1ca213b6b9407752829a2bdc025b4d6b4ac2574c7706699102558fd9d1ffe92&ipo=images",
+        "canImage": "https://i.imgur.com/VaqFOaM.jpeg",
         "runName": "Ryan",
-        "runImage": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.Uf9yk7jVcqQyV1zCDO_O9wHaJd%3Fpid%3DApi&f=1&ipt=9157ba3dd3cee5ddf5fb1a1c438659f141af3a71125ffef6752eb573e229fa41&ipo=images"
+        "runImage": "https://i.imgur.com/lDeUNoI.jpeg"
     },
     "banner_enabled": true,
     "nicknames": {
@@ -10713,5 +10713,4 @@ campaignTrail_temp.jet_data = [{
     }
 }
 ]
-
 
