@@ -210,7 +210,7 @@ jet_data = {
     "descriptionWindowTextColor": "#000000",
     "startButtonColor": "#e8e8e8",
     "bannerImageUrl": "https://preview.redd.it/how-would-a-romney-incumbency-sim-with-cyoa-go-how-would-v0-8i61delr2xjg1.jpeg?width=640&format=pjpg&auto=webp&s=33124ccfae0be9d78decb27a1029ecf969561e41",
-    "backgroundImageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.iH9thNs-uDjLIj0gPW89fQHaEK%3Fr%3D0%26pid%3DApi&f=1&ipt=7f91e9dbd2413a1811863b9cab34cafdeb8d30dad3bb2d8255647963c2681de2&ipo=images",
+    "backgroundImageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.MgwYJJFAd-hn4R28J8VfzAHaFj%3Fr%3D0%26pid%3DApi&f=1&ipt=e3149ed33eafa9d55ddc98898eba83bc6821b70625ff190059bc4f872c151e00&ipo=images",
     "gameTitle": "The 47th Percent",
     "customQuote": "",
     "quoteTextColor": "#ffffff",
@@ -268,7 +268,7 @@ theme.coloring_title     = "#c01c28";
 theme.coloring_window    = "#bfe6ff";
 theme.coloring_container = "#e01b24";
 theme.header_image = "https://preview.redd.it/how-would-a-romney-incumbency-sim-with-cyoa-go-how-would-v0-8i61delr2xjg1.jpeg?width=640&format=pjpg&auto=webp&s=33124ccfae0be9d78decb27a1029ecf969561e41";
-theme.body_background = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.iH9thNs-uDjLIj0gPW89fQHaEK%3Fr%3D0%26pid%3DApi&f=1&ipt=7f91e9dbd2413a1811863b9cab34cafdeb8d30dad3bb2d8255647963c2681de2&ipo=images";
+theme.body_background = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.MgwYJJFAd-hn4R28J8VfzAHaFj%3Fr%3D0%26pid%3DApi&f=1&ipt=e3149ed33eafa9d55ddc98898eba83bc6821b70625ff190059bc4f872c151e00&ipo=images";
 
 applyTheme(theme);
 //#endcode
