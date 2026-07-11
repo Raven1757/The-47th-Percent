@@ -60,7 +60,7 @@ campaignTrail_temp.questions_json = [
         "model": "campaign_trail.question",
         "pk": 1009,
         "fields": {
-            "description": "In the wake of your nomination, a few anti-Trump conservatives are organizing to cast votes for Evan McMullin as a protest, with an emphasis on the Western states. What are your thoughts?"
+            "description": "The Midterms are coming and you are not doing too well. Your administration is seen as ridiculously weak. You need victories to even have a chance for a midterm win. Your base is waiting patiently for the big bill. The thing you've been dangling in front of them like a treat to a dog. The Obamacare Repeal. The one thing you desperately want passed. Now is the time. Your only wonder is will the people agree?"
         }
     },
     {
@@ -230,6 +230,20 @@ campaignTrail_temp.questions_json = [
         "fields": {
             "description": "#AyersQuestions"
         }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 20821,
+        "fields": {
+            "description": "#CuomoQuestions"
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 20822,
+        "fields": {
+            "description": "#BrownQuestions"
+        }
     }
 ];
 
@@ -367,7 +381,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5024,
         "fields": {
             "question": 1009,
-            "description": "Evan who? Have you seen this guy? I'm not too worried!"
+            "description": "We have no time to second guess ourselves. The party needs us to survive the midterms and unless we do this we won't."
         }
     },
     {
@@ -375,15 +389,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5025,
         "fields": {
             "question": 1009,
-            "description": "Hillary Clinton deleted 32,000 emails under House Subpoena, along with many other crimes. When people see that I'm the only one who can defeat Crooked Hillary, they will reject this nonsense."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 5026,
-        "fields": {
-            "question": 1009,
-            "description": "We have some strong statements to make on foreign policy, on federal judges, on religious freedom and taxes, that I think are really gonna show people I'm serious."
+            "description": "Obamacare is a disaster waiting to be fulfilled but we can't rush this. It needs to be done right."
         }
     },
     {
@@ -967,6 +973,22 @@ campaignTrail_temp.answers_json = [
         "pk": 20820,
         "fields": {
             "question": 20819,
+            "description": "New answer option"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 20823,
+        "fields": {
+            "question": 20821,
+            "description": "New answer option"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 20824,
+        "fields": {
+            "question": 20822,
             "description": "New answer option"
         }
     }
@@ -6472,16 +6494,6 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 3015,
-        "fields": {
-            "answer": 5026,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "global_multiplier": 0.005
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
         "pk": 3017,
         "fields": {
             "answer": 5030,
@@ -7026,18 +7038,8 @@ campaignTrail_temp.answer_score_global_json = [
         "fields": {
             "answer": 5025,
             "candidate": 200,
-            "affected_candidate": 202,
-            "global_multiplier": -0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 3172,
-        "fields": {
-            "answer": 5026,
-            "candidate": 200,
-            "affected_candidate": 202,
-            "global_multiplier": -0.02
+            "affected_candidate": 200,
+            "global_multiplier": -0.1
         }
     },
     {
@@ -7599,6 +7601,26 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 201,
             "global_multiplier": 0.015
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 20825,
+        "fields": {
+            "answer": 5025,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "global_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 20826,
+        "fields": {
+            "answer": 5025,
+            "candidate": 200,
+            "affected_candidate": 202,
+            "global_multiplier": 1
+        }
     }
 ];
 
@@ -8155,56 +8177,6 @@ campaignTrail_temp.answer_score_issue_json = [
     },
     {
         "model": "campaign_trail.answer_score_issue",
-        "pk": 2802,
-        "fields": {
-            "answer": 5026,
-            "issue": 100,
-            "issue_score": -0.44,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2803,
-        "fields": {
-            "answer": 5026,
-            "issue": 101,
-            "issue_score": -0.2,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2804,
-        "fields": {
-            "answer": 5026,
-            "issue": 102,
-            "issue_score": -0.3,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2805,
-        "fields": {
-            "answer": 5026,
-            "issue": 103,
-            "issue_score": -0.55,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2806,
-        "fields": {
-            "answer": 5026,
-            "issue": 104,
-            "issue_score": -0.5,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
         "pk": 2807,
         "fields": {
             "answer": 5035,
@@ -8312,72 +8284,6 @@ campaignTrail_temp.answer_score_state_json = [
             "candidate": 200,
             "affected_candidate": 202,
             "state_multiplier": 0.075
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20497,
-        "fields": {
-            "answer": 5026,
-            "state": 1011,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": 0.015
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20498,
-        "fields": {
-            "answer": 5026,
-            "state": 1011,
-            "candidate": 200,
-            "affected_candidate": 202,
-            "state_multiplier": -0.03
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20499,
-        "fields": {
-            "answer": 5026,
-            "state": 1043,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": 0.02
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20500,
-        "fields": {
-            "answer": 5026,
-            "state": 1043,
-            "candidate": 200,
-            "affected_candidate": 202,
-            "state_multiplier": -0.04
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20501,
-        "fields": {
-            "answer": 5026,
-            "state": 1021,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": -0.004
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20502,
-        "fields": {
-            "answer": 5026,
-            "state": 1022,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": -0.003
         }
     },
     {
@@ -9149,7 +9055,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5024,
             "candidate": 200,
-            "answer_feedback": "Your flippant attitude is an asset at times, but many conservatives have legitimate worries about your candidacy."
+            "answer_feedback": "The vote passed by the slimmest of margins. The people are mad and it shows. Republicans lose the House but just barely managed to hold onto the senate. It's still considered a loss."
         }
     },
     {
@@ -9158,16 +9064,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5025,
             "candidate": 200,
-            "answer_feedback": "Mentioning Hillary Clinton is always a good way to keep your party unified."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 2526,
-        "fields": {
-            "answer": 5026,
-            "candidate": 200,
-            "answer_feedback": "This could help to keep traditional conservatives from defecting this fall."
+            "answer_feedback": "This was a horrific choice. The Midterms end in a landslide for the democrats. They retake the house with a significant margin and get the senate back with 55 seats. Your gamble failed and the party is out for blood. Many have left for the Libertarians in protest."
         }
     },
     {
@@ -10709,6 +10606,27 @@ campaignTrail_temp.jet_data = [{
             "variable": "Wins",
             "operation": "add",
             "amount": 1
+        },
+        "20827": {
+            "id": 20827,
+            "answer": 5025,
+            "variable": "GovernmentApproval",
+            "operation": "subtract",
+            "amount": 15
+        },
+        "20828": {
+            "id": 20828,
+            "answer": 5025,
+            "variable": "Americandivision",
+            "operation": "subtract",
+            "amount": 4
+        },
+        "20829": {
+            "id": 20829,
+            "answer": 5025,
+            "variable": "Congressionalrelations",
+            "operation": "subtract",
+            "amount": 2
         }
     }
 }
