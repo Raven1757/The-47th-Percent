@@ -71,7 +71,7 @@ campaignTrail_temp.candidate_json = [
             "color_hex": "#63040a",
             "secondary_color_hex": "#9c1b1b",
             "is_active": 1,
-            "image_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIF.BQqzU6UQZJJU6UxCjGisKQ%3Fpid%3DApi&f=1&ipt=898b3a12edc925d56bcd48be936cb04a5c110485cb94f44991a15d7eea1ee7db&ipo=images",
+            "image_url": "https://i.imgur.com/VaqFOaM.jpeg",
             "electoral_victory_message": "<h3>Congratulations! You have won the 2016 election.</h3><p>The future is still in your hands. You need to be careful not to let it slip</p>",
             "electoral_loss_message": "<h3>Sorry! You have lost the 2016 election.</h3><p>America has chosen a different path. You have lost before and don't need to go back to politics if you don't want to. Just relax, it's over.</p>",
             "no_electoral_majority_message": "<h3>Wow! You have pulled out 2016 election.</h3><p>No candidate secured a majority in the Electoral College. However, the Republicans won a majority in Congress and will elevate you to the Presidency. Time will tell how things go in that regard. Any mutual affection between you and Congress is predicted to be short-lived, but you've pulled off a number of surprises to get this far.</p>",
