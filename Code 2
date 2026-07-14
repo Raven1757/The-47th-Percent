@@ -285,7 +285,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5004,
         "fields": {
             "question": 1001,
-            "description": "You're right Ann, we need someone new. I will talk to Ryan to make sure he understands my decision. Maybe Tim Pawlenty will be a good choice?"
+            "description": "Ryan isn't cutting it. We need to vet someone close to the administration that is also popular in a swing region. Maybe Tim Pawlenty will do the job?"
         }
     },
     {
@@ -933,7 +933,7 @@ campaignTrail_temp.answers_json = [
         "pk": 20708,
         "fields": {
             "question": 1001,
-            "description": "You're right Ann, very much right. We can't replace Ryan immediately but for our next term we can make a choice for the future. Governor Chris Christie still holds significant support in New Jersey and across the nation. We should try to court him to our side."
+            "description": " We can't replace Ryan immediately but for our next term we can make a choice for the future. Governor Chris Christie still holds significant support in New Jersey and across the nation. We should try to court him to our side."
         }
     },
     {
@@ -941,7 +941,7 @@ campaignTrail_temp.answers_json = [
         "pk": 20720,
         "fields": {
             "question": 1001,
-            "description": "Maybe you are right. I think we need to weight our options and choose accordingly. For now i think Nikki Haley will be a good V.P for a second term."
+            "description": "We need to replace Ryan. My next term is important and we need someone who aligns with me and can do the things i need them to. Nikki Haley might be a new governor but i see the potential in her. "
         }
     },
     {
@@ -7239,7 +7239,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 5020,
             "candidate": 200,
             "affected_candidate": 202,
-            "global_multiplier": 0.04
+            "global_multiplier": 0.5
         }
     },
     {
@@ -7479,7 +7479,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 5060,
             "candidate": 200,
             "affected_candidate": 202,
-            "global_multiplier": 0.01
+            "global_multiplier": 0.05
         }
     },
     {
@@ -7617,6 +7617,16 @@ campaignTrail_temp.answer_score_global_json = [
         "pk": 20826,
         "fields": {
             "answer": 5025,
+            "candidate": 200,
+            "affected_candidate": 202,
+            "global_multiplier": 1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 20827,
+        "fields": {
+            "answer": 5032,
             "candidate": 200,
             "affected_candidate": 202,
             "global_multiplier": 1
@@ -8459,7 +8469,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 1022,
             "candidate": 200,
             "affected_candidate": 200,
-            "state_multiplier": 0.015
+            "state_multiplier": 0.05
         }
     },
     {
@@ -8547,18 +8557,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 1029,
             "candidate": 200,
             "affected_candidate": 200,
-            "state_multiplier": 0.015
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20712,
-        "fields": {
-            "answer": 20708,
-            "state": 1037,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": 0.01
+            "state_multiplier": 0.05
         }
     },
     {
@@ -9586,7 +9585,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 20720,
             "candidate": 200,
-            "answer_feedback": "You don't see the logic in having a second neocon in government but you trust Mitt's judgement. The public doesn't know about the affair but they grow suspicious of a rift between Mitt and Ryan."
+            "answer_feedback": "While she helps with Women the truth is that having two neocons in the same ticket isn't very appealing to most voters"
         }
     },
     {
@@ -9749,7 +9748,7 @@ cyoAdventure = function (a) {
     }
 
     // +5 GovernmentApproval
-    if ([5016, 5014, 5004, 20769, 5021].includes(ans)) {
+    if ([5016, 5014, 5004, 20708, 20769, 5021].includes(ans)) {
         GovernmentApproval += 5;
     }
 
@@ -9786,11 +9785,6 @@ cyoAdventure = function (a) {
     // +2 Americandivision
     if ([5015, 20708, 5060, 20770, 5020, 5022].includes(ans)) {
         Americandivision += 2;
-    }
-
-    // +10 GovernmentApproval
-    if (ans == 20708) {
-        GovernmentApproval += 10;
     }
 
     // +1 Congressionalrelations
@@ -10375,7 +10369,7 @@ campaignTrail_temp.jet_data = [{
             "answer": 20708,
             "variable": "GovernmentApproval",
             "operation": "add",
-            "amount": 10
+            "amount": 5
         },
         "20717": {
             "id": 20717,
@@ -10646,3 +10640,5 @@ campaignTrail_temp.jet_data = [{
     }
 }
 ]
+
+
