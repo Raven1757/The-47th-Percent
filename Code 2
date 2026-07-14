@@ -3,28 +3,28 @@ campaignTrail_temp.questions_json = [
         "model": "campaign_trail.question",
         "pk": 1000,
         "fields": {
-            "description": "You wait in the campaign office while Mitt speaks on the phone with Paul Ryan. The polls seemed underwhelming but you knew that things could easily change. Mitt knew that too, he was restless for the last days, trying to do as much as physically possible. He was exhausted but he never let up. You went over to him as he ended the call and told him to sit down and relax while the results came in. The count felt slow but he was over performing significantly. In the end he got exactly 270 because of the technicality in Colorado.The headquarters exploded with cheers but Mitt wasn't cheering. He won because of that technicality and the people who would do him in for it. You wondered what he'd do to calm their fears."
+            "description": "You and Ann were watching the news coverage of the election. The polls were a dead heat for now but you were confident. Ryan called you, he was worried but you weren't. The electoral votes started swinging your way but before you could celebrate they swung towards Obama. In the end you had won exactly 270. However it wasn't a happy moment. You knew you'd be crucified because of Colorado. You need to fix this. What can you do? What can you say?"
         }
     },
     {
         "model": "campaign_trail.question",
         "pk": 1007,
         "fields": {
-            "description": "Mitt stands on the podium of his inauguration, hands on the bible. You hold it next to him and look at both him and the crowd. They are there for him. He repeats the oath of office. He turns to the crowd,waving his hand, and goes to speak. This speech will be the defining moment for how his presidency will go. You sat down and listened as he spoke. You wondered what he'll say. He wanted to write this speech himself, he wanted it to be written entirely by the man they elected."
+            "description": "It was time. You had your hand on the bible as you were officially sworn in. Your supporters were loud but, to you, the protestors were louder. You waved and walked to the podium to give your speech. This was the moment to calm fears, to calm the hate. You need to seize this moment and clear your name. Would you?"
         }
     },
     {
         "model": "campaign_trail.question",
         "pk": 1006,
         "fields": {
-            "description": "Mitt barely has been able to form his government before problems arose. The Senate is tied and the House is barely any better. The stress on him has been insurmountable, he focuses on his most important nominees to see if he could pass some bipartisan options. You go to him as he leans on the desk, you sit down in front of him and ask him who he plans to nominate. You try to help him think  through different options for this step."
+            "description": "It's already brutal. The senate is tied and the house is barely any better. You felt the stress getting to you. Just passing the nominees was already a challenge. You needed to find a way to do this otherwise you would really be a lame duck president.  You need to make the right choices for the right jobs. Looking through the options, the prospects are bleak but not impossible. What choice will you make first?"
         }
     },
     {
         "model": "campaign_trail.question",
         "pk": 1001,
         "fields": {
-            "description": "Paul Ryan has been a less than successful V.P. While he has given some tie breaking votes it's clear that he's not cutting it. You believe that Mitt will do better to cut him off. He isn't even helping in Wisconsin that much. You tell him that he will do better to let him go and choose someone new. "
+            "description": "Paul Ryan has been a less than successful V.P. While he has given some tie breaking votes it's clear that he's not cutting it. You need a change. Ryan will only drag you down lower and lower. This isn't going to work unless you get him in line or change him."
         }
     },
     {
@@ -277,7 +277,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5003,
         "fields": {
             "question": 1001,
-            "description": "I get your concern Ann, i really do. Maybe you're right but Ryan is too important to cut off now. Maybe earlier we could've but now it's too late."
+            "description": "I need to talk to him. He's controversial and while he is important in the senate, it isn't enough."
         }
     },
     {
@@ -293,7 +293,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5013,
         "fields": {
             "question": 1006,
-            "description": "We are weak. That's the truth Ann, all we need to do is have none of our senators and representatives vote against to pass them. I'm thinking Robert Zoellick for Secretary of State and Glen Hubbard for treasury."
+            "description": "We are weak. That's the truth , all we need to do is have none of our senators and representatives vote against to pass them. I'm thinking Robert Zoellick for Secretary of State and Glen Hubbard for treasury."
         }
     },
     {
@@ -8938,7 +8938,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5003,
             "candidate": 200,
-            "answer_feedback": "You nod and leave, he's making a mistake but you don't want to push him. He's too important for you."
+            "answer_feedback": "Ryan just nods. You don't know if he'll actually change anything but it's not the time to worry about it."
         }
     },
     {
@@ -8956,7 +8956,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5013,
             "candidate": 200,
-            "answer_feedback": "While these aren't exactly controversial choices, they aren't easily accepted by Democrats. They pass nomination but Mitt doesn't  get many points"
+            "answer_feedback": "While these aren't exactly controversial choices, they aren't easily accepted by Democrats. They pass nomination but you don't  get many points"
         }
     },
     {
@@ -8965,7 +8965,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5014,
             "candidate": 200,
-            "answer_feedback": "Mitt chose him for Secretary of the Interior, an interesting choice which does get him points, a few democrats flip to vote yes and he passes easily. The rest of the nominees are slightly mre difficult but pass anyway"
+            "answer_feedback": "You chose him for Secretary of the Interior, an interesting choice which does get you some points, a few democrats flip to vote yes and he passes easily. The rest of the nominees are slightly more difficult but pass anyway"
         }
     },
     {
@@ -8974,7 +8974,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5015,
             "candidate": 200,
-            "answer_feedback": "You feel like Mitt is thinking wrong and you tell him but he reassures you. The Bush name is tainted and Jeb barely passes due to Ryan's tie breaking vote. People feel like Mitt is just a continuation of Bush politics."
+            "answer_feedback": " The Bush name is tainted and Jeb barely passes due to Ryan's tie breaking vote. People are disappointed at this choice. Not a good start."
         }
     },
     {
@@ -8983,7 +8983,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5016,
             "candidate": 200,
-            "answer_feedback": "Mitt's Speech is very well seen. You read through articles about it and how people all the way from California to the Midwest seem to have accepted his step towards unity"
+            "answer_feedback": "The speech is very well seen. You read through articles about it and how people all the way from California to the Midwest seem to have accepted his step towards unity"
         }
     },
     {
@@ -8992,7 +8992,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5017,
             "candidate": 200,
-            "answer_feedback": "Mitt's words are seen in a divisive light. He barely won on a technicality and attacking Obama is not what people wanted. His speech is not well reported by medias"
+            "answer_feedback": "The speech is seen as divisive. People barely think you are legitimate and this doesn't help at all."
         }
     },
     {
@@ -9734,17 +9734,22 @@ cyoAdventure = function (a) {
 
     // [JETS_CYOA_VARIABLE_EFFECTS_START]
     // +2 GovernmentApproval
-    if ([5002, 5022].includes(ans)) {
+    if ([5002, 5018, 5022].includes(ans)) {
         GovernmentApproval += 2;
     }
 
     // -5 GovernmentApproval
-    if ([5001, 5017, 5015, 5003, 20720, 20770, 5031].includes(ans)) {
+    if ([5001, 5015, 5003, 20720, 20770, 5031].includes(ans)) {
         GovernmentApproval -= 5;
     }
 
+    // +3 GovernmentApproval
+    if ([5000, 5020].includes(ans)) {
+        GovernmentApproval += 3;
+    }
+
     // +5 GovernmentApproval
-    if ([5000, 5016, 5018, 5014, 5004, 20769, 5021].includes(ans)) {
+    if ([5016, 5014, 5004, 20769, 5021].includes(ans)) {
         GovernmentApproval += 5;
     }
 
@@ -9761,6 +9766,11 @@ cyoAdventure = function (a) {
     // +1 Americandivision
     if ([5001, 5017, 5014, 5004, 20720].includes(ans)) {
         Americandivision += 1;
+    }
+
+    // -3 GovernmentApproval
+    if ([5017, 5060].includes(ans)) {
+        GovernmentApproval -= 3;
     }
 
     // +1 GovernmentApproval
@@ -9788,11 +9798,6 @@ cyoAdventure = function (a) {
         Congressionalrelations += 1;
     }
 
-    // -3 GovernmentApproval
-    if (ans == 5060) {
-        GovernmentApproval -= 3;
-    }
-
     // -1 Wins
     if (ans == 5060) {
         Wins -= 1;
@@ -9801,11 +9806,6 @@ cyoAdventure = function (a) {
     // +5 Americandivision
     if (ans == 5021) {
         Americandivision += 5;
-    }
-
-    // +3 GovernmentApproval
-    if (ans == 5020) {
-        GovernmentApproval += 3;
     }
 
     // -2 GovernmentApproval
@@ -9821,6 +9821,21 @@ cyoAdventure = function (a) {
     // +1 RussianAgression
     if (ans == 5032) {
         RussianAgression += 1;
+    }
+
+    // -15 GovernmentApproval
+    if (ans == 5025) {
+        GovernmentApproval -= 15;
+    }
+
+    // -4 Americandivision
+    if (ans == 5025) {
+        Americandivision -= 4;
+    }
+
+    // -2 Congressionalrelations
+    if (ans == 5025) {
+        Congressionalrelations -= 2;
     }
     // [JETS_CYOA_VARIABLE_EFFECTS_END]
     if(ans == 5004){
@@ -10213,7 +10228,7 @@ campaignTrail_temp.jet_data = [{
             "answer": 5000,
             "variable": "GovernmentApproval",
             "operation": "add",
-            "amount": 5
+            "amount": 3
         },
         "20680": {
             "id": 20680,
@@ -10248,7 +10263,7 @@ campaignTrail_temp.jet_data = [{
             "answer": 5017,
             "variable": "GovernmentApproval",
             "operation": "subtract",
-            "amount": 5
+            "amount": 3
         },
         "20686": {
             "id": 20686,
@@ -10262,7 +10277,7 @@ campaignTrail_temp.jet_data = [{
             "answer": 5018,
             "variable": "GovernmentApproval",
             "operation": "add",
-            "amount": 5
+            "amount": 2
         },
         "20691": {
             "id": 20691,
@@ -10631,4 +10646,3 @@ campaignTrail_temp.jet_data = [{
     }
 }
 ]
-
