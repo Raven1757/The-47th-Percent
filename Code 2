@@ -10,14 +10,14 @@ campaignTrail_temp.questions_json = [
         "model": "campaign_trail.question",
         "pk": 1007,
         "fields": {
-            "description": "It was time. You had your hand on the bible as you were officially sworn in. Your supporters were loud but, to you, the protestors were louder. You waved and walked to the podium to give your speech. This was the moment to calm fears, to calm the hate. You need to seize this moment and clear your name. Would you?"
+            "description": "It was time. You had your hand on the bible as you were officially sworn in. Your supporters were loud but, to you, the protestors were louder. You waved and walked to the podium to give your speech. This was the moment to calm fears, to calm the hate. You need to seize this moment and clear your name. This is the time for them to see you for how you really are. Their savior. The only question is if you manage to do so."
         }
     },
     {
         "model": "campaign_trail.question",
         "pk": 1006,
         "fields": {
-            "description": "It's already brutal. The senate is tied and the house is barely any better. You felt the stress getting to you. Just passing the nominees was already a challenge. You needed to find a way to do this otherwise you would really be a lame duck president.  You need to make the right choices for the right jobs. Looking through the options, the prospects are bleak but not impossible. What choice will you make first?"
+            "description": "You looked onto the senate chambers. No one held the majority. You were supposed to be their savior but they weren't seeing it. They didn't believe in you. You'll need to make them believe. The nominees will show what you are planning for the future. The people are losing their patience, you feel the walls closing in every day you wait."
         }
     },
     {
@@ -333,7 +333,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5018,
         "fields": {
             "question": 1007,
-            "description": "He have seen what division and partisanship leads to. We need to be a nation open to negotiation and compromise. Compromise has a bad light but the truth is that it's the most basic function of a democracy. We need to show the world that despite challenges our democracy is the only system that truly works."
+            "description": "We have seen what division and partisanship leads to. We need to be a nation open to negotiation and compromise. Compromise has a bad light but the truth is that it's the most basic function of a democracy. We need to show the world that despite challenges our democracy is the only system that truly works."
         }
     },
     {
@@ -8955,7 +8955,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5013,
             "candidate": 200,
-            "answer_feedback": "While these aren't exactly controversial choices, they aren't easily accepted by Democrats. They pass nomination but you don't  get many points"
+            "answer_feedback": "The people aren't mad but aren't very excited either. You're disappointed at the prospect of them never being happy. "
         }
     },
     {
@@ -8982,7 +8982,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5016,
             "candidate": 200,
-            "answer_feedback": "The speech is very well seen. You read through articles about it and how people all the way from California to the Midwest seem to have accepted his step towards unity"
+            "answer_feedback": "You watch the news. The opinions. The speech is well received but you know this is only the beginning. You need to work harder. You need to make sure they believe you."
         }
     },
     {
@@ -8991,7 +8991,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5017,
             "candidate": 200,
-            "answer_feedback": "The speech is seen as divisive. People barely think you are legitimate and this doesn't help at all."
+            "answer_feedback": "They hate it. You feel every insult, every protest, right in your heart. They claim you as illegitimate. They don't know the truth. They will soon."
         }
     },
     {
@@ -9000,7 +9000,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5018,
             "candidate": 200,
-            "answer_feedback": "You watch the news and hear mixed opinions. Some on the far right hate it, others more towards the center support it. The media calls it an attempt at unity which seems to work."
+            "answer_feedback": "The media seems to be receptive to the speech. You felt a small weight off your shoulders. Some on both sides hate it and call it selling out. They can't possibly imagine what you have to do to survive the next four years."
         }
     },
     {
@@ -9009,7 +9009,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5019,
             "candidate": 200,
-            "answer_feedback": "The media calls this a \"call to action\" speech which isn't necessarily a bad thing. Most people seem to be of agreement that it's a good thing."
+            "answer_feedback": "A \"call to action\". That's what the media calls it. You don't hate it. The people see this as a speech of accountability and strength."
         }
     },
     {
@@ -10640,5 +10640,4 @@ campaignTrail_temp.jet_data = [{
     }
 }
 ]
-
 
