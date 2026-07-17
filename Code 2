@@ -228,7 +228,7 @@ campaignTrail_temp.questions_json = [
         "model": "campaign_trail.question",
         "pk": 20819,
         "fields": {
-            "description": "#AyersQuestions"
+            "description": "#AyersQuestions Bill Ayers"
         }
     },
     {
@@ -7641,6 +7641,26 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 200,
             "global_multiplier": 1
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 20836,
+        "fields": {
+            "answer": 20820,
+            "candidate": 200,
+            "affected_candidate": 202,
+            "global_multiplier": 1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 20837,
+        "fields": {
+            "answer": 20820,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "global_multiplier": 1
+        }
     }
 ];
 
@@ -8943,6 +8963,94 @@ campaignTrail_temp.answer_score_state_json = [
             "affected_candidate": 200,
             "state_multiplier": 0.1
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 20834,
+        "fields": {
+            "answer": 20820,
+            "state": 1047,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "state_multiplier": -5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 20835,
+        "fields": {
+            "answer": 20820,
+            "state": 1047,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 20838,
+        "fields": {
+            "answer": 20820,
+            "state": 1004,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 20839,
+        "fields": {
+            "answer": 20820,
+            "state": 1012,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 20840,
+        "fields": {
+            "answer": 20820,
+            "state": 1022,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 20841,
+        "fields": {
+            "answer": 20820,
+            "state": 1029,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 20842,
+        "fields": {
+            "answer": 20820,
+            "state": 1031,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 20843,
+        "fields": {
+            "answer": 20820,
+            "state": 1045,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 1
+        }
     }
 ];
 
@@ -9673,6 +9781,486 @@ campaignTrail_temp.candidate_image_url = "https://i.imgur.com/VaqFOaM.jpeg";
 campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/lDeUNoI.jpeg";
 campaignTrail_temp.candidate_last_name = "Romney";
 campaignTrail_temp.running_mate_last_name = "Ryan";
+
+// [JETS_ENDINGS_START]
+campaignTrail_temp.multiple_endings = true;
+
+const _tctEndingDefs = [
+    {
+        "id": 1784286751569,
+        "variable": 0,
+        "operator": ">=",
+        "amount": 535,
+        "endingTitle": "Emptiness",
+        "endingSubtitle": "",
+        "endingText": "You looked out onto an empty lawn. An empty nation. This wasn't the point. It never was",
+        "endingImage": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.Jy3d0zwAQHA-Whd9E2yEiAHaGL%3Fpid%3DApi&f=1&ipt=c93a44f2ebedbbbe02634b7c21fa124d5f685c8069ce1c2d9d692d95b2f22408&ipo=images",
+        "endingHideImage": false,
+        "endingSlidesJson": "[\n  {\n    \"variable\": 0,\n    \"operator\": \">=\",\n    \"amount\": 535,\n    \"outcomeCondition\": \"ignore\",\n    \"title\": \"Emptiness\",\n    \"subtitle\": \"\",\n    \"content\": \"You looked out onto an empty lawn. An empty nation. This wasn't the point. It never was\",\n    \"image\": \"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.Jy3d0zwAQHA-Whd9E2yEiAHaGL%3Fpid%3DApi&f=1&ipt=c93a44f2ebedbbbe02634b7c21fa124d5f685c8069ce1c2d9d692d95b2f22408&ipo=images\",\n    \"slideGroup\": \"main\",\n    \"variableConditions\": [],\n    \"variableConditionOperator\": \"AND\",\n    \"answerConditionType\": \"has\",\n    \"answerConditionAnswer\": \"20820\",\n    \"answerConditionAnswers\": \"20820\",\n    \"audio\": {\n      \"title\": \"...\",\n      \"artist\": \"-\",\n      \"cover\": \"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.g_gXbXKurCr0AfbCMxx-aQHaE7%3Fr%3D0%26pid%3DApi&f=1&ipt=66b0d12c5f40c1c39a0b911ee1f77e4c076dee74b4c2514686cae23ba3497004&ipo=images\",\n      \"url\": \"https://audio.jukehost.co.uk/019f6f5d-0a3f-7356-8df2-2f28260eeb5d\"\n    }\n  }\n]",
+        "audioTitle": "...",
+        "audioArtist": "-",
+        "audioCover": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.g_gXbXKurCr0AfbCMxx-aQHaE7%3Fr%3D0%26pid%3DApi&f=1&ipt=66b0d12c5f40c1c39a0b911ee1f77e4c076dee74b4c2514686cae23ba3497004&ipo=images",
+        "audioUrl": "https://audio.jukehost.co.uk/019f6f5d-0a3f-7356-8df2-2f28260eeb5d",
+        "endingAccentColor": "#11299e",
+        "endingBackgroundColor": "#ffffff",
+        "endingTextColor": "#000000",
+        "variableConditions": [],
+        "variableConditionOperator": "AND",
+        "outcomeCondition": "ignore",
+        "answerConditionType": "has",
+        "answerConditionAnswer": "20820",
+        "answerConditionAnswers": "20820"
+    }
+];
+
+const _tctOpMap = {
+    ">": (a, b) => a > b,
+    ">=": (a, b) => a >= b,
+    "==": (a, b) => a == b,
+    "<=": (a, b) => a <= b,
+    "<": (a, b) => a < b,
+    "!=": (a, b) => a != b
+};
+
+const _tctGetEndingImageEl = () => {
+    const imageContainer = document.querySelector(".person_image");
+    if (!imageContainer) return null;
+    if (imageContainer.tagName && imageContainer.tagName.toLowerCase() === "img") {
+        return imageContainer;
+    }
+    return imageContainer.querySelector("img");
+};
+
+const _tctReadVariable = (name) => {
+    if (!name || typeof name !== "string") return undefined;
+    if (!/^[A-Za-z_$][A-Za-z0-9_$]*$/.test(name)) return undefined;
+    try {
+        return eval("(typeof " + name + " !== 'undefined') ? " + name + " : undefined;");
+    } catch (_err) {
+        return undefined;
+    }
+};
+
+const _tctParseConditionValue = (value) => {
+    if (value == null || value === "") return "";
+    const n = Number(value);
+    if (!Number.isNaN(n)) return n;
+    return value;
+};
+
+const _tctCheckOutcomeCondition = (entry, finalOutcome) => {
+    const cond = String(entry?.outcomeCondition || "ignore");
+    if (cond === "ignore") return true;
+    return cond === String(finalOutcome || "");
+};
+
+const _tctMatchesPrimaryCondition = (entry, quickstats, finalOutcome) => {
+    if (!_tctCheckOutcomeCondition(entry, finalOutcome)) return false;
+
+    const cond = String(entry?.outcomeCondition || "ignore");
+    if (cond !== "ignore") {
+        // explicit outcome match bypasses stat threshold checks
+        return true;
+    }
+
+    const opFn = _tctOpMap[entry?.operator] || _tctOpMap[">"];
+    const left = quickstats?.[Number(entry?.variable) || 0];
+    const right = Number(entry?.amount) || 0;
+    return opFn(left, right);
+};
+
+const _tctCheckExtraConditions = (entry, playerAnswers) => {
+    // check variable conditions
+    if (Array.isArray(entry.variableConditions) && entry.variableConditions.length > 0) {
+        const operator = entry.variableConditionOperator || "AND";
+        const results = entry.variableConditions.map((cond) => {
+            const left = _tctReadVariable(cond.variable);
+            const right = _tctParseConditionValue(cond.value);
+            const opFn = _tctOpMap[cond.comparator] || _tctOpMap["=="];
+            return opFn(left, right);
+        });
+
+        if (operator === "AND") {
+            if (!results.every((r) => r)) return false;
+        } else if (operator === "OR") {
+            if (!results.some((r) => r)) return false;
+        }
+    }
+
+    const answerType = entry.answerConditionType || "ignore";
+    if (answerType !== "ignore") {
+        const rawAnswers = String(entry.answerConditionAnswers || entry.answerConditionAnswer || "").trim();
+        const answerIds = rawAnswers
+            .split(/[s,]+/)
+            .filter((v) => v.length > 0)
+            .map((v) => Number(v))
+            .filter((v) => Number.isFinite(v));
+
+        if (answerIds.length === 0) return false;
+
+        const hasAny = Array.isArray(playerAnswers) && answerIds.some((id) => playerAnswers.includes(id));
+        if (answerType === "has" && !hasAny) return false;
+        if (answerType === "not_has" && hasAny) return false;
+    }
+
+    return true;
+};
+
+const playEndingSong = (title, artist, cover, url) => {
+    if (!url) return;
+    const PlaylistCtor = (typeof window !== "undefined" && window.Playlist)
+        || (typeof Playlist !== "undefined" ? Playlist : null);
+    const SongCtor = (typeof window !== "undefined" && window.Song)
+        || (typeof Song !== "undefined" ? Song : null);
+    const changePlaylistFn = (typeof window !== "undefined" && window.changePlaylist)
+        || (typeof changePlaylist === "function" ? changePlaylist : null);
+
+    if (PlaylistCtor && SongCtor && typeof changePlaylistFn === "function") {
+        try {
+            const playlist = new PlaylistCtor();
+            const song = new SongCtor(title || "", artist || "", cover || "", url);
+            if (typeof playlist.addSong === "function") {
+                playlist.addSong(song);
+                changePlaylistFn(playlist);
+                return;
+            }
+        } catch (err) {
+            console.warn("Failed to route ending song:", err);
+        }
+    }
+
+    // fallback for custom players: drive the shared audio element directly
+    const audioEl = document.getElementById("audio") || document.querySelector("audio#audio, audio");
+    if (!audioEl) return;
+
+    if (audioEl.src !== url) {
+        audioEl.src = url;
+    }
+
+    const player = document.getElementById("player");
+    if (player) {
+        const titleEl = player.querySelector("#title");
+        const artistEl = player.querySelector("#artist");
+        const coverEl = player.querySelector("#cover");
+        if (titleEl) titleEl.textContent = title || "";
+        if (artistEl) artistEl.textContent = artist || "";
+        if (coverEl && cover) coverEl.src = cover;
+    }
+
+    const playPromise = audioEl.play?.();
+    if (playPromise && typeof playPromise.catch === "function") {
+        playPromise.catch(() => {});
+    }
+};
+
+const styleEndingDescription = () => {
+    const desc = document.querySelector("#final_results_description");
+    if (!desc) return;
+
+    const e = campaignTrail_temp;
+    const theme = e._endingTheme || {};
+    const bg = theme.backgroundColor || "#ffffff";
+    const fg = theme.textColor || "#000000";
+    const border = theme.accentColor || "#11299e";
+
+    Object.assign(desc.style, {
+        textAlign: "left",
+        width: "72%",
+        maxHeight: "20em",
+        minHeight: "8em",
+        height: "auto",
+        display: "block",
+        margin: "0 auto",
+        overflowY: "auto",
+        overflowX: "hidden",
+        whiteSpace: "normal",
+        overflowWrap: "anywhere",
+        wordBreak: "break-word",
+        transform: "translateZ(0)",
+        backgroundColor: bg,
+        color: fg,
+        border: "2px solid " + border,
+        borderRadius: "4px",
+        padding: "10px"
+    });
+
+    desc.dataset.endingStyled = "1";
+};
+
+const applyEndingImage = (slide) => {
+    const imageEl = _tctGetEndingImageEl();
+    if (!imageEl || !slide) return;
+
+    if (slide.image === false) {
+        imageEl.style.display = "none";
+        imageEl.removeAttribute("src");
+        return;
+    }
+
+    if (!imageEl.dataset.endingStyled) {
+        const e = campaignTrail_temp;
+        const theme = e._endingTheme || {};
+        const border = theme.accentColor || "#11299e";
+        Object.assign(imageEl.style, {
+            border: "3px solid " + border,
+            display: "block",
+            width: "210px",
+            height: "250px",
+            objectFit: "cover"
+        });
+        imageEl.dataset.endingStyled = "1";
+    } else {
+        imageEl.style.display = "block";
+        const e = campaignTrail_temp;
+        const theme = e._endingTheme || {};
+        imageEl.style.border = "3px solid " + (theme.accentColor || "#11299e");
+    }
+
+    if (slide.image && imageEl.getAttribute("src") !== slide.image) {
+        imageEl.src = slide.image;
+    }
+};
+
+const applyEndingButtons = () => {
+    const e = campaignTrail_temp;
+    const theme = e._endingTheme || {};
+    const imageEl = _tctGetEndingImageEl();
+    if (!imageEl || !imageEl.parentNode) return;
+
+    let btnContainer = document.getElementById("ending_slide_buttons");
+    if (!btnContainer) {
+        btnContainer = document.createElement("div");
+        btnContainer.id = "ending_slide_buttons";
+        Object.assign(btnContainer.style, {
+            display: "flex",
+            gap: "20px",
+            left: "13px",
+            top: "280px",
+            position: "absolute"
+        });
+        imageEl.parentNode.insertBefore(btnContainer, imageEl.nextSibling);
+    }
+
+    let buttonsHtml = "";
+    if (e.page > 0) {
+        buttonsHtml += '<button onclick="endingConstructor(-1)">Back</button>';
+    }
+    if (e.page < e.endingSlides.length - 1) {
+        buttonsHtml += '<button onclick="endingConstructor(1)">Next</button>';
+    }
+
+    if (btnContainer.innerHTML !== buttonsHtml) {
+        btnContainer.innerHTML = buttonsHtml;
+    }
+
+    const buttonBg = theme.accentColor || "#11299e";
+    const buttonText = "#ffffff";
+    btnContainer.querySelectorAll("button").forEach((btn) => {
+        Object.assign(btn.style, {
+            backgroundColor: buttonBg,
+            border: "1px solid " + buttonBg,
+            color: buttonText,
+            padding: "4px 10px",
+            cursor: "pointer"
+        });
+    });
+};
+
+const syncEndingSlideDom = () => {
+    const e = campaignTrail_temp;
+    const slide = e.endingSlides?.[e.page];
+    if (!slide) return;
+
+    styleEndingDescription();
+    applyEndingImage(slide);
+    applyEndingButtons();
+
+    if (slide.audio && slide.audio.url) {
+        const key = [slide.audio.title || "", slide.audio.artist || "", slide.audio.url || ""].join("|");
+        const globalKey = (typeof window !== "undefined" && window.__tctLastEndingAudioKey) || "";
+
+        const currentAudioEl = document.getElementById("audio") || document.querySelector("audio#audio, audio");
+        const currentSrc = currentAudioEl ? (currentAudioEl.currentSrc || currentAudioEl.src || "") : "";
+        const sameSrcLoaded = !!currentSrc && currentSrc.includes(slide.audio.url);
+
+        if (e._endingAudioPlayedKey !== key && globalKey !== key && !sameSrcLoaded) {
+            playEndingSong(slide.audio.title, slide.audio.artist, slide.audio.cover, slide.audio.url);
+        }
+
+        e._endingAudioPlayedKey = key;
+        if (typeof window !== "undefined") {
+            window.__tctLastEndingAudioKey = key;
+        }
+    }
+};
+
+const syncEndingSlideDomDeferred = () => {
+    requestAnimationFrame(() => {
+        syncEndingSlideDom();
+    });
+};
+
+const _tctBuildSlides = (entry, quickstats, finalOutcome) => {
+    if (entry && entry.endingSlidesJson) {
+        try {
+            const parsed = JSON.parse(entry.endingSlidesJson);
+            if (Array.isArray(parsed) && parsed.length > 0) {
+                const normalizeSlide = (slide) => ({
+                    variable: Number(slide?.variable ?? 0),
+                    operator: slide?.operator || ">",
+                    amount: Number(slide?.amount ?? 0),
+                    outcomeCondition: slide?.outcomeCondition || "ignore",
+                    title: slide?.title || "",
+                    subtitle: slide?.subtitle || "",
+                    content: slide?.content || "",
+                    image: slide?.image,
+                    audio: slide?.audio && slide.audio.url ? {
+                        title: slide.audio.title || "",
+                        artist: slide.audio.artist || "",
+                        cover: slide.audio.cover || "",
+                        url: slide.audio.url || ""
+                    } : undefined
+                });
+
+                const hasGroups = parsed.some((slide) => slide && slide.slideGroup);
+                if (!hasGroups) {
+                    return parsed.map((slide) => normalizeSlide(slide));
+                }
+
+                const groupMap = new Map();
+                const groupOrder = [];
+                for (const slide of parsed) {
+                    const groupKey = slide?.slideGroup || "main";
+                    if (!groupMap.has(groupKey)) {
+                        groupMap.set(groupKey, []);
+                        groupOrder.push(groupKey);
+                    }
+                    groupMap.get(groupKey).push(slide);
+                }
+
+                const playerAnswers = campaignTrail_temp?.player_answers || [];
+                const selectedSlides = [];
+
+                for (const groupKey of groupOrder) {
+                    const groupSlides = groupMap.get(groupKey) || [];
+                    let selected = groupSlides.find((slide) => {
+                        return _tctMatchesPrimaryCondition(slide, quickstats, finalOutcome)
+                            && _tctCheckExtraConditions(slide, playerAnswers);
+                    });
+                    if (!selected) selected = groupSlides[0];
+                    if (selected) selectedSlides.push(normalizeSlide(selected));
+                }
+
+                return selectedSlides;
+            }
+        } catch (err) {
+            console.warn("Invalid endingSlidesJson for ending", entry?.id, err);
+        }
+    }
+
+    const fallbackSlide = {
+        title: entry?.endingTitle || "",
+        subtitle: entry?.endingSubtitle || "",
+        content: entry?.endingText || "",
+        image: entry?.endingHideImage ? false : (entry?.endingImage || undefined)
+    };
+
+    if (entry?.audioUrl) {
+        fallbackSlide.audio = {
+            title: entry.audioTitle || "",
+            artist: entry.audioArtist || "",
+            cover: entry.audioCover || "",
+            url: entry.audioUrl || ""
+        };
+    }
+
+    return [fallbackSlide];
+};
+
+const _tctConstructSlide = (direction = 1) => {
+    const e = campaignTrail_temp;
+    if (!Array.isArray(e.endingSlides) || e.endingSlides.length === 0) return "";
+
+    e.page += direction;
+    if (e.page < 0) e.page = 0;
+    if (e.page >= e.endingSlides.length) e.page = e.endingSlides.length - 1;
+
+    const currentSlide = e.endingSlides[e.page];
+    if (!currentSlide) return "";
+
+    let html = "";
+    if (currentSlide.title) html += "<h3>" + currentSlide.title + "</h3>";
+    if (currentSlide.subtitle) html += "<h4>" + currentSlide.subtitle + "</h4>";
+    html += (currentSlide.content || "") + "<br><br>";
+    return html;
+};
+
+endingConstructor = (direction = 1) => {
+    const desc = document.querySelector("#final_results_description");
+    if (!desc) return;
+    desc.innerHTML = _tctConstructSlide(direction);
+    syncEndingSlideDomDeferred();
+};
+
+endingPicker = (out, totv, aa, quickstats) => {
+    const playerAnswers = campaignTrail_temp?.player_answers || [];
+    for (const entry of _tctEndingDefs) {
+        let isMatch = false;
+
+        try {
+            const parsed = entry.endingSlidesJson ? JSON.parse(entry.endingSlidesJson) : [];
+            if (Array.isArray(parsed) && parsed.length > 0) {
+                const groupMap = new Map();
+                for (const slide of parsed) {
+                    const groupKey = slide?.slideGroup || "main";
+                    if (!groupMap.has(groupKey)) {
+                        groupMap.set(groupKey, []);
+                    }
+                    groupMap.get(groupKey).push(slide);
+                }
+
+                const mainSlides = groupMap.get("main") || parsed;
+                let validMain = mainSlides.find((slide) => {
+                    return _tctMatchesPrimaryCondition(slide, quickstats, out)
+                        && _tctCheckExtraConditions(slide, playerAnswers);
+                });
+
+                if (validMain) isMatch = true;
+            } else {
+                // legacy format without json slides
+                if (_tctMatchesPrimaryCondition(entry, quickstats, out) && _tctCheckExtraConditions(entry, playerAnswers)) {
+                    isMatch = true;
+                }
+            }
+        } catch(e) {
+            // legacy format without json slides
+            if (_tctMatchesPrimaryCondition(entry, quickstats, out) && _tctCheckExtraConditions(entry, playerAnswers)) {
+                isMatch = true;
+            }
+        }
+
+        if (isMatch) {
+            const e = campaignTrail_temp;
+            e.multiple_endings = true;
+            e.page = -1;
+            e._endingTheme = {
+                accentColor: entry?.endingAccentColor || "#11299e",
+                backgroundColor: entry?.endingBackgroundColor || "#ffffff",
+                textColor: entry?.endingTextColor || "#000000"
+            };
+            e.endingSlides = _tctBuildSlides(entry, quickstats, out);
+            e._endingAudioPlayedKey = (typeof window !== "undefined" && window.__tctLastEndingAudioKey) || "";
+
+            const html = _tctConstructSlide(1);
+            syncEndingSlideDomDeferred();
+            return html;
+        }
+    }
+
+    return "";
+};
+
+// [JETS_ENDINGS_END]
 
 //#startcode
 campaignTrail_temp.cyoa = true;
@@ -10742,7 +11330,37 @@ campaignTrail_temp.jet_data = [{
             "operation": "subtract",
             "amount": 2
         }
+    },
+    "endings_enabled": true,
+    "ending_data": {
+        "1784286751569": {
+            "id": 1784286751569,
+            "variable": 0,
+            "operator": ">=",
+            "amount": 535,
+            "endingTitle": "Emptiness",
+            "endingSubtitle": "",
+            "endingImage": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.Jy3d0zwAQHA-Whd9E2yEiAHaGL%3Fpid%3DApi&f=1&ipt=c93a44f2ebedbbbe02634b7c21fa124d5f685c8069ce1c2d9d692d95b2f22408&ipo=images",
+            "endingText": "You looked out onto an empty lawn. An empty nation. This wasn't the point. It never was",
+            "endingSlidesJson": "[\n  {\n    \"variable\": 0,\n    \"operator\": \">=\",\n    \"amount\": 535,\n    \"outcomeCondition\": \"ignore\",\n    \"title\": \"Emptiness\",\n    \"subtitle\": \"\",\n    \"content\": \"You looked out onto an empty lawn. An empty nation. This wasn't the point. It never was\",\n    \"image\": \"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.Jy3d0zwAQHA-Whd9E2yEiAHaGL%3Fpid%3DApi&f=1&ipt=c93a44f2ebedbbbe02634b7c21fa124d5f685c8069ce1c2d9d692d95b2f22408&ipo=images\",\n    \"slideGroup\": \"main\",\n    \"variableConditions\": [],\n    \"variableConditionOperator\": \"AND\",\n    \"answerConditionType\": \"has\",\n    \"answerConditionAnswer\": \"20820\",\n    \"answerConditionAnswers\": \"20820\",\n    \"audio\": {\n      \"title\": \"...\",\n      \"artist\": \"-\",\n      \"cover\": \"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.g_gXbXKurCr0AfbCMxx-aQHaE7%3Fr%3D0%26pid%3DApi&f=1&ipt=66b0d12c5f40c1c39a0b911ee1f77e4c076dee74b4c2514686cae23ba3497004&ipo=images\",\n      \"url\": \"https://audio.jukehost.co.uk/019f6f5d-0a3f-7356-8df2-2f28260eeb5d\"\n    }\n  }\n]",
+            "audioTitle": "...",
+            "audioArtist": "-",
+            "audioCover": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.g_gXbXKurCr0AfbCMxx-aQHaE7%3Fr%3D0%26pid%3DApi&f=1&ipt=66b0d12c5f40c1c39a0b911ee1f77e4c076dee74b4c2514686cae23ba3497004&ipo=images",
+            "audioUrl": "https://audio.jukehost.co.uk/019f6f5d-0a3f-7356-8df2-2f28260eeb5d",
+            "endingAccentColor": "#11299e",
+            "endingBackgroundColor": "#ffffff",
+            "endingTextColor": "#000000",
+            "variableConditionOperator": "AND",
+            "outcomeCondition": "ignore",
+            "answerConditionType": "has",
+            "answerConditionAnswer": "20820",
+            "answerConditionAnswers": "20820",
+            "variableConditionName": "",
+            "variableConditionValue": "",
+            "endingMode": "simple"
+        }
     }
 }
 ]
+
 
