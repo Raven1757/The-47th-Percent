@@ -1829,5 +1829,10 @@ tooltipList = [
     {searchString: "Democrats", explanationText: "<img src=https://i.imgur.com/IchSCgH.jpeg> Ennemies of the state"},
     {searchString: "Colorado", explanationText: "<img src=> The unfaithful chose you"},
     {searchString: "Obamacare", explanationText: "<img src=> A cheap knockoff"},
+    {searchString: "Romney", explanationText: "<img src=> You look at the mirror and wonder what had happened"},
+    {searchString: "Ryan", explanationText: "<img src=> Needed nuiscence"},
+    {searchString: "Pawlenty", explanationText: "<img src=> A ray of hope for a red midwest"},
+    {searchString: "Christie", explanationText: "<img src=> Pufferfish"},
+    {searchString: "Haley", explanationText: "<img src=> New senator,may be useful"},  
     {searchString: "Sanders", explanationText: "<img src=> A 'communist'"},
 ];
