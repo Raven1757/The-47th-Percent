@@ -233,6 +233,13 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
+        "pk": 20850,
+        "fields": {
+            "description": "You felt your chest tighten. How could the Democrats stoop this low. This wasn't even stopping low it was just suicide. Political suicide. Ayers was and still is a communist. The literal thing America fought against for decades and now they are embracing it? You didn't even think it was real. You told your aides to set up the cameras, a national adress was needed."
+        }
+    },
+    {
+        "model": "campaign_trail.question",
         "pk": 20821,
         "fields": {
             "description": "#CuomoQuestions"
@@ -990,6 +997,14 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 20822,
             "description": "New answer option"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 20851,
+        "fields": {
+            "question": 20850,
+            "description": "My fellow Americans...i can't even believe i have to say this. Under no circumstances should you allow Ayers to weave himself into your mind. He is a crooked, mad man who wishes the destruction of America. You need to make sure that he doesn't make you doubt. His words are lies."
         }
     }
 ];
@@ -7661,6 +7676,56 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 203,
             "global_multiplier": 2
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 20849,
+        "fields": {
+            "answer": 20820,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "global_multiplier": -0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 20853,
+        "fields": {
+            "answer": 20851,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "global_multiplier": 0.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 20854,
+        "fields": {
+            "answer": 20851,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "global_multiplier": -0.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 20855,
+        "fields": {
+            "answer": 20851,
+            "candidate": 200,
+            "affected_candidate": 202,
+            "global_multiplier": 0.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 20856,
+        "fields": {
+            "answer": 20851,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "global_multiplier": 1
+        }
     }
 ];
 
@@ -8944,28 +9009,6 @@ campaignTrail_temp.answer_score_state_json = [
     },
     {
         "model": "campaign_trail.answer_score_state",
-        "pk": 20832,
-        "fields": {
-            "answer": 20820,
-            "state": 1019,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": 0.1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
-        "pk": 20833,
-        "fields": {
-            "answer": 20820,
-            "state": 1044,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "state_multiplier": 0.1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_state",
         "pk": 20834,
         "fields": {
             "answer": 20820,
@@ -9105,6 +9148,83 @@ campaignTrail_temp.answer_score_state_json = [
             "candidate": 200,
             "affected_candidate": 201,
             "state_multiplier": -0.025
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 20857,
+        "fields": {
+            "answer": 20851,
+            "state": 1004,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 20858,
+        "fields": {
+            "answer": 20851,
+            "state": 1020,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 20859,
+        "fields": {
+            "answer": 20851,
+            "state": 1022,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 20860,
+        "fields": {
+            "answer": 20851,
+            "state": 1031,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 20861,
+        "fields": {
+            "answer": 20851,
+            "state": 1038,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 20862,
+        "fields": {
+            "answer": 20851,
+            "state": 1044,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 20863,
+        "fields": {
+            "answer": 20851,
+            "state": 1047,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 1
         }
     }
 ];
@@ -9828,6 +9948,15 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 20820,
             "candidate": 200,
             "answer_feedback": "..."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 20852,
+        "fields": {
+            "answer": 20851,
+            "candidate": 200,
+            "answer_feedback": "No one is listening Mitt. No one is there."
         }
     }
 ];
