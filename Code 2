@@ -39,14 +39,14 @@ campaignTrail_temp.questions_json = [
         "model": "campaign_trail.question",
         "pk": 1008,
         "fields": {
-            "description": "It's horrific. You and Mitt were standing in front of the TV as the news covered the shooting in Connecticut. Romney looked furious but calmed you as you cried in his arms. You calmed down and he wrote his speech. You didn't go with him as gave a press conference on the issue."
+            "description": "You couldn't believe your eyes. You watched the news with Ann by your side as Connecticut saw a dark page in it's history. Sandy Hook was meant to be a place of learning and love but now it was a place of pure nightmares. Another shooting. You felt it in your heart, the pain. You could only imagine it was your children there. The public was waiting for a response. For something to calm their fears."
         }
     },
     {
         "model": "campaign_trail.question",
         "pk": 1011,
         "fields": {
-            "description": "You barely had time to recover from the Sandy Hook tragedy before a new scandal arose. This time one that could topple Republicans clean from power. Edward Snowden had stolen government documents and fled the nation before releasing them to the public. The government spying on it's own people. You called Mitt and asked him about it. He was in shock but knew he could at least push the issue away from himself. "
+            "description": "You barely had time to recover from the Sandy Hook tragedy before a new scandal arose. This time one that could topple Republicans clean from power. Edward Snowden had stolen government documents and fled the nation before releasing them to the public. The government spying on it's own people. The only ray of hope for you and the party was that you were in no way involved with the act. You need to find leverage to use to stabilize your polling. What angle can you use?"
         }
     },
     {
@@ -413,7 +413,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5021,
         "fields": {
             "question": 1008,
-            "description": "We are grieving, our nation needs to come together to realize that this isn't normal. I call on both Republicans and Democrats to establish a minimum of control on who owns guns. The mentally unfit and those who have committed violent crimes should not be allowed to be an inch too close to a gun."
+            "description": "We are grieving, our nation needs to come together to realize that this isn't normal. I call on both Republicans and Democrats to establish a minimum of control on who owns guns. The mentally unfit and those who have committed violent crimes should not be allowed to be an inch from a gun."
         }
     },
     {
@@ -10934,6 +10934,28 @@ campaignTrail_temp.answer_score_state_json = [
             "affected_candidate": 201,
             "state_multiplier": 0.05
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21066,
+        "fields": {
+            "answer": 5020,
+            "state": 1001,
+            "candidate": 200,
+            "affected_candidate": 202,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21068,
+        "fields": {
+            "answer": 5025,
+            "state": 1001,
+            "candidate": 200,
+            "affected_candidate": 202,
+            "state_multiplier": 0.5
+        }
     }
 ];
 
@@ -12991,4 +13013,5 @@ campaignTrail_temp.jet_data = [{
     }
 }
 ]
+
 
