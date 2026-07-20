@@ -24,7 +24,7 @@ campaignTrail_temp.questions_json = [
         "model": "campaign_trail.question",
         "pk": 1001,
         "fields": {
-            "description": "Paul Ryan has been a less than successful V.P. While he has given some tie breaking votes it's clear that he's not cutting it. You need a change. Ryan will only drag you down lower and lower. This isn't going to work unless you get him in line or change him."
+            "description": "You rewatched footage of your campaign in 2012, you were smiling and thought that nothing could pull you down. Oh just how wrong you were. You wished that you'd be able to go back to those days but now...now it was too late. You saw Ryan next to you and wished you had chosen someone else. Maybe then the drama of 2012 wouldn't have happened. You and Ann and had talked about it a few times but you were never sure of yourself. You picked up the phone and called him to finally make the important choice. Would you keep him in 2016?"
         }
     },
     {
@@ -305,7 +305,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5003,
         "fields": {
             "question": 1001,
-            "description": "I need to talk to him. He's controversial and while he is important in the senate, it isn't enough."
+            "description": "I need to be honest with you Ryan. You are indispensable in the senate but you aren't cutting it for V.P. You need to find a way to be more effective, more convincing and especially less controversial. Can you do that?"
         }
     },
     {
@@ -313,7 +313,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5004,
         "fields": {
             "question": 1001,
-            "description": "Ryan isn't cutting it. We need to vet someone close to the administration that is also popular in a swing region. Maybe Tim Pawlenty will do the job?"
+            "description": "Ryan, i'm sorry to say this but you aren't cutting it. I'm not going to keep you in 2016. This is a choice i have thought about for a long time and i think it's best. For both of us. I'll pick someone else, maybe Tim Pawlenty to replace you."
         }
     },
     {
@@ -961,7 +961,7 @@ campaignTrail_temp.answers_json = [
         "pk": 20708,
         "fields": {
             "question": 1001,
-            "description": " We can't replace Ryan immediately but for our next term we can make a choice for the future. Governor Chris Christie still holds significant support in New Jersey and across the nation. We should try to court him to our side."
+            "description": "Listen Ryan. I've always had a great deal of respect to you but you just aren't fit for the job. I need a new, exciting V.P. Someone more popular than you, maybe like Chris Christie"
         }
     },
     {
@@ -9113,7 +9113,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 1047,
             "candidate": 200,
             "affected_candidate": 203,
-            "state_multiplier": 1
+            "state_multiplier": 5
         }
     },
     {
@@ -10186,7 +10186,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5003,
             "candidate": 200,
-            "answer_feedback": "Ryan just nods. You don't know if he'll actually change anything but it's not the time to worry about it."
+            "answer_feedback": "You felt his annoyance through the phone but he agrees. He hangs up and you feel a weight off your chest."
         }
     },
     {
@@ -10195,7 +10195,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5004,
             "candidate": 200,
-            "answer_feedback": "People take notice of Pawlenty's increased involvement with the administration even though the change isn't official yet. This both seems to help as Pawlenty is popular in the Midwest but also makes people uneasy about the stability of the adminitration"
+            "answer_feedback": "Ryan is mad, obviously, but he agrees. He decides that there's no point in fighting you and just accepts it with grace. "
         }
     },
     {
@@ -10825,7 +10825,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 20708,
             "candidate": 200,
-            "answer_feedback": "Christie agrees to the deal, Ryan seemed mad but accepting and the public seems excited at the prospect of the popular governor becoming vice president."
+            "answer_feedback": "Ryan was angered. He didn't agree with the choice or the change but he couldn't go against the President himself. He ends up agreeing but the rift between you two was growing."
         }
     },
     {
@@ -11490,64 +11490,9 @@ cyoAdventure = function (a) {
     e.noCounter = campaignTrail_temp.player_answers.length;
 
     // [JETS_CYOA_VARIABLE_EFFECTS_START]
-    // +2 GovernmentApproval
-    if ([5002, 5018, 5022].includes(ans)) {
-        GovernmentApproval += 2;
-    }
-
-    // -5 GovernmentApproval
-    if ([5001, 5015, 5003, 20720, 20770, 5031].includes(ans)) {
-        GovernmentApproval -= 5;
-    }
-
-    // +3 GovernmentApproval
-    if ([5000, 5020].includes(ans)) {
-        GovernmentApproval += 3;
-    }
-
-    // +5 GovernmentApproval
-    if ([5016, 5014, 5004, 20708, 20769, 5021].includes(ans)) {
-        GovernmentApproval += 5;
-    }
-
-    // -1 Americandivision
-    if ([5016, 5018, 5003, 20769, 5023].includes(ans)) {
-        Americandivision -= 1;
-    }
-
-    // -2 Americandivision
-    if ([5000, 5019, 5031, 5030].includes(ans)) {
-        Americandivision -= 2;
-    }
-
-    // +1 Americandivision
-    if ([5001, 5017, 5014, 5004, 20720].includes(ans)) {
-        Americandivision += 1;
-    }
-
     // -3 GovernmentApproval
-    if ([5017, 5060].includes(ans)) {
+    if (ans == 5060) {
         GovernmentApproval -= 3;
-    }
-
-    // +1 GovernmentApproval
-    if ([5019, 5013].includes(ans)) {
-        GovernmentApproval += 1;
-    }
-
-    // +1 Wins
-    if ([5013, 5014, 5015, 20770, 20769, 5021, 5020, 5030].includes(ans)) {
-        Wins += 1;
-    }
-
-    // +2 Americandivision
-    if ([5015, 20708, 5060, 20770, 5020, 5022].includes(ans)) {
-        Americandivision += 2;
-    }
-
-    // +1 Congressionalrelations
-    if ([5014, 5000, 5002, 20769].includes(ans)) {
-        Congressionalrelations += 1;
     }
 
     // -1 Wins
@@ -11555,14 +11500,59 @@ cyoAdventure = function (a) {
         Wins -= 1;
     }
 
+    // +2 Americandivision
+    if ([5060, 20770, 5020, 5022].includes(ans)) {
+        Americandivision += 2;
+    }
+
+    // -5 GovernmentApproval
+    if ([20770, 5031].includes(ans)) {
+        GovernmentApproval -= 5;
+    }
+
+    // +1 Wins
+    if ([20770, 20769, 5021, 5020, 5030].includes(ans)) {
+        Wins += 1;
+    }
+
+    // +5 GovernmentApproval
+    if ([20769, 5021].includes(ans)) {
+        GovernmentApproval += 5;
+    }
+
+    // -1 Americandivision
+    if ([20769, 5023].includes(ans)) {
+        Americandivision -= 1;
+    }
+
+    // +1 Congressionalrelations
+    if (ans == 20769) {
+        Congressionalrelations += 1;
+    }
+
     // +5 Americandivision
     if (ans == 5021) {
         Americandivision += 5;
     }
 
+    // +3 GovernmentApproval
+    if (ans == 5020) {
+        GovernmentApproval += 3;
+    }
+
+    // +2 GovernmentApproval
+    if (ans == 5022) {
+        GovernmentApproval += 2;
+    }
+
     // -2 GovernmentApproval
     if ([5023, 20748].includes(ans)) {
         GovernmentApproval -= 2;
+    }
+
+    // -2 Americandivision
+    if ([5031, 5030].includes(ans)) {
+        Americandivision -= 2;
     }
 
     // -10 GovernmentApproval
@@ -12014,230 +12004,6 @@ campaignTrail_temp.jet_data = [{
         }
     },
     "cyoa_variable_effects": {
-        "20677": {
-            "id": 20677,
-            "answer": 5002,
-            "variable": "GovernmentApproval",
-            "operation": "add",
-            "amount": 2
-        },
-        "20678": {
-            "id": 20678,
-            "answer": 5001,
-            "variable": "GovernmentApproval",
-            "operation": "subtract",
-            "amount": 5
-        },
-        "20679": {
-            "id": 20679,
-            "answer": 5000,
-            "variable": "GovernmentApproval",
-            "operation": "add",
-            "amount": 3
-        },
-        "20680": {
-            "id": 20680,
-            "answer": 5016,
-            "variable": "GovernmentApproval",
-            "operation": "add",
-            "amount": 5
-        },
-        "20681": {
-            "id": 20681,
-            "answer": 5016,
-            "variable": "Americandivision",
-            "operation": "subtract",
-            "amount": 1
-        },
-        "20682": {
-            "id": 20682,
-            "answer": 5000,
-            "variable": "Americandivision",
-            "operation": "subtract",
-            "amount": 2
-        },
-        "20683": {
-            "id": 20683,
-            "answer": 5001,
-            "variable": "Americandivision",
-            "operation": "add",
-            "amount": 1
-        },
-        "20685": {
-            "id": 20685,
-            "answer": 5017,
-            "variable": "GovernmentApproval",
-            "operation": "subtract",
-            "amount": 3
-        },
-        "20686": {
-            "id": 20686,
-            "answer": 5017,
-            "variable": "Americandivision",
-            "operation": "add",
-            "amount": 1
-        },
-        "20690": {
-            "id": 20690,
-            "answer": 5018,
-            "variable": "GovernmentApproval",
-            "operation": "add",
-            "amount": 2
-        },
-        "20691": {
-            "id": 20691,
-            "answer": 5018,
-            "variable": "Americandivision",
-            "operation": "subtract",
-            "amount": 1
-        },
-        "20693": {
-            "id": 20693,
-            "answer": 5019,
-            "variable": "GovernmentApproval",
-            "operation": "add",
-            "amount": 1
-        },
-        "20694": {
-            "id": 20694,
-            "answer": 5019,
-            "variable": "Americandivision",
-            "operation": "subtract",
-            "amount": 2
-        },
-        "20695": {
-            "id": 20695,
-            "answer": 5013,
-            "variable": "GovernmentApproval",
-            "operation": "add",
-            "amount": 1
-        },
-        "20696": {
-            "id": 20696,
-            "answer": 5013,
-            "variable": "Wins",
-            "operation": "add",
-            "amount": 1
-        },
-        "20699": {
-            "id": 20699,
-            "answer": 5014,
-            "variable": "GovernmentApproval",
-            "operation": "add",
-            "amount": 5
-        },
-        "20700": {
-            "id": 20700,
-            "answer": 5014,
-            "variable": "Wins",
-            "operation": "add",
-            "amount": 1
-        },
-        "20701": {
-            "id": 20701,
-            "answer": 5014,
-            "variable": "Americandivision",
-            "operation": "add",
-            "amount": 1
-        },
-        "20702": {
-            "id": 20702,
-            "answer": 5015,
-            "variable": "GovernmentApproval",
-            "operation": "subtract",
-            "amount": 5
-        },
-        "20703": {
-            "id": 20703,
-            "answer": 5015,
-            "variable": "Wins",
-            "operation": "add",
-            "amount": 1
-        },
-        "20704": {
-            "id": 20704,
-            "answer": 5015,
-            "variable": "Americandivision",
-            "operation": "add",
-            "amount": 2
-        },
-        "20714": {
-            "id": 20714,
-            "answer": 5004,
-            "variable": "GovernmentApproval",
-            "operation": "add",
-            "amount": 5
-        },
-        "20715": {
-            "id": 20715,
-            "answer": 5004,
-            "variable": "Americandivision",
-            "operation": "add",
-            "amount": 1
-        },
-        "20716": {
-            "id": 20716,
-            "answer": 20708,
-            "variable": "GovernmentApproval",
-            "operation": "add",
-            "amount": 5
-        },
-        "20717": {
-            "id": 20717,
-            "answer": 20708,
-            "variable": "Americandivision",
-            "operation": "add",
-            "amount": 2
-        },
-        "20718": {
-            "id": 20718,
-            "answer": 5003,
-            "variable": "GovernmentApproval",
-            "operation": "subtract",
-            "amount": 5
-        },
-        "20719": {
-            "id": 20719,
-            "answer": 5003,
-            "variable": "Americandivision",
-            "operation": "subtract",
-            "amount": 1
-        },
-        "20736": {
-            "id": 20736,
-            "answer": 20720,
-            "variable": "GovernmentApproval",
-            "operation": "subtract",
-            "amount": 5
-        },
-        "20737": {
-            "id": 20737,
-            "answer": 20720,
-            "variable": "Americandivision",
-            "operation": "add",
-            "amount": 1
-        },
-        "20738": {
-            "id": 20738,
-            "answer": 5014,
-            "variable": "Congressionalrelations",
-            "operation": "add",
-            "amount": 1
-        },
-        "20739": {
-            "id": 20739,
-            "answer": 5000,
-            "variable": "Congressionalrelations",
-            "operation": "add",
-            "amount": 1
-        },
-        "20740": {
-            "id": 20740,
-            "answer": 5002,
-            "variable": "Congressionalrelations",
-            "operation": "add",
-            "amount": 1
-        },
         "20741": {
             "id": 20741,
             "answer": 5060,
