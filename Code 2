@@ -31,15 +31,8 @@ campaignTrail_temp.questions_json = [
         "model": "campaign_trail.question",
         "pk": 1019,
         "fields": {
-            "description": "You and Mitt talked it over. He knew that Obamacare was off the table for now. He needed another win. Both of you considered many options but the only one that made sense was the tax cut plan. Mitt knew he had the republicans for it, it was perfect.",
+            "description": "(tax cut fail)You had talked with your advisors for days, weeks, about if it would be possible to do the repeal immediately but the conclusion was always the same. It would be very risky. While you technically held a majority in both chambers, the risk of a rogue vote was very evident. You were advised against it but you still needed to do something. Most recommended a tax cut but it isn't the only possible path. You knew that it was one of the many promises you made but would you be able to follow through on it",
             "likelihood": 0.5
-        }
-    },
-    {
-        "model": "campaign_trail.question",
-        "pk": 20768,
-        "fields": {
-            "description": "You sit with Mitt as he calls his advisors. They are planning the Obamacare repeal and if he should even try. You've seen that his relations with congress are too strained. You felt like you needed to try and convince him to let it go for a while and try to pass something else."
         }
     },
     {
@@ -194,6 +187,20 @@ campaignTrail_temp.questions_json = [
         "pk": 20664,
         "fields": {
             "description": "#ALTQuestions"
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 20952,
+        "fields": {
+            "description": "(Tax cut passed)You had talked with your advisors for days, weeks, about if it would be possible to do the repeal immediately but the conclusion was always the same. It would be very risky. While you technically held a majority in both chambers, the risk of a rogue vote was very evident. You were advised against it but you still needed to do something. Most recommended a tax cut but it isn't the only possible path. You knew that it was one of the many promises you made but would you be able to follow through on it"
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 20953,
+        "fields": {
+            "description": "put description here"
         }
     },
     {
@@ -537,7 +544,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5060,
         "fields": {
             "question": 1019,
-            "description": "I will work with Republicans to push a comprehensive tax reform through congress. Our population will benefit from it. "
+            "description": "We need to get our caucus together.  We will pass this cut and we will gain the momentum for the rest of the term"
         }
     },
     {
@@ -974,30 +981,6 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
-        "pk": 20748,
-        "fields": {
-            "question": 1019,
-            "description": "We don't have time for this. I need to focus on the repeal,working with the senators and representatives to make sure it passes and is replaced by Romneycare as soon as possible."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 20769,
-        "fields": {
-            "question": 20768,
-            "description": "I hear you Ann, but we have put too much work into this. We have promised this to the people and we need to try a the very least."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 20770,
-        "fields": {
-            "question": 20768,
-            "description": "Maybe you are right Ann. I'll think about it. Maybe we should do a smaller bill like infrastructure investment instead."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
         "pk": 20820,
         "fields": {
             "question": 20819,
@@ -1042,6 +1025,14 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 20893,
             "description": "We can just let him have the south. The north is now ours. The west too. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 20954,
+        "fields": {
+            "question": 20952,
+            "description": "We need to get our caucus together.  We will pass this cut and we will gain the momentum for the rest of the term"
         }
     }
 ];
@@ -6621,7 +6612,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 5060,
             "candidate": 200,
             "affected_candidate": 200,
-            "global_multiplier": -0.012
+            "global_multiplier": -0.01
         }
     },
     {
@@ -7101,7 +7092,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 5060,
             "candidate": 200,
             "affected_candidate": 201,
-            "global_multiplier": 0.035
+            "global_multiplier": 0.02
         }
     },
     {
@@ -7496,102 +7487,12 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 20750,
-        "fields": {
-            "answer": 20748,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "global_multiplier": -0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 20751,
-        "fields": {
-            "answer": 20748,
-            "candidate": 200,
-            "affected_candidate": 201,
-            "global_multiplier": 0.005
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 20752,
-        "fields": {
-            "answer": 20748,
-            "candidate": 200,
-            "affected_candidate": 202,
-            "global_multiplier": 0.01
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
         "pk": 20753,
         "fields": {
             "answer": 5060,
             "candidate": 200,
             "affected_candidate": 202,
             "global_multiplier": 0.05
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 20772,
-        "fields": {
-            "answer": 20769,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "global_multiplier": 0.032
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 20773,
-        "fields": {
-            "answer": 20769,
-            "candidate": 200,
-            "affected_candidate": 201,
-            "global_multiplier": -0.015
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 20774,
-        "fields": {
-            "answer": 20769,
-            "candidate": 200,
-            "affected_candidate": 202,
-            "global_multiplier": 0.005
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 20776,
-        "fields": {
-            "answer": 20770,
-            "candidate": 200,
-            "affected_candidate": 200,
-            "global_multiplier": -0.025
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 20777,
-        "fields": {
-            "answer": 20770,
-            "candidate": 200,
-            "affected_candidate": 201,
-            "global_multiplier": 0.03
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 20778,
-        "fields": {
-            "answer": 20770,
-            "candidate": 200,
-            "affected_candidate": 202,
-            "global_multiplier": 0.01
         }
     },
     {
@@ -7812,6 +7713,36 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 200,
             "affected_candidate": 201,
             "global_multiplier": -0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 20956,
+        "fields": {
+            "answer": 20954,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "global_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 20957,
+        "fields": {
+            "answer": 20954,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "global_multiplier": -0.015
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 20958,
+        "fields": {
+            "answer": 20954,
+            "candidate": 200,
+            "affected_candidate": 202,
+            "global_multiplier": -0.005
         }
     }
 ];
@@ -10839,33 +10770,6 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 20749,
-        "fields": {
-            "answer": 20748,
-            "candidate": 200,
-            "answer_feedback": "You are disappointed that Mitt isn't following your advice but can't stay mad too long.  It's  better to over-prepare than not though it hurts him in the polls seemingly"
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 20771,
-        "fields": {
-            "answer": 20769,
-            "candidate": 200,
-            "answer_feedback": "You watched the vote with fear. You were scared for the result but in the end the senate was tied. Ryan broke the tie with his vote and Obamacare was repealed. You watched Mitt's eyes light up, happy for his success."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 20775,
-        "fields": {
-            "answer": 20770,
-            "candidate": 200,
-            "answer_feedback": "You watched the news after the vote passed and see that people weren't happy. They were disappointed in Mitt's lack of action and you felt that it was on you for having pushed him not to try."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
         "pk": 20828,
         "fields": {
             "answer": 20820,
@@ -10889,6 +10793,15 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 20823,
             "candidate": 200,
             "answer_feedback": "Sanders delegates walked out. That was the best news you could receive. Cuomo is weak. You'll make sure hes as weak as possible"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 20955,
+        "fields": {
+            "answer": 20954,
+            "candidate": 200,
+            "answer_feedback": "You were worried about the vote but felt, in your heart, that it'll pass. the vote was close but in the end the cut was accepted and passed the vote. You and your advisors cheered but this was only the begining"
         }
     }
 ];
@@ -11490,21 +11403,6 @@ cyoAdventure = function (a) {
     e.noCounter = campaignTrail_temp.player_answers.length;
 
     // [JETS_CYOA_VARIABLE_EFFECTS_START]
-    // -3 GovernmentApproval
-    if (ans == 5060) {
-        GovernmentApproval -= 3;
-    }
-
-    // -1 Wins
-    if (ans == 5060) {
-        Wins -= 1;
-    }
-
-    // +2 Americandivision
-    if ([5060, 20770, 5020, 5022].includes(ans)) {
-        Americandivision += 2;
-    }
-
     // -5 GovernmentApproval
     if ([20770, 5031].includes(ans)) {
         GovernmentApproval -= 5;
@@ -11528,6 +11426,11 @@ cyoAdventure = function (a) {
     // +1 Congressionalrelations
     if (ans == 20769) {
         Congressionalrelations += 1;
+    }
+
+    // +2 Americandivision
+    if ([20770, 5020, 5022].includes(ans)) {
+        Americandivision += 2;
     }
 
     // +5 Americandivision
@@ -12004,27 +11907,6 @@ campaignTrail_temp.jet_data = [{
         }
     },
     "cyoa_variable_effects": {
-        "20741": {
-            "id": 20741,
-            "answer": 5060,
-            "variable": "GovernmentApproval",
-            "operation": "subtract",
-            "amount": 3
-        },
-        "20742": {
-            "id": 20742,
-            "answer": 5060,
-            "variable": "Wins",
-            "operation": "subtract",
-            "amount": 1
-        },
-        "20743": {
-            "id": 20743,
-            "answer": 5060,
-            "variable": "Americandivision",
-            "operation": "add",
-            "amount": 2
-        },
         "20779": {
             "id": 20779,
             "answer": 20770,
