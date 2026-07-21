@@ -909,38 +909,27 @@ z.observe(document, { subtree: true, childList: true });
     return time;
   }
 })();
-// This is a modified version of the music player
-// used in the mod W. and 2004: Four More Wars.
+
+// This is a SoundCloud-themed
+// music player.
 class Song {
-  constructor(title, artist, coverLink, audioLink) {
-    this.title = title;
-    this.artist = artist;
-    this.coverLink = coverLink;
-    this.audioLink = audioLink;
-  }
-  getTitle() { return this.title; }
-  getArtist() { return this.artist; }
-  getCoverLink() { return this.coverLink; }
-  getAudioLink() { return this.audioLink; }
+    constructor(title, artist, coverLink, audioLink) {
+        this.title = title;
+        this.artist = artist;
+        this.coverLink = coverLink;
+        this.audioLink = audioLink;
+    }
 }
 
 class Playlist {
-  constructor() {
-    this.songs = [];
-    this.currentSongIndex = 0;
-  }
-  addSong(song) { this.songs.push(song); }
-  getCurrentSong() { return this.songs[this.currentSongIndex]; }
-
-  playNext() {
-    if (this.songs.length === 0) return;
-    this.currentSongIndex = (this.currentSongIndex + 1) % this.songs.length;
-  }
-
-  playPrevious() {
-    if (this.songs.length === 0) return;
-    this.currentSongIndex = (this.currentSongIndex - 1 + this.songs.length) % this.songs.length;
-  }
+    constructor() {
+        this.songs = [];
+        this.currentSongIndex = 0;
+    }
+    addSong(song) { this.songs.push(song); }
+    getCurrentSong() { return this.songs[this.currentSongIndex]; }
+    playNext() { this.currentSongIndex = (this.currentSongIndex + 1) % this.songs.length; }
+    playPrevious() { this.currentSongIndex = (this.currentSongIndex - 1 + this.songs.length) % this.songs.length; }
 }
 
 window.Playlist = Playlist;
@@ -948,82 +937,308 @@ window.Song = Song;
 
 let activePlaylist = new Playlist();
 let audioInstance = null;
-let currentVolume = 1;
+let audioCtx = null;
+let isDraggingWaveform = false;
+let waveformCache = new Map();
+let waveformBaseCanvasCache = new Map();
+let waveformRequestId = 0;
+let waveformAnimationId = null;
 
 // assets
 const ASSETS = {
-  bg: "https://i.ibb.co/dKL29kY/background.png",
-  infoBg: "https://i.ibb.co/M73CBjW/overlay.png",
-  btnPrev: "https://i.ibb.co/gMyNq5T/back.png",
-  btnPlay: "https://i.ibb.co/G5TsX12/play.png",
-  btnPause: "https://i.ibb.co/5TwzzWN/pause.png",
-  btnNext: "https://i.ibb.co/5Rx0cYt/forward.png",
-  volIcon: "https://i.ibb.co/9Gkg5Qp/volume.png"
+    play: `
+    <svg class="sc-icon sc-play-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M8 5.14v13.72c0 .72.78 1.17 1.4.81l10.2-6.86a.95.95 0 0 0 0-1.58L9.4 4.33A.94.94 0 0 0 8 5.14Z" fill="currentColor"></path>
+    </svg>`,
+    pause: `
+    <svg class="sc-icon sc-pause-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="6" y="5" width="4" height="14" rx="1" fill="currentColor"></rect>
+      <rect x="14" y="5" width="4" height="14" rx="1" fill="currentColor"></rect>
+    </svg>`,
+    prev: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4.44444 3C4.19898 3 4 3.20147 4 3.45V20.55C4 20.7985 4.19898 21 4.44444 21H6.22222C6.46768 21 6.66667 20.7985 6.66667 20.55V12.5625L19.32 20.5697C19.616 20.757 20 20.5415 20 20.1881V3.81191C20 3.45847 19.616 3.24299 19.32 3.43031L6.66667 11.4375V3.45C6.66667 3.20147 6.46768 3 6.22222 3H4.44444Z" fill="currentColor"></path></svg>`,
+    next: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.7778 3C17.5323 3 17.3333 3.20147 17.3333 3.45V11.4375L4.68 3.43031C4.38398 3.24299 4 3.45847 4 3.81191V20.1881C4 20.5415 4.38398 20.757 4.68 20.5697L17.3333 12.5625V20.55C17.3333 20.7985 17.5323 21 17.7778 21H19.5556C19.801 21 20 20.7985 20 20.55V3.45C20 3.20147 19.801 3 19.5556 3H17.7778Z" fill="currentColor"></path></svg>`,
+    vol: `<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7.14645 1.85356C7.46143 1.53858 8 1.76167 8 2.20712V13.7929C8 14.2384 7.46143 14.4614 7.14645 14.1465L4 11H1.5C1.22386 11 1 10.7762 1 10.5V5.50001C1 5.22387 1.22386 5.00001 1.5 5.00001H4L7.14645 1.85356Z" fill="currentColor"></path><path d="M15 7.99997C15 11.1453 12.5798 13.7254 9.5 13.9794V12.4725C11.75 12.2238 13.5 10.3162 13.5 7.99997C13.5 5.68369 11.75 3.77616 9.5 3.52744V2.02051C12.5798 2.27458 15 4.85464 15 7.99997Z" fill="currentColor"></path><path d="M12 7.99997C12 9.48647 10.9189 10.7205 9.5 10.9585V5.04145C10.9189 5.27949 12 6.51347 12 7.99997Z" fill="currentColor"></path></svg>`
 };
 
-function changePlaylist(newPlaylist) {
-  activePlaylist = newPlaylist;
-  activePlaylist.currentSongIndex = 0;
+// draw a placeholder waveform to show loading activity
+function drawPlaceholderWaveform() {
+    const canvas = document.getElementById("waveform-canvas");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  updateUI(activePlaylist);
+    const barWidth = 2;
+    const gap = 1;
+    const stride = barWidth + gap;
+    const samples = Math.floor(canvas.width / stride);
 
-  // ensure audio exists before trying to access it
-  const audio = getAudioElement();
-  const song = activePlaylist.getCurrentSong();
-
-  if (song) {
-    audio.src = song.audioLink;
-    audio.play().catch(e => console.log("Autoplay blocked or waiting for interaction", e));
-    updatePlayPauseIcon(true);
-  }
+    ctx.fillStyle = "#e0e0e0";
+    for (let i = 0; i < samples; i++) {
+        const x = i * stride;
+        const h = (Math.sin(i * 0.08) * 0.12 + 0.22) * canvas.height;
+        ctx.fillRect(x, canvas.height - h, barWidth, h);
+    }
 }
-window.changePlaylist = changePlaylist;
 
-function updateUI(playlist) {
-  const currentSong = playlist.getCurrentSong();
-  const player = document.getElementById("player");
+// animate transition from the placeholder wave to the real wave
+function animateWaveformSweep(baseCanvas) {
+    const canvas = document.getElementById("waveform-canvas");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
 
-  if (!player || !currentSong) return;
+    const duration = 650;
+    const startTime = performance.now();
 
-  const cover = player.querySelector("#cover");
-  const title = player.querySelector("#title");
-  const artist = player.querySelector("#artist");
+    function step(now) {
+        if (!canvas) return;
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
 
-  if (cover) cover.src = currentSong.getCoverLink();
-  if (title) title.textContent = currentSong.getTitle();
-  if (artist) artist.textContent = currentSong.getArtist();
+        const easeProgress = 1 - Math.pow(1 - progress, 3);
+        const revealWidth = canvas.width * easeProgress;
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // draw the placeholder waveform on the right side of the sweep threshold
+        const barWidth = 2;
+        const gap = 1;
+        const stride = barWidth + gap;
+        const samples = Math.floor(canvas.width / stride);
+
+        ctx.fillStyle = "#e0e0e0";
+        for (let i = 0; i < samples; i++) {
+            const x = i * stride;
+            if (x >= revealWidth) {
+                const h = (Math.sin(i * 0.08) * 0.12 + 0.22) * canvas.height;
+                ctx.fillRect(x, canvas.height - h, barWidth, h);
+            }
+        }
+
+        // overlay the completed real waveform on the left side of the threshold
+        ctx.drawImage(
+            baseCanvas,
+            0, 0, revealWidth, canvas.height,
+            0, 0, revealWidth, canvas.height
+        );
+
+        // update active player colors relative to decoded progress
+        const audio = getAudioElement();
+        if (audio.duration) {
+            updateWaveformProgress((audio.currentTime / audio.duration) * 100);
+        }
+
+        if (progress < 1) {
+            waveformAnimationId = requestAnimationFrame(step);
+        } else {
+            // lock down final static canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(baseCanvas, 0, 0);
+            waveformAnimationId = null;
+        }
+    }
+
+    if (waveformAnimationId) cancelAnimationFrame(waveformAnimationId);
+    waveformAnimationId = requestAnimationFrame(step);
 }
-window.updateUI = updateUI;
+
+// waveform engine
+async function drawWaveform(url) {
+    const canvas = document.getElementById("waveform-canvas");
+    const progCanvas = document.getElementById("waveform-prog-canvas");
+    if (!canvas || !progCanvas) return;
+
+    const ctx = canvas.getContext("2d");
+    const progCtx = progCanvas.getContext("2d");
+
+    const requestId = ++waveformRequestId;
+
+    // use cached waveform data if available
+    if (waveformCache.has(url) && waveformBaseCanvasCache.has(url)) {
+        if (requestId !== waveformRequestId) return;
+
+        window.currentWaveformData = waveformCache.get(url);
+        ctx.drawImage(waveformBaseCanvasCache.get(url), 0, 0);
+        const audio = getAudioElement();
+        if (audio.duration) {
+            updateWaveformProgress((audio.currentTime / audio.duration) * 100);
+        }
+        return;
+    }
+
+    try {
+        const response = await fetch(url, { mode: "cors", cache: "force-cache" });
+        const arrayBuffer = await response.arrayBuffer();
+        if (requestId !== waveformRequestId) return;
+
+        const audioBuffer = await audioCtx.decodeAudioData(arrayBuffer);
+        if (requestId !== waveformRequestId) return;
+
+        const rawData = audioBuffer.getChannelData(0);
+
+        const barWidth = 2;
+        const gap = 1;
+        const stride = barWidth + gap;
+        const samples = Math.floor(canvas.width / stride);
+        const blockSize = Math.max(1, Math.floor(rawData.length / samples));
+        const filteredData = new Float32Array(samples);
+
+        // sample only a subset of frames in each block
+        const step = Math.max(1, Math.floor(blockSize / 32));
+
+        for (let i = 0; i < samples; i++) {
+            const blockStart = i * blockSize;
+            let max = 0;
+
+            for (let j = 0; j < blockSize; j += step) {
+                const sample = Math.abs(rawData[blockStart + j] || 0);
+                if (sample > max) max = sample;
+            }
+
+            filteredData[i] = max;
+        }
+
+        let peak = 0;
+        for (let i = 0; i < filteredData.length; i++) {
+            if (filteredData[i] > peak) peak = filteredData[i];
+        }
+        const multiplier = peak > 0 ? 1 / peak : 1;
+
+        const normalizedData = new Float32Array(filteredData.length);
+        for (let i = 0; i < filteredData.length; i++) {
+            normalizedData[i] = filteredData[i] * multiplier;
+        }
+
+        if (requestId !== waveformRequestId) return;
+
+        // pre-render static gray waveform to offscreen canvas
+        const baseCanvas = document.createElement("canvas");
+        baseCanvas.width = canvas.width;
+        baseCanvas.height = canvas.height;
+        const baseCtx = baseCanvas.getContext("2d");
+
+        baseCtx.fillStyle = "#cccccc";
+        for (let i = 0; i < normalizedData.length; i++) {
+            const x = i * stride;
+            const h = Math.max(1, normalizedData[i] * canvas.height * 0.9);
+            baseCtx.fillRect(x, canvas.height - h, barWidth, h);
+        }
+
+        waveformCache.set(url, normalizedData);
+        waveformBaseCanvasCache.set(url, baseCanvas);
+
+        window.currentWaveformData = normalizedData;
+
+        // smoothly sweep-in the parsed waveform
+        animateWaveformSweep(baseCanvas);
+
+    } catch (e) {
+        console.warn("Waveform bypass:", e);
+    }
+}
+
+function updateWaveformProgress(pct) {
+    const progCanvas = document.getElementById("waveform-prog-canvas");
+    const baseCanvas = document.getElementById("waveform-canvas");
+    if (!progCanvas || !baseCanvas || !window.currentWaveformData) return;
+
+    const ctx = progCanvas.getContext("2d");
+    ctx.clearRect(0, 0, progCanvas.width, progCanvas.height);
+
+    pct = Math.max(0, Math.min(100, pct));
+    const progressWidth = Math.floor(progCanvas.width * (pct / 100));
+    if (progressWidth <= 0) return;
+
+    // draw gray waveform slice, then tint it orange
+    ctx.drawImage(baseCanvas, 0, 0, progressWidth, progCanvas.height, 0, 0, progressWidth, progCanvas.height);
+    ctx.globalCompositeOperation = "source-in";
+    ctx.fillStyle = "#ff5500";
+    ctx.fillRect(0, 0, progressWidth, progCanvas.height);
+    ctx.globalCompositeOperation = "source-over";
+}
 
 // helpers
 function getAudioElement() {
-  if (!audioInstance) {
-    audioInstance = document.createElement("audio");
-    audioInstance.id = "audio";
-    document.body.appendChild(audioInstance);
-  }
-  return audioInstance;
+    if (!audioInstance) {
+        audioInstance = document.createElement("audio");
+        audioInstance.id = "audio";
+        document.body.appendChild(audioInstance);
+    }
+    return audioInstance;
+}
+
+function formatTime(seconds) {
+    if (isNaN(seconds) || !Number.isFinite(seconds)) return "0:00";
+    const m = Math.floor(seconds / 60);
+    const s = Math.floor(seconds % 60);
+    return `${m}:${s < 10 ? '0' : ''}${s}`;
+}
+
+function updateUI() {
+    const song = activePlaylist.getCurrentSong();
+    const player = document.getElementById("player");
+    if (!player || !song) return;
+
+    player.querySelector("#cover").src = song.coverLink;
+    player.querySelector("#title").textContent = song.title;
+    player.querySelector("#artist").textContent = song.artist;
+
+    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    if (audioCtx.state === "suspended") audioCtx.resume();
+
+    // cancel any active transitions and display the default loading placeholder
+    if (waveformAnimationId) {
+        cancelAnimationFrame(waveformAnimationId);
+        waveformAnimationId = null;
+    }
+    drawPlaceholderWaveform();
+
+    const progCanvas = document.getElementById("waveform-prog-canvas");
+    if (progCanvas) {
+        progCanvas.getContext("2d").clearRect(0, 0, progCanvas.width, progCanvas.height);
+    }
+
+    requestAnimationFrame(() => {
+        setTimeout(() => drawWaveform(song.audioLink), 0);
+    });
 }
 
 function updatePlayPauseIcon(isPlaying) {
-  const btn = document.getElementById("playPauseButton");
-  if (btn) {
-    btn.src = isPlaying ? ASSETS.btnPause : ASSETS.btnPlay;
-  }
+    const btn = document.getElementById("playPauseButton");
+    if (btn) btn.innerHTML = isPlaying ? ASSETS.pause : ASSETS.play;
+}
+
+function safePlay(audio) {
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+        playPromise.then(() => {
+            updatePlayPauseIcon(true);
+        }).catch(error => {
+            if (error.name === "AbortError") {
+                console.log("Play interrupted by a new request.");
+            } else {
+                updatePlayPauseIcon(false);
+            }
+        });
+    }
+}
+async function loadAndPlaySong() {
+    const audio = getAudioElement();
+    const song = activePlaylist.getCurrentSong();
+
+    updateUI();
+
+    audio.src = song.audioLink;
+    audio.load();
+
+    await safePlay(audio);
 }
 
 // setup
 function setupMusicPlayer() {
-  const gameWindow = document.getElementById("game_window");
-  if (!gameWindow) {
-    console.warn("game_window element not found. Player will not be attached.");
-    return;
-  }
+    const gameWindow = document.getElementById("game_window");
+    if (!gameWindow || document.getElementById("player")) return;
 
-  // prevent duplicate players
-  if (document.getElementById("player")) return;
-
-  const defaultSongs = [
+    const defaultSongs = [
     ["Lies In The Eyes Of Love", "Part Time", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bing.com%2Fth%3Fid%3DOIP.zTYJoCKlXdE9Yo4g2UMIWwHaHa%26w%3D120%26h%3D120%26c%3D1%26pid%3D5.1&f=1&nofb=1", "https://audio.jukehost.co.uk/019f3c4d-febe-72fd-8115-df1dae8e3f98"],
     ["Angel", "Massive Attack", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthfvnext.bing.com%2Fth%2Fid%2FOIP.AU3MIw_ey2oVEfRQcxUxSwHaHa%3Fr%3D0%26cb%3Dthfvnextfalcon4%26pid%3DApi&f=1&ipt=679309a9096247a1fd2170ac78b0da65911c6a5d4635ee2e19c8225e9682db27&ipo=images", "https://audio.jukehost.co.uk/019f3c50-e557-715b-ba29-28cbc7fdfef1"],
     ["Every Breath You Take", "The Police", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthf.bing.com%2Fth%2Fid%2FOIP.DdRGVFwx-ddtHkCmsxPSswHaHa%3Fcb%3Dthfc1falcon4%26pid%3DApi&f=1&ipt=653c4dd968ecd5a0b676f97bb602886c731614555f3282f883255b0bfabaf8ac&ipo=images", "https://audio.jukehost.co.uk/019f3d1c-9938-708d-a3f4-0cdc6e1846e4"],
@@ -1031,304 +1246,257 @@ function setupMusicPlayer() {
     ["Saddest Girl Story", "The Starting Line", "https://resources.tidal.com/images/89571243/7a8b/4a85/945b/ec723866e109/320x320.jpg", "https://audio.jukehost.co.uk/A2jyXHWjaFVimqsqdgldYnBokmEV2Aup"],
     ["The Boy Who Blocked His Own Shot", "Brand New", "https://resources.tidal.com/images/1c1ba9d5/f47c/417d/86d3/48d46dac02db/320x320.jpg", "https://audio.jukehost.co.uk/5tx0d7xnGrJw3T2ue4r451SLrRUphlBd"],
     ["War All The Time", "Thursday", "https://resources.tidal.com/images/2eb4dbc7/0f01/4d0c/ac73/c19691259eea/320x320.jpg", "https://audio.jukehost.co.uk/seThtysSBS6MsbfeUUNRuKlxAkR0GSlO"],
-  ];
+    ];
 
-  if (activePlaylist.songs.length === 0) {
-    defaultSongs.forEach(data => activePlaylist.addSong(new Song(...data)));
-  }
-
-  // inject CSS
-  const style = document.createElement("style");
-  style.textContent = `
-    @keyframes sliding {
-      from { transform: translateX(-30px); }
-      to   { transform: translateX(100%); }
+    if (activePlaylist.songs.length === 0) {
+        defaultSongs.forEach(d => activePlaylist.addSong(new Song(...d)));
     }
 
-    :root {
-      --xp-progress-shadow: inset 0 0 1px 0 #686868;
-      --xp-progress-value-bg: repeating-linear-gradient(90deg, #fff 0, #fff 2px, transparent 0, transparent 10px), linear-gradient(180deg, #acedad 0, #7be47d 14%, #4cda50 28%, #2ed330 42%, #42d845 57%, #76e275 71%, #8fe791 85%, #fff);
-      --xp-progress-indeterminate-bg: repeating-linear-gradient(90deg, transparent 0, transparent 8px, #fff 0, #fff 10px, transparent 0, transparent 18px, #fff 0, #fff 20px, transparent 0, transparent 28px, #fff 0, #fff), linear-gradient(180deg, #acedad 0, #7be47d 14%, #4cda50 28%, #2ed330 42%, #42d845 57%, #76e275 71%, #8fe791 85%, #fff);
-      --xp-range-track-shadow: 1px 0 0 #fff, 1px 1px 0 #fff, 0 1px 0 #fff, -1px 0 0 #9d9c99, -1px -1px 0 #9d9c99, 0 -1px 0 #9d9c99, -1px 1px 0 #fff, 1px -1px #9d9c99;
-      --xp-range-track-shadow-vertical: -1px 0 0 #fff, -1px 1px 0 #fff, 0 1px 0 #fff, 1px 0 0 #9d9c99, 1px -1px 0 #9d9c99, 0 -1px 0 #9d9c99, 1px 1px 0 #fff, -1px -1px #9d9c99;
-    }
-
-    /* progress bar */
-    progress {
-      box-sizing: border-box; appearance: none; -webkit-appearance: none; -moz-appearance: none;
-      height: 14px; padding: 1px 2px 1px 0; overflow: hidden; background-color: #fff; border: 1px solid #686868; border-radius: 4px;
-      -webkit-box-shadow: var(--xp-progress-shadow); -moz-box-shadow: var(--xp-progress-shadow); box-shadow: var(--xp-progress-shadow);
-      cursor: pointer; /* Ensures users know they can click it */
-    }
-    progress[value]::-webkit-progress-bar { background-color: transparent; }
-    progress[value]::-webkit-progress-value, progress[value]::-moz-progress-bar { border-radius: 2px; background: var(--xp-progress-value-bg); }
-    progress:not([value]) { position: relative; }
-    progress:not([value])::-webkit-progress-bar, progress:not([value])::-moz-progress-bar { width: 100%; background: var(--xp-progress-indeterminate-bg); animation: sliding 2s linear infinite; }
-    progress:not([value]):before { content: ""; position: absolute; inset: 0; box-sizing: border-box; background-color: #fff; box-shadow: var(--xp-progress-shadow); }
-    progress:not([value]):after { content: ""; position: absolute; top: 1px; left: 2px; width: 100%; height: calc(100% - 2px); box-sizing: border-box; padding: 1px 2px; border-radius: 2px; background: var(--xp-progress-indeterminate-bg); animation: sliding 2s linear infinite; }
-
-    /* range */
-    input[type=range] { -webkit-appearance:none; width:100%; background:transparent }
-    input[type=range]:focus { outline:none }
-    .is-vertical { display:inline-block; width:4px; height:150px; transform:translateY(50%) }
-    .is-vertical>input[type=range] { width:150px; height:4px; margin:0 16px 0 10px; transform-origin:left; transform:rotate(270deg) translateX(calc(-50% + 8px)) }
-    .is-vertical>input[type=range]::-webkit-slider-thumb { transform:translateY(-8px) scaleX(-1) }
-    .is-vertical>input[type=range]::-moz-range-thumb { transform:translateY(2px) scaleX(-1) }
-    .is-vertical>input[type=range].has-box-indicator::-webkit-slider-thumb { transform:translateY(-10px) scaleX(-1) }
-    .is-vertical>input[type=range].has-box-indicator::-moz-range-thumb { transform:translateY(0) scaleX(-1) }
-
-    input[type=range]::-webkit-slider-thumb {
-      -webkit-appearance:none; height:21px; width:11px; transform:translateY(-8px);
-      background:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -0.5 11 21' shape-rendering='crispEdges'%3E%3Cpath stroke='%23becbd3' d='M1 0h1M0 1h1'/%3E%3Cpath stroke='%23b6c5cd' d='M2 0h1M0 2h1'/%3E%3Cpath stroke='%23b5c4cd' d='M3 0h5M0 3h1M0 4h1M0 5h1M0 6h1M0 7h1M0 8h1M0 9h1m-1 1h1m-1 1h1m-1 1h1m-1 1h1'/%3E%3Cpath stroke='%23afbfc8' d='M8 0h1M0 14h1'/%3E%3Cpath stroke='%239fb2be' d='M9 0h1M0 15h1'/%3E%3Cpath stroke='%23a6d1b1' d='M1 1h1'/%3E%3Cpath stroke='%236fd16e' d='M2 1h1M1 2h1'/%3E%3Cpath stroke='%2367ce65' d='M3 1h1M1 3h1'/%3E%3Cpath stroke='%2366ce64' d='M4 1h3'/%3E%3Cpath stroke='%2362cd61' d='M7 1h1'/%3E%3Cpath stroke='%2345c343' d='M8 1h1M7 2h1'/%3E%3Cpath stroke='%2363ac76' d='M9 1h1M2 16h1m0 1h1m0 1h1'/%3E%3Cpath stroke='%23879aa6' d='M10 1h1'/%3E%3Cpath stroke='%2363cd62' d='M2 2h1'/%3E%3Cpath stroke='%2349c547' d='M3 2h1M2 3h1'/%3E%3Cpath stroke='%2347c446' d='M4 2h3'/%3E%3Cpath stroke='%2321b71f' d='M8 2h1'/%3E%3Cpath stroke='%231da41c' d='M9 2h1'/%3E%3Cpath stroke='%237d8e99' d='M10 2h1'/%3E%3Cpath stroke='%2325b923' d='M3 3h1'/%3E%3Cpath stroke='%2321b81f' d='M4 3h4M2 15h1'/%3E%3Cpath stroke='%231ea71c' d='M8 3h1'/%3E%3Cpath stroke='%231b9619' d='M9 3h1'/%3E%3Cpath stroke='%23778892' d='M10 3h1m-1 1h1m-1 1h1m-1 1h1m-1 1h1m-1 1h1m-1 1h1m-1 1h1m-1 1h1m-1 1h1m-1 1h1'/%3E%3Cpath stroke='%23f7f7f4' d='M1 4h1M1 5h1M1 6h1M1 7h1M1 8h1M1 9h1m-1 1h1m-1 1h1m-1 1h1m-1 1h1'/%3E%3Cpath stroke='%23f5f5f2' d='M2 4h1M2 5h1M2 6h1M2 7h1M2 8h1M2 9h1m-1 1h1m-1 1h1m-1 1h1m-1 1h1'/%3E%3Cpath stroke='%23f3f3ef' d='M3 4h5M3 5h5M3 6h5M3 7h5M3 8h5M3 9h5m-5 1h5m-5 1h5m-5 1h5m-5 1h4m-4 1h3m-2 1h1'/%3E%3Cpath stroke='%23dcdcd9' d='M8 4h1M8 5h1M8 6h1M8 7h1M8 8h1M8 9h1m-1 1h1m-1 1h1m-1 1h1'/%3E%3Cpath stroke='%23c3c3c0' d='M9 4h1M9 5h1M9 6h1M9 7h1M9 8h1M9 9h1m-1 1h1m-1 1h1m-1 1h1'/%3E%3Cpath stroke='%23f1f1ed' d='M7 13h1m-2 1h1m-2 1h1'/%3E%3Cpath stroke='%23dbdbd8' d='M8 13h1'/%3E%3Cpath stroke='%23c4c4c1' d='M9 13h1'/%3E%3Cpath stroke='%234bc549' d='M1 14h1'/%3E%3Cpath stroke='%23f4f4f1' d='M2 14h1'/%3E%3Cpath stroke='%23e6e6e2' d='M7 14h1m-2 1h1'/%3E%3Cpath stroke='%23cececa' d='M8 14h1'/%3E%3Cpath stroke='%231a9319' d='M9 14h1'/%3E%3Cpath stroke='%23788993' d='M10 14h1'/%3E%3Cpath stroke='%2369b17b' d='M1 15h1'/%3E%3Cpath stroke='%23f2f2ee' d='M3 15h1m0 1h1'/%3E%3Cpath stroke='%23d0d0cc' d='M7 15h1m-2 1h1'/%3E%3Cpath stroke='%231a9118' d='M8 15h1m-2 1h1m-2 1h1'/%3E%3Cpath stroke='%234c845a' d='M9 15h1'/%3E%3Cpath stroke='%2372838d' d='M10 15h1'/%3E%3Cpath stroke='%2391a6b2' d='M1 16h1m0 1h1m0 1h1m0 1h1'/%3E%3Cpath stroke='%2321b61f' d='M3 16h1m0 1h1'/%3E%3Cpath stroke='%23e7e7e3' d='M5 16h1'/%3E%3Cpath stroke='%234b8259' d='M8 16h1m-2 1h1m-2 1h1'/%3E%3Cpath stroke='%236e7e88' d='M9 16h1m-2 1h1m-2 1h1m-2 1h1'/%3E%3Cpath stroke='%23d7d7d4' d='M5 17h1'/%3E%3Cpath stroke='%231da21b' d='M5 18h1'/%3E%3Cpath stroke='%23589868' d='M5 19h1'/%3E%3Cpath stroke='%2380929e' d='M5 20h1'/%3E%3C/svg%3E");
-    }
-    input[type=range]::-moz-range-thumb {
-      height:21px; width:11px; border:0; border-radius:0; transform:translateY(2px);
-      background:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -0.5 11 21' shape-rendering='crispEdges'%3E%3Cpath stroke='%23becbd3' d='M1 0h1M0 1h1'/%3E%3Cpath stroke='%23b6c5cd' d='M2 0h1M0 2h1'/%3E%3Cpath stroke='%23b5c4cd' d='M3 0h5M0 3h1M0 4h1M0 5h1M0 6h1M0 7h1M0 8h1M0 9h1m-1 1h1m-1 1h1m-1 1h1m-1 1h1'/%3E%3Cpath stroke='%23afbfc8' d='M8 0h1M0 14h1'/%3E%3Cpath stroke='%239fb2be' d='M9 0h1M0 15h1'/%3E%3Cpath stroke='%23a6d1b1' d='M1 1h1'/%3E%3Cpath stroke='%236fd16e' d='M2 1h1M1 2h1'/%3E%3Cpath stroke='%2367ce65' d='M3 1h1M1 3h1'/%3E%3Cpath stroke='%2366ce64' d='M4 1h3'/%3E%3Cpath stroke='%2362cd61' d='M7 1h1'/%3E%3Cpath stroke='%2345c343' d='M8 1h1M7 2h1'/%3E%3Cpath stroke='%2363ac76' d='M9 1h1M2 16h1m0 1h1m0 1h1'/%3E%3Cpath stroke='%23879aa6' d='M10 1h1'/%3E%3Cpath stroke='%2363cd62' d='M2 2h1'/%3E%3Cpath stroke='%2349c547' d='M3 2h1M2 3h1'/%3E%3Cpath stroke='%2347c446' d='M4 2h3'/%3E%3Cpath stroke='%2321b71f' d='M8 2h1'/%3E%3Cpath stroke='%231da41c' d='M9 2h1'/%3E%3Cpath stroke='%237d8e99' d='M10 2h1'/%3E%3Cpath stroke='%2325b923' d='M3 3h1'/%3E%3Cpath stroke='%2321b81f' d='M4 3h4M2 15h1'/%3E%3Cpath stroke='%231ea71c' d='M8 3h1'/%3E%3Cpath stroke='%231b9619' d='M9 3h1'/%3E%3Cpath stroke='%23778892' d='M10 3h1m-1 1h1m-1 1h1m-1 1h1m-1 1h1m-1 1h1m-1 1h1m-1 1h1m-1 1h1m-1 1h1m-1 1h1'/%3E%3Cpath stroke='%23f7f7f4' d='M1 4h1M1 5h1M1 6h1M1 7h1M1 8h1M1 9h1m-1 1h1m-1 1h1m-1 1h1m-1 1h1'/%3E%3Cpath stroke='%23f5f5f2' d='M2 4h1M2 5h1M2 6h1M2 7h1M2 8h1M2 9h1m-1 1h1m-1 1h1m-1 1h1m-1 1h1'/%3E%3Cpath stroke='%23f3f3ef' d='M3 4h5M3 5h5M3 6h5M3 7h5M3 8h5M3 9h5m-5 1h5m-5 1h5m-5 1h5m-5 1h4m-4 1h3m-2 1h1'/%3E%3Cpath stroke='%23dcdcd9' d='M8 4h1M8 5h1M8 6h1M8 7h1M8 8h1M8 9h1m-1 1h1m-1 1h1m-1 1h1'/%3E%3Cpath stroke='%23c3c3c0' d='M9 4h1M9 5h1M9 6h1M9 7h1M9 8h1M9 9h1m-1 1h1m-1 1h1m-1 1h1'/%3E%3Cpath stroke='%23f1f1ed' d='M7 13h1m-2 1h1m-2 1h1'/%3E%3Cpath stroke='%23dbdbd8' d='M8 13h1'/%3E%3Cpath stroke='%23c4c4c1' d='M9 13h1'/%3E%3Cpath stroke='%234bc549' d='M1 14h1'/%3E%3Cpath stroke='%23f4f4f1' d='M2 14h1'/%3E%3Cpath stroke='%23e6e6e2' d='M7 14h1m-2 1h1'/%3E%3Cpath stroke='%23cececa' d='M8 14h1'/%3E%3Cpath stroke='%231a9319' d='M9 14h1'/%3E%3Cpath stroke='%23788993' d='M10 14h1'/%3E%3Cpath stroke='%2369b17b' d='M1 15h1'/%3E%3Cpath stroke='%23f2f2ee' d='M3 15h1m0 1h1'/%3E%3Cpath stroke='%23d0d0cc' d='M7 15h1m-2 1h1'/%3E%3Cpath stroke='%231a9118' d='M8 15h1m-2 1h1m-2 1h1'/%3E%3Cpath stroke='%234c845a' d='M9 15h1'/%3E%3Cpath stroke='%2372838d' d='M10 15h1'/%3E%3Cpath stroke='%2391a6b2' d='M1 16h1m0 1h1m0 1h1m0 1h1'/%3E%3Cpath stroke='%2321b61f' d='M3 16h1m0 1h1'/%3E%3Cpath stroke='%23e7e7e3' d='M5 16h1'/%3E%3Cpath stroke='%234b8259' d='M8 16h1m-2 1h1m-2 1h1'/%3E%3Cpath stroke='%236e7e88' d='M9 16h1m-2 1h1m-2 1h1m-2 1h1'/%3E%3Cpath stroke='%23d7d7d4' d='M5 17h1'/%3E%3Cpath stroke='%231da21b' d='M5 18h1'/%3E%3Cpath stroke='%23589868' d='M5 19h1'/%3E%3Cpath stroke='%2380929e' d='M5 20h1'/%3E%3C/svg%3E");
-    }
-    input[type=range]::-webkit-slider-runnable-track { width:100%; height:2px; box-sizing:border-box; background:#ecebe4; border-right:1px solid #f3f2ea; border-bottom:1px solid #f3f2ea; border-radius:2px; box-shadow:1px 0 0 #fff,1px 1px 0 #fff,0 1px 0 #fff,-1px 0 0 #9d9c99,-1px -1px 0 #9d9c99,0 -1px 0 #9d9c99,-1px 1px 0 #fff,1px -1px #9d9c99 }
-    input[type=range]::-moz-range-track { width:100%; height:2px; box-sizing:border-box; background:#ecebe4; border-right:1px solid #f3f2ea; border-bottom:1px solid #f3f2ea; border-radius:2px; box-shadow:1px 0 0 #fff,1px 1px 0 #fff,0 1px 0 #fff,-1px 0 0 #9d9c99,-1px -1px 0 #9d9c99,0 -1px 0 #9d9c99,-1px 1px 0 #fff,1px -1px #9d9c99 }
-    .is-vertical>input[type=range]::-webkit-slider-runnable-track { border-left:1px solid #f3f2ea; border-right:0; border-bottom:1px solid #f3f2ea; box-shadow:-1px 0 0 #fff,-1px 1px 0 #fff,0 1px 0 #fff,1px 0 0 #9d9c99,1px -1px 0 #9d9c99,0 -1px 0 #9d9c99,1px 1px 0 #fff,-1px -1px #9d9c99 }
-    .is-vertical>input[type=range]::-moz-range-track { border-left:1px solid #f3f2ea; border-right:0; border-bottom:1px solid #f3f2ea; box-shadow:-1px 0 0 #fff,-1px 1px 0 #fff,0 1px 0 #fff,1px 0 0 #9d9c99,1px -1px 0 #9d9c99,0 -1px 0 #9d9c99,1px 1px 0 #fff,-1px -1px #9d9c99 }
-
-    /* actual player styling */
+    // inject CSS
+    const style = document.createElement("style");
+    style.textContent = `
     #player {
-      border: 3px solid #C9C9C9;
       display: flex;
-      flex-direction: row;
-      height: 191px;
-      background-image: url("${ASSETS.bg}");
-      font-family: sans-serif;
+      height: 160px;
+      background: #fff;
+      border: 3px solid #c9c9c9;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      position: relative;
+      box-sizing: border-box;
+      margin: 6.5px 0;
     }
-    #display-box { display: flex; align-items: center; width: 50%; }
-    #cover { width: 176px; height: 176px; object-fit: cover; }
-
-    #info-container {
-      display: flex;
-      flex-direction: row;
-      height: 178px;
-      width: 127px;
-      margin-top: 3px;
-      background-image: url("${ASSETS.infoBg}");
-      background-size: cover;
-      color: white;
+    #cover {
+      height: 100%;
+      width: 160px;
+      object-fit: cover;
+      border-right: 1px solid #e5e5e5;
     }
 
-    #song-info { width: 100%; padding: 5px; box-sizing: border-box; }
-    #title { font-weight: normal; font-size: 15px; line-height: 1.1; }
-    #artist { margin: 0; opacity: 0.95; }
-
-    #controls-container {
-      display: flex; flex-direction: column; align-items: center;
-      margin: 10px; width: 100%; padding-top: 15px;
+    #sc-main-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        position: relative;
+        min-width: 0;
     }
 
-    #controls {
-      display: flex; flex-direction: row; justify-content: center;
-      width: 80%; cursor: pointer;
+    #sc-top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
     }
-    #controls img { transition: transform 0.1s; }
-    #controls img:active { transform: scale(0.95); }
 
-    #progress-bar-container { width: 100%; }
-    #progress-bar { width: 80%; display: block; margin: 20px auto 0 auto; }
+    #sc-play-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 
-    #volume-container {
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
+    #playPauseButton {
+        width: 46px;
+        height: 46px;
+        background: #ff5500;
+        border-radius: 50%;
+        border: none;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.1s;
     }
-    #player .is-vertical {
-      height: 126px;
-      margin-left: 23%;
-      margin: 0 1.2em 1em 0;
+    #playPauseButton:active { transform: scale(0.95); }
+
+    .sc-play-svg { width: 25px; height: 25px; transform: translateX(-1px); }
+    .sc-pause-svg { width: 27px; height: 27px; }
+
+    #sc-meta {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
     }
-    #player .is-vertical>input[type=range] { width: 125px; }
-    #volume-display { font-weight: bold; display: none; }
+    .sc-box {
+        background: #999;
+        color: #fff;
+        font-size: 12px;
+        padding: 2px 6px;
+        width: fit-content;
+        line-height: 1.2;
+    }
+    .sc-box.artist { background: #333; color: #ccc; }
+    .sc-box.title { background: #000; font-size: 16px; }
+
+    #sc-nav {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: #333;
+    }
+    .nav-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: inherit;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-btn svg { width: 20px; height: 20px; }
+    .nav-btn:hover { color: #ff5500; }
+
+    #volSlider {
+        width: 80px;
+        accent-color: #ff5500;
+        cursor: pointer;
+    }
+
+    #waveform-area {
+        position: relative;
+        flex-grow: 1;
+        margin-top: 15px;
+        cursor: pointer;
+    }
+    canvas {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .time-stamp {
+        position: absolute;
+        bottom: 0;
+        background: #000;
+        font-size: 11px;
+        padding: 2px 4px;
+        z-index: 10;
+        pointer-events: none;
+        line-height: 1.2;
+    }
+    #time-current { left: 0; color: #ff5500; }
+    #time-total { right: 0; color: #ccc; }
   `;
-  document.head.appendChild(style);
+    document.head.appendChild(style);
 
-  // create HTML
-  const playerContainer = document.createElement("div");
-  playerContainer.id = "player";
-  playerContainer.innerHTML = `
-    <div id="display-box">
-      <img id="cover" src="">
-      <div id="info-container">
-        <div id="song-info">
-          <h3 id="title"></h3>
-          <p id="artist"></p>
+    // create HTML
+    const container = document.createElement("div");
+    container.id = "player";
+    container.innerHTML = `
+    <img id="cover">
+    <div id="sc-main-content">
+        <div id="sc-top-bar">
+            <div id="sc-play-info">
+                <button id="playPauseButton">${ASSETS.play}</button>
+                <div id="sc-meta">
+                    <span id="artist" class="sc-box artist"></span>
+                    <span id="title" class="sc-box title"></span>
+                </div>
+            </div>
+            <div id="sc-nav">
+                <button id="prevBtn" class="nav-btn">${ASSETS.prev}</button>
+                <button id="nextBtn" class="nav-btn">${ASSETS.next}</button>
+                <div style="display:flex; align-items:center; gap:5px">
+                    <div class="nav-btn">${ASSETS.vol}</div>
+                    <input type="range" id="volSlider" min="0" max="1" step="0.05" value="0.8">
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div id="controls-container">
-      <div id="controls">
-        <img id="prevButton" src="${ASSETS.btnPrev}" alt="Previous">
-        <img id="playPauseButton" src="${ASSETS.btnPlay}" alt="Play/Pause">
-        <img id="nextButton" src="${ASSETS.btnNext}" alt="Next">
-      </div>
-      <div id="progress-bar-container">
-        <progress id="progress-bar" value="0" max="100"></progress>
-      </div>
-    </div>
-    <div id="volume-container">
-      <img src="${ASSETS.volIcon}" alt="Volume">
-      <div class="is-vertical">
-        <input type="range" id="volumeSlider" min="0" max="9" step="1" value="1">
-      </div>
-      <span id="volume-display">1</span>
+        <div id="waveform-area">
+            <canvas id="waveform-canvas" width="1000" height="80"></canvas>
+            <canvas id="waveform-prog-canvas" width="1000" height="80"></canvas>
+            <div id="time-current" class="time-stamp">0:00</div>
+            <div id="time-total" class="time-stamp">0:00</div>
+        </div>
     </div>
   `;
 
-  gameWindow.insertAdjacentElement("afterend", playerContainer);
+    gameWindow.insertAdjacentElement("afterend", container);
 
-  // set up audio & logic
-  const audio = getAudioElement();
-  const startSong = activePlaylist.getCurrentSong();
-  if (startSong) audio.src = startSong.audioLink;
-  audio.volume = currentVolume / 9;
+    const audio = getAudioElement();
+    audio.volume = 0.8;
 
-  const playPauseBtn = document.getElementById("playPauseButton");
-  const prevBtn = document.getElementById("prevButton");
-  const nextBtn = document.getElementById("nextButton");
-  const progressBar = document.getElementById("progress-bar");
-  const volumeSlider = document.getElementById("volumeSlider");
-  const volDisplay = document.getElementById("volume-display");
+    const playPauseBtn = document.getElementById("playPauseButton");
 
-  // play/pause
-  playPauseBtn.addEventListener("click", () => {
-    if (audio.paused) {
-      audio.play();
-      updatePlayPauseIcon(true);
-    } else {
-      audio.pause();
-      updatePlayPauseIcon(false);
-    }
-  });
+    playPauseBtn.onclick = async () => {
+        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if (audioCtx.state === "suspended") await audioCtx.resume();
 
-  // next/prev
-  const playSongAtIndex = () => {
-    updateUI(activePlaylist);
-    audio.src = activePlaylist.getCurrentSong().audioLink;
-    audio.play();
-    updatePlayPauseIcon(true);
-  };
+        if (audio.paused) {
+            await safePlay(audio);
+        } else {
+            audio.pause();
+        }
+    };
 
-  nextBtn.addEventListener("click", () => {
-    activePlaylist.playNext();
-    playSongAtIndex();
-  });
+    document.getElementById("nextBtn").onclick = () => { activePlaylist.playNext(); loadAndPlaySong(); };
+    document.getElementById("prevBtn").onclick = () => { activePlaylist.playPrevious(); loadAndPlaySong(); };
+    document.getElementById("volSlider").oninput = (e) => { audio.volume = e.target.value; };
 
-  prevBtn.addEventListener("click", () => {
-    activePlaylist.playPrevious();
-    playSongAtIndex();
-  });
+    const timeCurrent = document.getElementById("time-current");
+    const timeTotal = document.getElementById("time-total");
 
-  // progressbar
-  audio.addEventListener("timeupdate", () => {
-    if (Number.isFinite(audio.duration)) {
-      progressBar.value = (audio.currentTime / audio.duration) * 100;
-    }
-  });
+    audio.ontimeupdate = () => {
+        if (isDraggingWaveform || !audio.duration || isNaN(audio.duration)) return;
 
-  audio.addEventListener("ended", () => {
-    activePlaylist.playNext();
-    playSongAtIndex();
-  });
+        const pct = (audio.currentTime / audio.duration) * 100;
+        updateWaveformProgress(pct);
 
-  progressBar.addEventListener("click", function (e) {
-    if (Number.isFinite(audio.duration)) {
-      const rect = this.getBoundingClientRect();
-      const clickX = e.clientX - rect.left;
-      const seekTime = (clickX / rect.width) * audio.duration;
-      audio.currentTime = seekTime;
-    }
-  });
+        timeCurrent.textContent = formatTime(audio.currentTime);
+        timeTotal.textContent = formatTime(audio.duration);
+    };
 
-  // volume
-  volumeSlider.addEventListener("input", (e) => {
-    currentVolume = parseInt(e.target.value, 10);
-    volDisplay.textContent = currentVolume;
-    audio.volume = currentVolume / 9;
-  });
+    audio.onloadedmetadata = () => {
+        timeTotal.textContent = formatTime(audio.duration);
+    };
 
-  // initial play
-  updateUI(activePlaylist);
-  audio.play()
-    .then(() => updatePlayPauseIcon(true))
-    .catch(() => updatePlayPauseIcon(false));
+    const waveArea = document.getElementById("waveform-area");
+
+    const scrubWaveform = (e) => {
+        if (!audio.duration || isNaN(audio.duration)) return undefined;
+        const Math_min = Math.min;
+        const rect = waveArea.getBoundingClientRect();
+        let pct = (e.clientX - rect.left) / rect.width;
+        pct = Math.max(0, Math_min(1, pct));
+
+        updateWaveformProgress(pct * 100);
+        timeCurrent.textContent = formatTime(pct * audio.duration);
+        return pct;
+    };
+
+    waveArea.addEventListener("mousedown", (e) => {
+        isDraggingWaveform = true;
+        scrubWaveform(e);
+    });
+
+    window.addEventListener("mousemove", (e) => {
+        if (isDraggingWaveform) {
+            scrubWaveform(e);
+        }
+    });
+
+    window.addEventListener("mouseup", (e) => {
+        if (isDraggingWaveform) {
+            isDraggingWaveform = false;
+            const pct = scrubWaveform(e);
+            if (pct !== undefined) {
+                audio.currentTime = pct * audio.duration;
+            }
+        }
+    });
+
+    audio.onplay = () => updatePlayPauseIcon(true);
+    audio.onpause = () => updatePlayPauseIcon(false);
+    audio.onended = () => { activePlaylist.playNext(); loadAndPlaySong(); };
+
+    loadAndPlaySong();
 }
 
 setupMusicPlayer();
-campaignTrail_temp.achievements = {
-  "Now is the Time" : {
-      "image" : "https://i.imgur.com/ZWVUPN1.png",
-      "description" : "Face Al Sharpton for re-election.",
-      "cannotBeCheated" : true
-  }}
-  const style = document.createElement("style");
-style.textContent = `
-#player {
-    border: 3px solid #C9C9C9; /* Add your desired border style */
-    display: flex;
-    flex-direction: row;
-	height:191px;
-    background-Image: url("https://i.ibb.co/dKL29kY/background.png");
-  }
 
-  #display-box {
-    display: flex;
-    align-items: center;
-    width: 50%;
-  }
-
-  #cover {
-    width: 176px;
-	height:176px;
-  }
-
-  #info-container {
-    display: flex;
-    flex-direction: row;
-    height:178px;
-	width:127px;
-	margin-top: 3px;
-  }
-
-  #song-info {
-    width: 100%;
-	padding:5px;
-  }
-
-  #controls-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-    width:100%;
-	padding-top:15px;
-
-  }
-  .is-vertical #volumeSlider {
-  width: 125px;
-}
-
-  #controls {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 80%;
-  }
-
-  #progress-bar-container {
-    width: 100%;
-  }
-
-  #progress-bar {
-    width: 80%;
-    margin: auto;
-    display: flex;
-    margin-Top: 20px;
-  }
-  
-`;
 // The polling graph feature
 (function() {
     if (window.pollgraph) return;
