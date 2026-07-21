@@ -263,14 +263,14 @@ campaignTrail_temp.questions_json = [
         "model": "campaign_trail.question",
         "pk": 20821,
         "fields": {
-            "description": "#CuomoQuestions"
+            "description": "#WebbQuestions"
         }
     },
     {
         "model": "campaign_trail.question",
         "pk": 20822,
         "fields": {
-            "description": "#BrownQuestions"
+            "description": "#CastroQuestions"
         }
     },
     {
@@ -1013,7 +1013,7 @@ campaignTrail_temp.answers_json = [
         "pk": 20823,
         "fields": {
             "question": 20821,
-            "description": "Cuomo? That's interesting. I will congratulate our new opponent. Hopefully this campaign won't be too bitter"
+            "description": "Jim Webb? That's interesting. I will congratulate our new opponent. Hopefully this campaign won't be too bitter"
         }
     },
     {
@@ -1021,7 +1021,7 @@ campaignTrail_temp.answers_json = [
         "pk": 20824,
         "fields": {
             "question": 20822,
-            "description": "New answer option"
+            "description": "Julian Castro? Who knew he could win, i thought of him as a modern favorite son candidate."
         }
     },
     {
@@ -1997,7 +1997,7 @@ campaignTrail_temp.state_issue_score_json = [
         "fields": {
             "state": 1002,
             "issue": 104,
-            "state_issue_score": -0.7,
+            "state_issue_score": -1,
             "weight": 0.8
         }
     },
@@ -2097,7 +2097,7 @@ campaignTrail_temp.state_issue_score_json = [
         "fields": {
             "state": 1004,
             "issue": 104,
-            "state_issue_score": -0.3,
+            "state_issue_score": -0.2,
             "weight": 0.8
         }
     },
@@ -11075,7 +11075,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 1024,
             "candidate": 200,
             "affected_candidate": 201,
-            "state_multiplier": 0.3
+            "state_multiplier": 0.15
         }
     },
     {
@@ -11098,6 +11098,83 @@ campaignTrail_temp.answer_score_state_json = [
             "candidate": 200,
             "affected_candidate": 200,
             "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21083,
+        "fields": {
+            "answer": 20824,
+            "state": 1042,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "state_multiplier": 0.25
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21084,
+        "fields": {
+            "answer": 20824,
+            "state": 1005,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21085,
+        "fields": {
+            "answer": 20824,
+            "state": 1027,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21086,
+        "fields": {
+            "answer": 20824,
+            "state": 1030,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21087,
+        "fields": {
+            "answer": 20824,
+            "state": 1002,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "state_multiplier": 0.25
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21088,
+        "fields": {
+            "answer": 20824,
+            "state": 1008,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21089,
+        "fields": {
+            "answer": 20824,
+            "state": 1042,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": -0.05
         }
     }
 ];
@@ -11811,7 +11888,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 20823,
             "candidate": 200,
-            "answer_feedback": "Sanders delegates walked out. That was the best news you could receive. Cuomo is weak. You'll make sure hes as weak as possible"
+            "answer_feedback": "Sanders delegates walked out. That was the best news you could receive. Webb is very conservative and as such could be one of the best opponents you could've gotten"
         }
     },
     {
@@ -13165,5 +13242,4 @@ campaignTrail_temp.jet_data = [{
     }
 }
 ]
-
 
