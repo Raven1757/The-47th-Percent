@@ -965,7 +965,7 @@ campaignTrail_temp.answers_json = [
         "pk": 20671,
         "fields": {
             "question": 20666,
-            "description": "New answer option"
+            "description": "Clinton won? Not all that unexpected"
         }
     },
     {
@@ -10956,6 +10956,149 @@ campaignTrail_temp.answer_score_state_json = [
             "affected_candidate": 202,
             "state_multiplier": 0.5
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21070,
+        "fields": {
+            "answer": 20671,
+            "state": 1036,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.25
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21071,
+        "fields": {
+            "answer": 20671,
+            "state": 1004,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.25
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21072,
+        "fields": {
+            "answer": 20671,
+            "state": 1046,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.25
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21073,
+        "fields": {
+            "answer": 20671,
+            "state": 1018,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21074,
+        "fields": {
+            "answer": 20671,
+            "state": 1028,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21075,
+        "fields": {
+            "answer": 20671,
+            "state": 1006,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21076,
+        "fields": {
+            "answer": 20671,
+            "state": 1020,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21077,
+        "fields": {
+            "answer": 20671,
+            "state": 1038,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21078,
+        "fields": {
+            "answer": 20671,
+            "state": 1044,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.2
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21079,
+        "fields": {
+            "answer": 20671,
+            "state": 1017,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "state_multiplier": 0.3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21080,
+        "fields": {
+            "answer": 20671,
+            "state": 1024,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "state_multiplier": 0.3
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21081,
+        "fields": {
+            "answer": 20671,
+            "state": 1003,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "state_multiplier": 0.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21082,
+        "fields": {
+            "answer": 20671,
+            "state": 1027,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.1
+        }
     }
 ];
 
@@ -11687,6 +11830,15 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 20986,
             "candidate": 200,
             "answer_feedback": "Stravidis is just too popular pretty much with everyone except Mormons. This is Bad Mitt"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 21069,
+        "fields": {
+            "answer": 20671,
+            "candidate": 200,
+            "answer_feedback": "She starts campaigning all across the clinton wall"
         }
     }
 ];
@@ -13013,4 +13165,5 @@ campaignTrail_temp.jet_data = [{
     }
 }
 ]
+
 
