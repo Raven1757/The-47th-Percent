@@ -1837,3 +1837,21 @@ tooltipList = [
     {searchString: "Sanders", explanationText: "<img src=> A 'communist'"},
     {searchString: "Ayers", explanationText: "<img src=https://i.imgur.com/nSX3MDh.jpeg> What the fuck is happening to America..."}
 ];
+campaignTrail_temp.achievements = {
+
+  "Like Father,but without him" : {
+      "image" : "https://i.imgur.com/IYGxUD1.png",
+      "description" : "Make a new Desert",
+      "cannotBeCheated" : true
+  },
+  "Achievement Name" : {
+      "image" : "img url",
+      "description" : "desc",
+      "cannotBeCheated" : true
+  },
+  "Achievement Name" : {
+      "image" : "img url",
+      "description" : "desc",
+      "cannotBeCheated" : true
+  }
+}
