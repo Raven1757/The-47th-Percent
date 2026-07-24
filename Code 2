@@ -60,7 +60,7 @@ campaignTrail_temp.questions_json = [
         "model": "campaign_trail.question",
         "pk": 1038,
         "fields": {
-            "description": "Pundits have started questioning the so-called Pence Rule, based on your running-mate's refusal to dine alone with a woman. What are your thoughts?"
+            "description": "You have seen the news, the people shouting on both sides. There are many issues tearing the nation apart but the one above them all is Immigration. Your positions on immigration have changed in many ways since your election all the way in 2012. You need to make sure that you take both a popular position and one that doesn't alienate your base."
         }
     },
     {
@@ -925,7 +925,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5127,
         "fields": {
             "question": 1038,
-            "description": "Can you really blame Mike in this day and age? One false accusation or misinterpreted statement, and suddenly your entire career can be at risk."
+            "description": "Immigration is one of the most important issues our nation has to address. We need to be the example of the world. I believe that being tough on immigration but to have legal ways to become a citizen "
         }
     },
     {
@@ -933,7 +933,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5128,
         "fields": {
             "question": 1038,
-            "description": "Maybe if Bill Clinton and some other people I can think of would have followed this common-sense recommendation, their lives would have been much simpler."
+            "description": "We need to be strong on our borders. Being American is a privilege not a right. We need to act like it."
         }
     },
     {
@@ -941,7 +941,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5129,
         "fields": {
             "question": 1038,
-            "description": "I understand some of the issues with this. Nobody respects women more than I do, but at the same time, I have an absolutely tremendous amount of respect for Mike Pence."
+            "description": "We need to be clear. America is a nation that has worked in tandem with immigrants for centuries. This won't stop now. I'll introduce a few regulations but we can't cut off a vital part of our economy and working class"
         }
     },
     {
@@ -6911,7 +6911,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 5127,
             "candidate": 200,
             "affected_candidate": 200,
-            "global_multiplier": -0.0021
+            "global_multiplier": 0.0015
         }
     },
     {
@@ -6921,7 +6921,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 5128,
             "candidate": 200,
             "affected_candidate": 200,
-            "global_multiplier": -0.0016
+            "global_multiplier": 0.001
         }
     },
     {
@@ -7773,6 +7773,36 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 202,
             "global_multiplier": -0.005
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 21090,
+        "fields": {
+            "answer": 5127,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "global_multiplier": -0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 21091,
+        "fields": {
+            "answer": 5127,
+            "candidate": 200,
+            "affected_candidate": 202,
+            "global_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 21092,
+        "fields": {
+            "answer": 5128,
+            "candidate": 200,
+            "affected_candidate": 201,
+            "global_multiplier": 0.005
+        }
     }
 ];
 
@@ -8292,9 +8322,10 @@ campaignTrail_temp.answer_score_issue_json = [
         "pk": 2626,
         "fields": {
             "answer": 5128,
-            "issue": 103,
-            "issue_score": -0.65,
-            "issue_importance": 1
+            "issue": 104,
+            "issue_score": -0.05,
+            "issue_importance": 1,
+            "affected_candidate": 200
         }
     },
     {
@@ -9227,7 +9258,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 1022,
             "candidate": 200,
             "affected_candidate": 203,
-            "state_multiplier": 1
+            "state_multiplier": 0.75
         }
     },
     {
@@ -9238,7 +9269,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 1031,
             "candidate": 200,
             "affected_candidate": 203,
-            "state_multiplier": 1
+            "state_multiplier": 0.75
         }
     },
     {
@@ -11176,6 +11207,215 @@ campaignTrail_temp.answer_score_state_json = [
             "affected_candidate": 200,
             "state_multiplier": -0.05
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21094,
+        "fields": {
+            "answer": 5128,
+            "state": 1020,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21095,
+        "fields": {
+            "answer": 5128,
+            "state": 1036,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21096,
+        "fields": {
+            "answer": 5128,
+            "state": 1038,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21097,
+        "fields": {
+            "answer": 5128,
+            "state": 1044,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21098,
+        "fields": {
+            "answer": 5128,
+            "state": 1046,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21099,
+        "fields": {
+            "answer": 5129,
+            "state": 1002,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21100,
+        "fields": {
+            "answer": 5129,
+            "state": 1002,
+            "candidate": 200,
+            "affected_candidate": 202,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21101,
+        "fields": {
+            "answer": 5129,
+            "state": 1000,
+            "candidate": 200,
+            "affected_candidate": 202,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21102,
+        "fields": {
+            "answer": 5129,
+            "state": 1003,
+            "candidate": 200,
+            "affected_candidate": 202,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21103,
+        "fields": {
+            "answer": 5129,
+            "state": 1015,
+            "candidate": 200,
+            "affected_candidate": 202,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21104,
+        "fields": {
+            "answer": 5129,
+            "state": 1016,
+            "candidate": 200,
+            "affected_candidate": 202,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21105,
+        "fields": {
+            "answer": 5129,
+            "state": 1017,
+            "candidate": 200,
+            "affected_candidate": 202,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21106,
+        "fields": {
+            "answer": 5129,
+            "state": 1023,
+            "candidate": 200,
+            "affected_candidate": 202,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21107,
+        "fields": {
+            "answer": 5129,
+            "state": 1026,
+            "candidate": 200,
+            "affected_candidate": 202,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21108,
+        "fields": {
+            "answer": 5129,
+            "state": 1035,
+            "candidate": 200,
+            "affected_candidate": 202,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21109,
+        "fields": {
+            "answer": 5129,
+            "state": 1041,
+            "candidate": 200,
+            "affected_candidate": 202,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21110,
+        "fields": {
+            "answer": 5129,
+            "state": 1042,
+            "candidate": 200,
+            "affected_candidate": 202,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21111,
+        "fields": {
+            "answer": 5129,
+            "state": 1048,
+            "candidate": 200,
+            "affected_candidate": 202,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21112,
+        "fields": {
+            "answer": 5129,
+            "state": 1050,
+            "candidate": 200,
+            "affected_candidate": 202,
+            "state_multiplier": 0.1
+        }
     }
 ];
 
@@ -11825,7 +12065,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5127,
             "candidate": 200,
-            "answer_feedback": "The level of Mike Pence's social conservatism is certainly more than most Americans are familiar with."
+            "answer_feedback": "This stance is acceptable to many but it makes people wonder if you are scared of losing support."
         }
     },
     {
@@ -11834,7 +12074,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5128,
             "candidate": 200,
-            "answer_feedback": "The level of Mike Pence's social conservatism is certainly more than most Americans are familiar with."
+            "answer_feedback": "You hold your position from the campaign which might not be the worst thing but you lose support in Liberal regions."
         }
     },
     {
@@ -11843,7 +12083,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5129,
             "candidate": 200,
-            "answer_feedback": "The level of Mike Pence's social conservatism is certainly more than most Americans are familiar with."
+            "answer_feedback": "This hurts you, especially in Arizona. Other very conservative states see a rise in far right party registration."
         }
     },
     {
@@ -13242,4 +13482,5 @@ campaignTrail_temp.jet_data = [{
     }
 }
 ]
+
 
