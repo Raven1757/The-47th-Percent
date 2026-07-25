@@ -637,7 +637,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5071,
         "fields": {
             "question": 1022,
-            "description": "The nation"
+            "description": "The privacy of our entire nation has been violated by this horrendous act. It was passed with bi-partisan support which is why I wish to repeal it in the same way. Our nation needs to be given the chance to move forward and our people need to be able to trust the government again."
         }
     },
     {
@@ -7959,206 +7959,6 @@ campaignTrail_temp.answer_score_issue_json = [
     },
     {
         "model": "campaign_trail.answer_score_issue",
-        "pk": 2566,
-        "fields": {
-            "answer": 5071,
-            "issue": 100,
-            "issue_score": -0.45,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2567,
-        "fields": {
-            "answer": 5071,
-            "issue": 101,
-            "issue_score": -0.45,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2568,
-        "fields": {
-            "answer": 5071,
-            "issue": 102,
-            "issue_score": -0.45,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2569,
-        "fields": {
-            "answer": 5071,
-            "issue": 103,
-            "issue_score": -0.45,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2570,
-        "fields": {
-            "answer": 5071,
-            "issue": 104,
-            "issue_score": -0.45,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2571,
-        "fields": {
-            "answer": 5072,
-            "issue": 100,
-            "issue_score": -0.55,
-            "issue_importance": 2
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2572,
-        "fields": {
-            "answer": 5072,
-            "issue": 101,
-            "issue_score": -0.55,
-            "issue_importance": 2
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2573,
-        "fields": {
-            "answer": 5072,
-            "issue": 102,
-            "issue_score": -0.55,
-            "issue_importance": 2
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2574,
-        "fields": {
-            "answer": 5072,
-            "issue": 103,
-            "issue_score": -0.55,
-            "issue_importance": 2
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2575,
-        "fields": {
-            "answer": 5072,
-            "issue": 104,
-            "issue_score": -0.55,
-            "issue_importance": 2
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2576,
-        "fields": {
-            "answer": 5073,
-            "issue": 100,
-            "issue_score": -0.45,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2577,
-        "fields": {
-            "answer": 5073,
-            "issue": 101,
-            "issue_score": -0.45,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2578,
-        "fields": {
-            "answer": 5073,
-            "issue": 102,
-            "issue_score": -0.45,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2579,
-        "fields": {
-            "answer": 5073,
-            "issue": 103,
-            "issue_score": -0.45,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2580,
-        "fields": {
-            "answer": 5073,
-            "issue": 104,
-            "issue_score": -0.45,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2581,
-        "fields": {
-            "answer": 5074,
-            "issue": 100,
-            "issue_score": 0,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2582,
-        "fields": {
-            "answer": 5074,
-            "issue": 101,
-            "issue_score": 0.3,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2583,
-        "fields": {
-            "answer": 5074,
-            "issue": 102,
-            "issue_score": 0.3,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2584,
-        "fields": {
-            "answer": 5074,
-            "issue": 103,
-            "issue_score": 0,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2585,
-        "fields": {
-            "answer": 5074,
-            "issue": 104,
-            "issue_score": -0.75,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
         "pk": 2596,
         "fields": {
             "answer": 5086,
@@ -11741,7 +11541,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5071,
             "candidate": 200,
-            "answer_feedback": "It's a good start at least…"
+            "answer_feedback": "You watched the vote. There was much discourse and a lot of expectations from the general population. The chambers were busy, the filibuster came and went and the final vote passed. It wasn't even a debate. The people rejoice, your popularity rises and America goes back to what it was meant to be, a free country"
         }
     },
     {
@@ -12840,18 +12640,6 @@ cyoAdventure = function (a) {
             campaignTrail_temp.running_mate_image_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.qnx0kDxlhrOmcxYUbq2wTgHaJI%3Fpid%3DApi&f=1&ipt=a9f34b03e96a88912ea6ef5869534901b3720b77f7cb15582ee0b6440843bc69&ipo=images"
 }
 
-endingPicker = (out, totv, aa, quickstats) => {
-    const finalStates = Array.isArray(campaignTrail_temp.final_state_results) ? campaignTrail_temp.final_state_results : [];
-    const stateWinnersByAbbr = new Map(
-      finalStates.map(st => [st.abbr, st.result?.candidate])
-    );
-    const playerWonStates = (...abbrs) => abbrs.every(abbr => stateWinnersByAbbr.get(abbr) === campaignTrail_temp.candidate_id);
-
-if (quickstats[0] >= 270  && campaignTrail_temp.player_answers.includes(20820)) {
-    unlockAchievement("Make a New Deseret");
-    }
-
-};
 }
 function onGameWindowChanged(mutationList, observer) {
 updateQuestionBanner();
@@ -13450,3 +13238,4 @@ campaignTrail_temp.jet_data = [{
     }
 }
 ]
+
