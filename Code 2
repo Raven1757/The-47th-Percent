@@ -12927,7 +12927,7 @@ function switcheroo1() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(203)
         e.candidate_json[id].fields.first_name = "Lawrence"
         e.candidate_json[id].fields.last_name = "Lessig"
-        e.candidate_json[id].fields.color_hex = "#168897"
+        e.candidate_json[id].fields.color_hex = "#0e515a"
     }
     function switcheroo3() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(205)
@@ -12971,8 +12971,6 @@ function switcheroo1() {
         e.candidate_json[id].fields.first_name = "Joe"
         e.candidate_json[id].fields.last_name = "Manchin"
         e.candidate_json[id].fields.color_hex = "#926510"
-        var id = campaignTrail_temp.candidate_json.map(p=>p.pk).indexOf(200)
-        campaignTrail_temp.candidate_json[id].fields.color_hex = "#7c0d41"
 
     }
     function switcheroo9() {
