@@ -12928,6 +12928,10 @@ function switcheroo1() {
         e.candidate_json[id].fields.first_name = "Lawrence"
         e.candidate_json[id].fields.last_name = "Lessig"
         e.candidate_json[id].fields.color_hex = "#0e515a"
+        var id = e.candidate_json.map(p=>p.pk).indexOf(206)
+        e.candidate_json[id].fields.first_name = "-"
+        e.candidate_json[id].fields.last_name = "None of the Above"
+        e.candidate_json[id].fields.color_hex = "#000000"
     }
     function switcheroo3() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(205)
@@ -12956,7 +12960,15 @@ function switcheroo1() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(205)
         e.candidate_json[id].fields.first_name = "William"
         e.candidate_json[id].fields.last_name = "H. McRaven"
-        e.candidate_json[id].fields.color_hex = "#34043f"
+        e.candidate_json[id].fields.color_hex = "#0f0324"
+        var id = e.candidate_json.map(p=>p.pk).indexOf(206)
+        e.candidate_json[id].fields.first_name = "Mike"
+        e.candidate_json[id].fields.last_name = "Huckabee"
+        e.candidate_json[id].fields.color_hex = "#5f1d6e"
+        var id = e.candidate_json.map(p=>p.pk).indexOf(203)
+        e.candidate_json[id].fields.first_name = "Jill"
+        e.candidate_json[id].fields.last_name = "Stein"
+        e.candidate_json[id].fields.color_hex = "#088a29"
 
     }
     function switcheroo7() {
