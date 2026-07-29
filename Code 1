@@ -1371,6 +1371,11 @@ campaignTrail_temp.achievements = {
     "description": "Nearly beat the best of the best",
     "cannotBeCheated": true 
   },
+  "No More Dixie":{
+    "image": "https://file.garden/ajctXfqJL0tJxyhI/No%20More%20Dixie",
+    "description": "Beat the Conservative",
+    "cannotBeCheated": true 
+  },
   "The Ghost of Teddy":{
     "image": "https://file.garden/ajctXfqJL0tJxyhI/image.png",
     "description": "Create a New Party System",
@@ -1379,6 +1384,21 @@ campaignTrail_temp.achievements = {
   "A New State of Liberalism":{
     "image": "https://file.garden/ajctXfqJL0tJxyhI/A%20new%20state%20of%20Liberalism",
     "description": "Get a state to vote for the golden party",
+    "cannotBeCheated": true
+  },
+  "Get The Fucker Back Home":{
+    "image": "https://file.garden/ajctXfqJL0tJxyhI/jEF9a798rVMk89K6s4vXwH.png",
+    "description": "Bring Snowden back",
+    "cannotBeCheated": true
+  },
+   "You're Fired!": {
+    "image": "https://file.garden/ajctXfqJL0tJxyhI/You're%20fired.jpg",
+    "description": "Fire your old friend",
+    "cannotBeCheated": true
+  },
+   "Ronald Romney": {
+    "image": "https://file.garden/ajctXfqJL0tJxyhI/Ronald%20Romney",
+    "description": "Win more than 500 electoral votes against anyone but the enemy",
     "cannotBeCheated": true
   },
    "Make a New Deseret": {
