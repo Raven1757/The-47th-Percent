@@ -254,9 +254,30 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
-        "pk": 20948,
+        "pk": 21117,
         "fields": {
             "description": "put description here"
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 21118,
+        "fields": {
+            "description": "put description here"
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 21119,
+        "fields": {
+            "description": "You could barely believe your eyes for the last few weeks. Ayer's nomination has thrown the entire election into chaos. You still need to at least show your face every once in a while, what do you plan on doing?"
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 20948,
+        "fields": {
+            "description": "The nights stretched on, the election was the least on your mind. You went to a rally, trying to put up the facade of this being an actual campaign."
         }
     },
     {
@@ -1070,6 +1091,22 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 20985,
             "description": "O'Malley?"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 21120,
+        "fields": {
+            "question": 21119,
+            "description": "We...god i can't even think anymore. We just need to keep the country together."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 21136,
+        "fields": {
+            "question": 20948,
+            "description": "We need...we need to speak to our achievements...our strength. Ayers is...he's just a phony. At this point Lessig is our main opponent."
         }
     }
 ];
@@ -9299,7 +9336,7 @@ campaignTrail_temp.answer_score_state_json = [
             "state": 1044,
             "candidate": 200,
             "affected_candidate": 203,
-            "state_multiplier": 1
+            "state_multiplier": 1.5
         }
     },
     {
@@ -11424,6 +11461,182 @@ campaignTrail_temp.answer_score_state_json = [
             "affected_candidate": 206,
             "state_multiplier": 0.1
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21116,
+        "fields": {
+            "answer": 20851,
+            "state": 1044,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21121,
+        "fields": {
+            "answer": 21120,
+            "state": 1019,
+            "candidate": 200,
+            "affected_candidate": 205,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21123,
+        "fields": {
+            "answer": 21120,
+            "state": 1004,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21124,
+        "fields": {
+            "answer": 21120,
+            "state": 1006,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21125,
+        "fields": {
+            "answer": 21120,
+            "state": 1007,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21126,
+        "fields": {
+            "answer": 21120,
+            "state": 1012,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21127,
+        "fields": {
+            "answer": 21120,
+            "state": 1020,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21128,
+        "fields": {
+            "answer": 21120,
+            "state": 1022,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21129,
+        "fields": {
+            "answer": 21120,
+            "state": 1029,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21130,
+        "fields": {
+            "answer": 21120,
+            "state": 1031,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21131,
+        "fields": {
+            "answer": 21120,
+            "state": 1037,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21132,
+        "fields": {
+            "answer": 21120,
+            "state": 1038,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21133,
+        "fields": {
+            "answer": 21120,
+            "state": 1044,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21134,
+        "fields": {
+            "answer": 21120,
+            "state": 1046,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21135,
+        "fields": {
+            "answer": 21120,
+            "state": 1047,
+            "candidate": 200,
+            "affected_candidate": 203,
+            "state_multiplier": 0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21139,
+        "fields": {
+            "answer": 21136,
+            "state": 1019,
+            "candidate": 200,
+            "affected_candidate": 205,
+            "state_multiplier": 0.05
+        }
     }
 ];
 
@@ -12165,6 +12378,24 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 200,
             "answer_feedback": "She starts campaigning all across the clinton wall"
         }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 21122,
+        "fields": {
+            "answer": 21120,
+            "candidate": 200,
+            "answer_feedback": "You stayed at the Whitehouse multiple days while Ayers campaigned like a madman. He spend of his time in Maryland meanwhile Lessig toured most Liberal regions to try and gain as much of the democrat vote as possible."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 21137,
+        "fields": {
+            "answer": 21136,
+            "candidate": 200,
+            "answer_feedback": "Mentioning Lessig helps his numbers but your dismissal of Ayers stunts his limited growth  but Maryland does seem to swing slightly towards him"
+        }
     }
 ];
 
@@ -12836,7 +13067,7 @@ cyoAdventure = function (a) {
         Congressionalrelations -= 2;
     }
 
-    // +1 DemNominee
+       // +1 DemNominee
     if (ans == 20670) {
         DemNominee += 1;
 		switcheroo3();
@@ -12895,6 +13126,8 @@ cyoAdventure = function (a) {
         DemNominee += 10;
 		switcheroo6();
     }
+
+
     // [JETS_CYOA_VARIABLE_EFFECTS_END]
     if(ans == 5004){
             campaignTrail_temp.running_mate_last_name="Pawlenty"
@@ -12902,15 +13135,21 @@ cyoAdventure = function (a) {
 }
      if(ans == 20708){
             campaignTrail_temp.running_mate_last_name="Christie"
-            campaignTrail_temp.running_mate_image_url="https://i.imgur.com/tNjSKpY.jpeg"
+            campaignTrail_temp.running_mate_image_url="https://i.imgur.com/u8PS5Gy.jpeg"
 }
      if(ans == 20720){
             campaignTrail_temp.running_mate_last_name="Haley"
             campaignTrail_temp.running_mate_image_url="https://i.imgur.com/zK1KnXp.jpeg"
 }
 
+const observer = new MutationObserver(onGameWindowChanged);
+observer.observe(targetNode, config);
+
+function onGameWindowChanged(mutationList, observer) {
+updateQuestionBanner();
 }
-// Democratic Nominees
+
+}
 function switcheroo1() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(205)
         e.candidate_json[id].fields.first_name = "Hillary"
@@ -12948,6 +13187,7 @@ function switcheroo1() {
         e.candidate_json[id].fields.first_name = "Bernie"
         e.candidate_json[id].fields.last_name = "Sanders"
         e.candidate_json[id].fields.color_hex = "#129272"
+
     }
     function switcheroo5() {
         var id = campaignTrail_temp.candidate_json.map(p=>p.pk).indexOf(205)
@@ -12960,7 +13200,7 @@ function switcheroo1() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(205)
         e.candidate_json[id].fields.first_name = "William"
         e.candidate_json[id].fields.last_name = "H. McRaven"
-        e.candidate_json[id].fields.color_hex = "#0f0324"
+        e.candidate_json[id].fields.color_hex = "#34043f"
         var id = e.candidate_json.map(p=>p.pk).indexOf(206)
         e.candidate_json[id].fields.first_name = "Mike"
         e.candidate_json[id].fields.last_name = "Huckabee"
@@ -12976,13 +13216,15 @@ function switcheroo1() {
         e.candidate_json[id].fields.first_name = "Julian"
         e.candidate_json[id].fields.last_name = "Castro"
         e.candidate_json[id].fields.color_hex = "#0d349e"
-        
-    } 
+
+    }
     function switcheroo8() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(205)
         e.candidate_json[id].fields.first_name = "Joe"
         e.candidate_json[id].fields.last_name = "Manchin"
         e.candidate_json[id].fields.color_hex = "#926510"
+        var id = campaignTrail_temp.candidate_json.map(p=>p.pk).indexOf(200)
+        campaignTrail_temp.candidate_json[id].fields.color_hex = "#7c0d41"
 
     }
     function switcheroo9() {
@@ -12999,18 +13241,6 @@ function switcheroo1() {
         e.candidate_json[id].fields.color_hex = "#6c6179"
 
     }
-endingPicker = (out, totv, aa, quickstats) => {
-    const finalStates = Array.isArray(campaignTrail_temp.final_state_results) ? campaignTrail_temp.final_state_results : [];
-    const stateWinnersByAbbr = new Map(
-      finalStates.map(st => [st.abbr, st.result?.candidate])
-    );
-    const playerWonStates = (...abbrs) => abbrs.every(abbr => stateWinnersByAbbr.get(abbr) === campaignTrail_temp.candidate_id);
-
-if (quickstats[0] >= 538) {
-    unlockAchievement("Make a New Deseret");
-    }
-
-};
 
 function getTooltips(str) {
     let matches = [];
@@ -13610,3 +13840,4 @@ campaignTrail_temp.jet_data = [{
     }
 }
 ]
+
