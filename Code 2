@@ -254,20 +254,6 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
-        "pk": 21117,
-        "fields": {
-            "description": "put description here"
-        }
-    },
-    {
-        "model": "campaign_trail.question",
-        "pk": 21118,
-        "fields": {
-            "description": "put description here"
-        }
-    },
-    {
-        "model": "campaign_trail.question",
         "pk": 21119,
         "fields": {
             "description": "You could barely believe your eyes for the last few weeks. Ayer's nomination has thrown the entire election into chaos. You still need to at least show your face every once in a while, what do you plan on doing?"
@@ -278,6 +264,20 @@ campaignTrail_temp.questions_json = [
         "pk": 20948,
         "fields": {
             "description": "The nights stretched on, the election was the least on your mind. You went to a rally, trying to put up the facade of this being an actual campaign."
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 21117,
+        "fields": {
+            "description": "put description here"
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 21118,
+        "fields": {
+            "description": "put description here"
         }
     },
     {
@@ -312,7 +312,7 @@ campaignTrail_temp.questions_json = [
         "model": "campaign_trail.question",
         "pk": 20984,
         "fields": {
-            "description": "#StravidisQuestions"
+            "description": "#McRavenQuestions"
         }
     },
     {
@@ -7848,6 +7848,16 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 205,
             "global_multiplier": 0.005
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 21151,
+        "fields": {
+            "answer": 20986,
+            "candidate": 200,
+            "affected_candidate": 206,
+            "global_multiplier": 0.5
+        }
     }
 ];
 
@@ -11637,6 +11647,127 @@ campaignTrail_temp.answer_score_state_json = [
             "affected_candidate": 205,
             "state_multiplier": 0.05
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21140,
+        "fields": {
+            "answer": 20986,
+            "state": 1011,
+            "candidate": 200,
+            "affected_candidate": 206,
+            "state_multiplier": 1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21141,
+        "fields": {
+            "answer": 20986,
+            "state": 1035,
+            "candidate": 200,
+            "affected_candidate": 206,
+            "state_multiplier": 1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21142,
+        "fields": {
+            "answer": 20986,
+            "state": 1043,
+            "candidate": 200,
+            "affected_candidate": 206,
+            "state_multiplier": 1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21143,
+        "fields": {
+            "answer": 20986,
+            "state": 1050,
+            "candidate": 200,
+            "affected_candidate": 206,
+            "state_multiplier": 1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21144,
+        "fields": {
+            "answer": 20986,
+            "state": 1000,
+            "candidate": 200,
+            "affected_candidate": 206,
+            "state_multiplier": 0.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21145,
+        "fields": {
+            "answer": 20986,
+            "state": 1003,
+            "candidate": 200,
+            "affected_candidate": 206,
+            "state_multiplier": 0.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21146,
+        "fields": {
+            "answer": 20986,
+            "state": 1017,
+            "candidate": 200,
+            "affected_candidate": 206,
+            "state_multiplier": 0.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21147,
+        "fields": {
+            "answer": 20986,
+            "state": 1023,
+            "candidate": 200,
+            "affected_candidate": 206,
+            "state_multiplier": 0.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21148,
+        "fields": {
+            "answer": 20986,
+            "state": 1039,
+            "candidate": 200,
+            "affected_candidate": 206,
+            "state_multiplier": 0.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21149,
+        "fields": {
+            "answer": 20986,
+            "state": 1041,
+            "candidate": 200,
+            "affected_candidate": 206,
+            "state_multiplier": 0.5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21150,
+        "fields": {
+            "answer": 20986,
+            "state": 1048,
+            "candidate": 200,
+            "affected_candidate": 206,
+            "state_multiplier": 0.5
+        }
     }
 ];
 
@@ -12367,7 +12498,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 20986,
             "candidate": 200,
-            "answer_feedback": "Stravidis is just too popular pretty much with everyone except Mormons. This is Bad Mitt"
+            "answer_feedback": "McRaven is just too popular pretty much with everyone except Mormons. To worsen the situation, Mike Huckabee has been campaign with Mormons to try and take the mantle of the right wing challenger"
         }
     },
     {
@@ -13067,7 +13198,7 @@ cyoAdventure = function (a) {
         Congressionalrelations -= 2;
     }
 
-       // +1 DemNominee
+           // +1 DemNominee
     if (ans == 20670) {
         DemNominee += 1;
 		switcheroo3();
@@ -13126,7 +13257,6 @@ cyoAdventure = function (a) {
         DemNominee += 10;
 		switcheroo6();
     }
-
 
     // [JETS_CYOA_VARIABLE_EFFECTS_END]
     if(ans == 5004){
