@@ -1930,12 +1930,12 @@ function addDynamicCSS() {
             position: relative;
             display: inline-block;
             cursor: pointer;
-            background-color: #d8dee8;
+            background-color: #8b2323;
         }
 
         .mytooltip .mytooltiptext {
             width: 240px;
-            background-color: #d8dee8;
+            background-color: #a73a3a;
             color: black;
             text-align: center;
             border-radius: 6px;
@@ -3677,4 +3677,4 @@ e.creditsPage = () => {
 }
 
 e.credits = "<button onclick='e.creditsPage()'>The 47th Percent Team</button>";
-campaignTrail_temp.modBoxTheme = { "header_color": "#000000", "header_image_url": "https://file.garden/ajctXfqJL0tJxyhI/washington-dc-sen-mitt-romney-departs-the-senate-chamber-following-a-vote-at-the-u-s-capitol%20(2).webp", "header_text_color": "#292121", "description_text_color": "#ffffff", "description_background_color": "#685c5c", "main_color": "#a30000", "secondary_color": "#000000", "ui_text_color": "#442323" }
+campaignTrail_temp.modBoxTheme = { "header_color": "#000000", "header_image_url": "https://file.garden/ajctXfqJL0tJxyhI/Header.jpg", "header_text_color": "#292121", "description_text_color": "#ffffff", "description_background_color": "#685c5c", "main_color": "#a30000", "secondary_color": "#000000", "ui_text_color": "#442323" }
