@@ -347,6 +347,34 @@ campaignTrail_temp.questions_json = [
         "model": "campaign_trail.question",
         "pk": 21209,
         "fields": {
+            "description": "Today unexpected news came from the United Kingdom, after years of doubts and debates they have seemingly chosen to leave the European Union. You are confused by their choice but they've made it anyway. It's now up to you to see how you respond to this."
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 21253,
+        "fields": {
+            "description": "Mike Huckabee has obviously been a thorn in your side but he isn't necessarily a strong candidate either. You can easily knock him out with a few well landed punches all that matters is if you can find them. There are many attacks you can use to hamper his support. What will you attack him on?"
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 21254,
+        "fields": {
+            "description": "put description here"
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 21255,
+        "fields": {
+            "description": "put description here"
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 21256,
+        "fields": {
             "description": "put description here"
         }
     }
@@ -1175,6 +1203,54 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 21235,
             "description": "New answer option"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 21237,
+        "fields": {
+            "question": 21209,
+            "description": "The decision taken by the people of the United Kingdom confuses me but we must respect it. They have chosen their path and we will do our best to guide them so that we can remain strong allies."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 21238,
+        "fields": {
+            "question": 21209,
+            "description": "Britain's choice isn't one we are happy with but we won't ignore it. The people chose this path but we will try to negotiate with the government to try and keep them in the Union."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 21239,
+        "fields": {
+            "question": 21209,
+            "description": "This referendum is a sad choice but it isn't set in stone. We will contact David Cameron to try and decide if the referendum will be followed through. It was basically a 50-50 result, it doesn't mean that it's actually the will of the people."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 21257,
+        "fields": {
+            "question": 21253,
+            "description": "The clearest option is to attack him on splitting the vote. His third party run is just hurting our chances at victory and the voters will clearly know that."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 21287,
+        "fields": {
+            "question": 21253,
+            "description": "We need to focus on his campaigning. He is trying to portray himself as a fighter for the religious but he doesn't believe half of what he's telling the people he campaigns with."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 21292,
+        "fields": {
+            "question": 21253,
+            "description": "We shouldn't attack him at all. Bringing attention to third parties never helps in any way so we should just ignore him and focus on McRaven."
         }
     }
 ];
@@ -7954,7 +8030,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 21171,
             "candidate": 200,
             "affected_candidate": 200,
-            "global_multiplier": 0.005
+            "global_multiplier": 0.01
         }
     },
     {
@@ -8112,6 +8188,166 @@ campaignTrail_temp.answer_score_global_json = [
         "pk": 21234,
         "fields": {
             "answer": 21213,
+            "candidate": 200,
+            "affected_candidate": 206,
+            "global_multiplier": 0.015
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 21241,
+        "fields": {
+            "answer": 21237,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "global_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 21242,
+        "fields": {
+            "answer": 21237,
+            "candidate": 200,
+            "affected_candidate": 205,
+            "global_multiplier": -0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 21243,
+        "fields": {
+            "answer": 21237,
+            "candidate": 200,
+            "affected_candidate": 206,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 21248,
+        "fields": {
+            "answer": 21238,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "global_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 21250,
+        "fields": {
+            "answer": 21239,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 21251,
+        "fields": {
+            "answer": 21239,
+            "candidate": 200,
+            "affected_candidate": 205,
+            "global_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 21252,
+        "fields": {
+            "answer": 21239,
+            "candidate": 200,
+            "affected_candidate": 206,
+            "global_multiplier": 0.015
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 21259,
+        "fields": {
+            "answer": 21257,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "global_multiplier": 0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 21260,
+        "fields": {
+            "answer": 21257,
+            "candidate": 200,
+            "affected_candidate": 205,
+            "global_multiplier": -0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 21261,
+        "fields": {
+            "answer": 21257,
+            "candidate": 200,
+            "affected_candidate": 206,
+            "global_multiplier": -0.02
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 21289,
+        "fields": {
+            "answer": 21287,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 21290,
+        "fields": {
+            "answer": 21287,
+            "candidate": 200,
+            "affected_candidate": 205,
+            "global_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 21291,
+        "fields": {
+            "answer": 21287,
+            "candidate": 200,
+            "affected_candidate": 206,
+            "global_multiplier": -0.015
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 21294,
+        "fields": {
+            "answer": 21292,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "global_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 21295,
+        "fields": {
+            "answer": 21292,
+            "candidate": 200,
+            "affected_candidate": 205,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 21296,
+        "fields": {
+            "answer": 21292,
             "candidate": 200,
             "affected_candidate": 206,
             "global_multiplier": 0.015
@@ -12321,6 +12557,424 @@ campaignTrail_temp.answer_score_state_json = [
             "affected_candidate": 205,
             "state_multiplier": -0.01
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21262,
+        "fields": {
+            "answer": 21257,
+            "state": 1000,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21263,
+        "fields": {
+            "answer": 21257,
+            "state": 1002,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21264,
+        "fields": {
+            "answer": 21257,
+            "state": 1003,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21265,
+        "fields": {
+            "answer": 21257,
+            "state": 1008,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21266,
+        "fields": {
+            "answer": 21257,
+            "state": 1009,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21267,
+        "fields": {
+            "answer": 21257,
+            "state": 1011,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21268,
+        "fields": {
+            "answer": 21257,
+            "state": 1013,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21269,
+        "fields": {
+            "answer": 21257,
+            "state": 1015,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21270,
+        "fields": {
+            "answer": 21257,
+            "state": 1016,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21271,
+        "fields": {
+            "answer": 21257,
+            "state": 1017,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21272,
+        "fields": {
+            "answer": 21257,
+            "state": 1023,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21273,
+        "fields": {
+            "answer": 21257,
+            "state": 1026,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21274,
+        "fields": {
+            "answer": 21257,
+            "state": 1032,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21275,
+        "fields": {
+            "answer": 21257,
+            "state": 1033,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21276,
+        "fields": {
+            "answer": 21257,
+            "state": 1034,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21277,
+        "fields": {
+            "answer": 21257,
+            "state": 1035,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21278,
+        "fields": {
+            "answer": 21257,
+            "state": 1039,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21279,
+        "fields": {
+            "answer": 21257,
+            "state": 1040,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21280,
+        "fields": {
+            "answer": 21257,
+            "state": 1041,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21281,
+        "fields": {
+            "answer": 21257,
+            "state": 1042,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21282,
+        "fields": {
+            "answer": 21257,
+            "state": 1048,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21283,
+        "fields": {
+            "answer": 21257,
+            "state": 1050,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21284,
+        "fields": {
+            "answer": 21257,
+            "state": 1024,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.025
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21285,
+        "fields": {
+            "answer": 21257,
+            "state": 1025,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21286,
+        "fields": {
+            "answer": 21257,
+            "state": 1043,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21297,
+        "fields": {
+            "answer": 21287,
+            "state": 1002,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21298,
+        "fields": {
+            "answer": 21287,
+            "state": 1005,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21299,
+        "fields": {
+            "answer": 21287,
+            "state": 1008,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21300,
+        "fields": {
+            "answer": 21287,
+            "state": 1009,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21301,
+        "fields": {
+            "answer": 21287,
+            "state": 1014,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21302,
+        "fields": {
+            "answer": 21287,
+            "state": 1021,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21303,
+        "fields": {
+            "answer": 21287,
+            "state": 1025,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21304,
+        "fields": {
+            "answer": 21287,
+            "state": 1027,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21305,
+        "fields": {
+            "answer": 21287,
+            "state": 1032,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21306,
+        "fields": {
+            "answer": 21287,
+            "state": 1034,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21307,
+        "fields": {
+            "answer": 21287,
+            "state": 1037,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21308,
+        "fields": {
+            "answer": 21287,
+            "state": 1045,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 21309,
+        "fields": {
+            "answer": 21287,
+            "state": 1049,
+            "candidate": 200,
+            "affected_candidate": 200,
+            "state_multiplier": 0.01
+        }
     }
 ];
 
@@ -13116,6 +13770,60 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 200,
             "answer_feedback": "Webb's numbers stabilize due to your indecisiveness. Despite Sanders running a left-wing platform it seems that Webb might even be gaining slightly."
         }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 21240,
+        "fields": {
+            "answer": 21237,
+            "candidate": 200,
+            "answer_feedback": "McRaven attacks this as weakness, believing that you should've persuaded them to stay but most people understand your reaction."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 21244,
+        "fields": {
+            "answer": 21238,
+            "candidate": 200,
+            "answer_feedback": "McRaven agrees with you and offers to help with the negotiations. You ultimately reject it and the negotiations are planned for after the election."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 21249,
+        "fields": {
+            "answer": 21239,
+            "candidate": 200,
+            "answer_feedback": "McRaven claims that this is you admitting that you don't care about the voice of the people and even worse is that David Cameron resigns before you are even able to reach him. This was almost certainty bound to hurt you but maybe not this much"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 21258,
+        "fields": {
+            "answer": 21257,
+            "candidate": 200,
+            "answer_feedback": "Huckabee is asked about vote splitting and he responds that it doesn't matter since you don't represent what American conservatives truly need. His numbers drop but there are some die hard supporters that he manages to keep."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 21288,
+        "fields": {
+            "answer": 21287,
+            "candidate": 200,
+            "answer_feedback": "Huckabee responds immediately stating that you don't either but unlike you he only focuses on them.  Both Huckabee's and your numbers fall which only helps McRaven more."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 21293,
+        "fields": {
+            "answer": 21292,
+            "candidate": 200,
+            "answer_feedback": "This helps with you hurting McRaven's numbers but you lose to Huckabee in conservative regions. This shouldn't be too much of a problem however."
+        }
     }
 ];
 
@@ -13138,7 +13846,7 @@ const _tctEndingDefs = [
         "endingText": "The white house was empty. Why would there be anyone there? There was no point anymore. America was no longer the same. It never would be. Mitt stood alone. The emptiness. The quiet. It was driving him insane. This was supposed to be the moment for him to prove himself. He walked across empty halls. He looked at the portraits hung on the walls. The forgotten presidents. This was his fate. He won it all but would just be forgotten. They would focus on what led to it. Not on him. He walked to the oval office. Not even the vice president was there. He took a deep breath and started writing his note. He wrote for hours, moving to more and more pages. To anyone who would've been there it might look like he's hard at work. The truth was that he was writing a note for every scenario. He thought about al the ways this could end. His mind was empty now, filled with the cheers he had hoped to hear. He knew that things would never be the same. No one cared anymore. No one was surprised that he won. He wasn't chosen because he was wanted but because there was no other choice. Ayers wasn't a candidate. He was a lamb. Mitt felt his hands tightening and tightening as he wrote. The page ripping as the pen broke. Ink smeared the papers. His notes ruined. Mitt looked at it, unfazed. His face was completely blank, nearly robotic. He stood up, pulled the chair to the table and walked out. Out of the office. Out of the White house. Out of America's mind.",
         "endingImage": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.Jy3d0zwAQHA-Whd9E2yEiAHaGL%3Fpid%3DApi&f=1&ipt=c93a44f2ebedbbbe02634b7c21fa124d5f685c8069ce1c2d9d692d95b2f22408&ipo=images",
         "endingHideImage": false,
-        "endingSlidesJson": "[\n  {\n    \"variable\": 0,\n    \"operator\": \"==\",\n    \"amount\": 538,\n    \"outcomeCondition\": \"ignore\",\n    \"title\": \"Emptiness\",\n    \"subtitle\": \"\",\n    \"content\": \"The white house was empty. Why would there be anyone there? There was no point anymore. America was no longer the same. It never would be. Mitt stood alone. The emptiness. The quiet. It was driving him insane. This was supposed to be the moment for him to prove himself. He walked across empty halls. He looked at the portraits hung on the walls. The forgotten presidents. This was his fate. He won it all but would just be forgotten. They would focus on what led to it. Not on him. He walked to the oval office. Not even the vice president was there. He took a deep breath and started writing his note. He wrote for hours, moving to more and more pages. To anyone who would've been there it might look like he's hard at work. The truth was that he was writing a note for every scenario. He thought about al the ways this could end. His mind was empty now, filled with the cheers he had hoped to hear. He knew that things would never be the same. No one cared anymore. No one was surprised that he won. He wasn't chosen because he was wanted but because there was no other choice. Ayers wasn't a candidate. He was a lamb. Mitt felt his hands tightening and tightening as he wrote. The page ripping as the pen broke. Ink smeared the papers. His notes ruined. Mitt looked at it, unfazed. His face was completely blank, nearly robotic. He stood up, pulled the chair to the table and walked out. Out of the office. Out of the White house. Out of America's mind.\",\n    \"image\": \"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.Jy3d0zwAQHA-Whd9E2yEiAHaGL%3Fpid%3DApi&f=1&ipt=c93a44f2ebedbbbe02634b7c21fa124d5f685c8069ce1c2d9d692d95b2f22408&ipo=images\",\n    \"slideGroup\": \"main\",\n    \"variableConditions\": [],\n    \"variableConditionOperator\": \"AND\",\n    \"answerConditionType\": \"has\",\n    \"answerConditionAnswer\": \"20820\",\n    \"answerConditionAnswers\": \"20820\",\n    \"audio\": {\n      \"title\": \"...\",\n      \"artist\": \"-\",\n      \"cover\": \"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.g_gXbXKurCr0AfbCMxx-aQHaE7%3Fr%3D0%26pid%3DApi&f=1&ipt=66b0d12c5f40c1c39a0b911ee1f77e4c076dee74b4c2514686cae23ba3497004&ipo=images\",\n      \"url\": \"https://audio.jukehost.co.uk/019f6f5d-0a3f-7356-8df2-2f28260eeb5d\"\n    }\n  },\n  {\n    \"variable\": 0,\n    \"operator\": \"==\",\n    \"amount\": 0,\n    \"outcomeCondition\": \"ignore\",\n    \"title\": \"New Horizon\",\n    \"subtitle\": \"Admiral's America\",\n    \"content\": \"Not even Utah...\",\n    \"image\": \"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.EY-kBti3BCe0idPeKJVPlwHaDb%3Fr%3D0%26pid%3DApi&f=1&ipt=3e540e16e939bb6c887a8da6e3acfceff32f1967ac2b9613fdde744ac11f4094&ipo=images\",\n    \"slideGroup\": \"main\",\n    \"variableConditions\": [],\n    \"variableConditionOperator\": \"AND\",\n    \"answerConditionType\": \"has\",\n    \"answerConditionAnswer\": \"20986\",\n    \"answerConditionAnswers\": \"20986\",\n    \"audio\": {\n      \"title\": \"Horizon\",\n      \"artist\": \"Paweł Błaszczak\",\n      \"cover\": \"https://ia601802.us.archive.org/10/items/dying_light_ost/Cover.jpg?cnt=0\",\n      \"url\": \"https://audio.jukehost.co.uk/019f846e-e2a9-71c5-9268-ab1294a792b2\"\n    }\n  },\n  {\n    \"variable\": 0,\n    \"operator\": \">\",\n    \"amount\": 270,\n    \"outcomeCondition\": \"ignore\",\n    \"title\": \"America comes back\",\n    \"subtitle\": \"\",\n    \"content\": \"\",\n    \"image\": \"https://imgs.search.brave.com/Iq__HBCik76yRwwJiVMglKiMNv0uiB1V7Z1BpS4Y3yA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pY2hl/Zi5iYmNpLmNvLnVr/L2FjZS9zdGFuZGFy/ZC80NjQvbWNzL21l/ZGlhL2ltYWdlcy82/MzcxNTAwMC9qcGcv/XzYzNzE1MzEzXzYz/NzE1MzA4LmpwZw\",\n    \"slideGroup\": \"main\",\n    \"variableConditions\": [],\n    \"variableConditionOperator\": \"AND\",\n    \"answerConditionType\": \"has\",\n    \"answerConditionAnswer\": \"20672\",\n    \"answerConditionAnswers\": \"20672\",\n    \"audio\": {\n      \"title\": \"Terranova\",\n      \"artist\": \"Janina\",\n      \"cover\": \"https://imgs.search.brave.com/1bYTVQg8TsP95WWSKPlH_XFBl1_GJ6GNZwZ6-538pqw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9k/TjVSVk5hbm05WS9t/YXhyZXNkZWZhdWx0/LmpwZw\",\n      \"url\": \"https://audio.jukehost.co.uk/019f9b5c-a1c7-73c2-b273-161b081c8282\"\n    }\n  },\n  {\n    \"variable\": 0,\n    \"operator\": \"==\",\n    \"amount\": 538,\n    \"outcomeCondition\": \"ignore\",\n    \"title\": \"Mitt Romney's dissapearance\",\n    \"subtitle\": \"\",\n    \"content\": \"That's what the newspapers wrote. That's what was on the front page. It didn't matter. No one cared anymore. Most just sighed as if it was another Tuesday. For many it was. Mitt Romney was supposed to be a god in human clothing at a victory like this. But now. Now people just wanted to forget. Forget the past. Forget the mistakes. Forget America. This was no longer the country they loved. For many life lost its meaning. America was still the same on the outside but inside, it was hollow. It was no longer the same. It was lost.\",\n    \"image\": \"\",\n    \"slideGroup\": \"secondary\",\n    \"variableConditions\": [],\n    \"variableConditionOperator\": \"AND\",\n    \"answerConditionType\": \"has\",\n    \"answerConditionAnswer\": \"20820\",\n    \"answerConditionAnswers\": \"20820\"\n  },\n  {\n    \"variable\": 0,\n    \"operator\": \"==\",\n    \"amount\": 538,\n    \"outcomeCondition\": \"ignore\",\n    \"title\": \"2036- 20 years of the White House being abandonned\",\n    \"subtitle\": \"\",\n    \"content\": \"Every since Mitt Romney's disappearance in 2016 the White House has been left abandoned. No one wanted it. No one wanted to stay in it. It has been kept up by the new administrations but it is still filled with dust. The outside looks the same. The inside is empty. It has been. For 20 years\",\n    \"image\": \"\",\n    \"slideGroup\": \"extra-3\",\n    \"variableConditions\": [],\n    \"variableConditionOperator\": \"AND\",\n    \"answerConditionType\": \"ignore\",\n    \"answerConditionAnswer\": \"\",\n    \"answerConditionAnswers\": \"\"\n  }\n]",
+        "endingSlidesJson": "[\n  {\n    \"variable\": 0,\n    \"operator\": \"==\",\n    \"amount\": 538,\n    \"outcomeCondition\": \"ignore\",\n    \"title\": \"Emptiness\",\n    \"subtitle\": \"\",\n    \"content\": \"The white house was empty. Why would there be anyone there? There was no point anymore. America was no longer the same. It never would be. Mitt stood alone. The emptiness. The quiet. It was driving him insane. This was supposed to be the moment for him to prove himself. He walked across empty halls. He looked at the portraits hung on the walls. The forgotten presidents. This was his fate. He won it all but would just be forgotten. They would focus on what led to it. Not on him. He walked to the oval office. Not even the vice president was there. He took a deep breath and started writing his note. He wrote for hours, moving to more and more pages. To anyone who would've been there it might look like he's hard at work. The truth was that he was writing a note for every scenario. He thought about al the ways this could end. His mind was empty now, filled with the cheers he had hoped to hear. He knew that things would never be the same. No one cared anymore. No one was surprised that he won. He wasn't chosen because he was wanted but because there was no other choice. Ayers wasn't a candidate. He was a lamb. Mitt felt his hands tightening and tightening as he wrote. The page ripping as the pen broke. Ink smeared the papers. His notes ruined. Mitt looked at it, unfazed. His face was completely blank, nearly robotic. He stood up, pulled the chair to the table and walked out. Out of the office. Out of the White house. Out of America's mind.\",\n    \"image\": \"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.Jy3d0zwAQHA-Whd9E2yEiAHaGL%3Fpid%3DApi&f=1&ipt=c93a44f2ebedbbbe02634b7c21fa124d5f685c8069ce1c2d9d692d95b2f22408&ipo=images\",\n    \"slideGroup\": \"main\",\n    \"variableConditions\": [],\n    \"variableConditionOperator\": \"AND\",\n    \"answerConditionType\": \"has\",\n    \"answerConditionAnswer\": \"20820\",\n    \"answerConditionAnswers\": \"20820\",\n    \"audio\": {\n      \"title\": \"...\",\n      \"artist\": \"-\",\n      \"cover\": \"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.g_gXbXKurCr0AfbCMxx-aQHaE7%3Fr%3D0%26pid%3DApi&f=1&ipt=66b0d12c5f40c1c39a0b911ee1f77e4c076dee74b4c2514686cae23ba3497004&ipo=images\",\n      \"url\": \"https://audio.jukehost.co.uk/019f6f5d-0a3f-7356-8df2-2f28260eeb5d\"\n    }\n  },\n  {\n    \"variable\": 0,\n    \"operator\": \"==\",\n    \"amount\": 0,\n    \"outcomeCondition\": \"ignore\",\n    \"title\": \"New Horizon\",\n    \"subtitle\": \"Admiral's America\",\n    \"content\": \"Not even Utah...\",\n    \"image\": \"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.EY-kBti3BCe0idPeKJVPlwHaDb%3Fr%3D0%26pid%3DApi&f=1&ipt=3e540e16e939bb6c887a8da6e3acfceff32f1967ac2b9613fdde744ac11f4094&ipo=images\",\n    \"slideGroup\": \"main\",\n    \"variableConditions\": [],\n    \"variableConditionOperator\": \"AND\",\n    \"answerConditionType\": \"has\",\n    \"answerConditionAnswer\": \"20986\",\n    \"answerConditionAnswers\": \"20986\",\n    \"audio\": {\n      \"title\": \"Horizon\",\n      \"artist\": \"Paweł Błaszczak\",\n      \"cover\": \"https://ia601802.us.archive.org/10/items/dying_light_ost/Cover.jpg?cnt=0\",\n      \"url\": \"https://audio.jukehost.co.uk/019f846e-e2a9-71c5-9268-ab1294a792b2\"\n    }\n  },\n  {\n    \"variable\": 0,\n    \"operator\": \">\",\n    \"amount\": 270,\n    \"outcomeCondition\": \"ignore\",\n    \"title\": \"America comes back\",\n    \"subtitle\": \"\",\n    \"content\": \"You watched the election\",\n    \"image\": \"https://imgs.search.brave.com/Iq__HBCik76yRwwJiVMglKiMNv0uiB1V7Z1BpS4Y3yA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pY2hl/Zi5iYmNpLmNvLnVr/L2FjZS9zdGFuZGFy/ZC80NjQvbWNzL21l/ZGlhL2ltYWdlcy82/MzcxNTAwMC9qcGcv/XzYzNzE1MzEzXzYz/NzE1MzA4LmpwZw\",\n    \"slideGroup\": \"main\",\n    \"variableConditions\": [],\n    \"variableConditionOperator\": \"AND\",\n    \"answerConditionType\": \"has\",\n    \"answerConditionAnswer\": \"20672\",\n    \"answerConditionAnswers\": \"20672\",\n    \"audio\": {\n      \"title\": \"Terranova\",\n      \"artist\": \"Janina\",\n      \"cover\": \"https://imgs.search.brave.com/1bYTVQg8TsP95WWSKPlH_XFBl1_GJ6GNZwZ6-538pqw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9k/TjVSVk5hbm05WS9t/YXhyZXNkZWZhdWx0/LmpwZw\",\n      \"url\": \"https://audio.jukehost.co.uk/019f9b5c-a1c7-73c2-b273-161b081c8282\"\n    }\n  },\n  {\n    \"variable\": 0,\n    \"operator\": \"==\",\n    \"amount\": 538,\n    \"outcomeCondition\": \"ignore\",\n    \"title\": \"Mitt Romney's dissapearance\",\n    \"subtitle\": \"\",\n    \"content\": \"That's what the newspapers wrote. That's what was on the front page. It didn't matter. No one cared anymore. Most just sighed as if it was another Tuesday. For many it was. Mitt Romney was supposed to be a god in human clothing at a victory like this. But now. Now people just wanted to forget. Forget the past. Forget the mistakes. Forget America. This was no longer the country they loved. For many life lost its meaning. America was still the same on the outside but inside, it was hollow. It was no longer the same. It was lost.\",\n    \"image\": \"\",\n    \"slideGroup\": \"secondary\",\n    \"variableConditions\": [],\n    \"variableConditionOperator\": \"AND\",\n    \"answerConditionType\": \"has\",\n    \"answerConditionAnswer\": \"20820\",\n    \"answerConditionAnswers\": \"20820\"\n  },\n  {\n    \"variable\": 0,\n    \"operator\": \"==\",\n    \"amount\": 538,\n    \"outcomeCondition\": \"ignore\",\n    \"title\": \"2036- 20 years of the White House being abandonned\",\n    \"subtitle\": \"\",\n    \"content\": \"Every since Mitt Romney's disappearance in 2016 the White House has been left abandoned. No one wanted it. No one wanted to stay in it. It has been kept up by the new administrations but it is still filled with dust. The outside looks the same. The inside is empty. It has been. For 20 years\",\n    \"image\": \"\",\n    \"slideGroup\": \"extra-3\",\n    \"variableConditions\": [],\n    \"variableConditionOperator\": \"AND\",\n    \"answerConditionType\": \"ignore\",\n    \"answerConditionAnswer\": \"\",\n    \"answerConditionAnswers\": \"\"\n  }\n]",
         "audioTitle": "...",
         "audioArtist": "-",
         "audioCover": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.g_gXbXKurCr0AfbCMxx-aQHaE7%3Fr%3D0%26pid%3DApi&f=1&ipt=66b0d12c5f40c1c39a0b911ee1f77e4c076dee74b4c2514686cae23ba3497004&ipo=images",
@@ -13704,6 +14412,54 @@ function answerSwapper(pk1, pk2, takeEffects = true) {
         });
     }
 }
+
+// Candidate switching wahoo - from Moonbeam
+function setCandidateIdentity(candidatePk, options) {
+    const cand = campaignTrail_temp.candidate_json.find(p => Number(p.pk) === Number(candidatePk));
+    if (cand?.fields) {
+        if (options.first !== undefined) cand.fields.first_name = options.first;
+        if (options.last !== undefined) cand.fields.last_name = options.last;
+        if (options.color !== undefined) cand.fields.color_hex = options.color;
+    }
+
+    if (Number(campaignTrail_temp.candidate_id) === Number(candidatePk)) {
+        if (options.last !== undefined) campaignTrail_temp.candidate_last_name = options.last;
+        if (options.first !== undefined) campaignTrail_temp.candidate_first_name = options.first;
+    }
+
+    if (options.issueScores && campaignTrail_temp.candidate_issue_score_json) {
+        const updateScore = (issueId, score) => {
+            let targetScore = campaignTrail_temp.candidate_issue_score_json.find(
+                item => Number(item.fields.candidate) === Number(candidatePk) &&
+                        Number(item.fields.issue) === Number(issueId)
+            );
+
+            if (targetScore?.fields) {
+                targetScore.fields.issue_score = Number(score);
+            } else {
+                campaignTrail_temp.candidate_issue_score_json.push({
+                    model: "campaign_trail.candidate_issue_score",
+                    fields: {
+                        candidate: Number(candidatePk),
+                        issue: Number(issueId),
+                        issue_score: Number(score)
+                    }
+                });
+            }
+        };
+
+        if (!Array.isArray(options.issueScores) && typeof options.issueScores === 'object') {
+            Object.entries(options.issueScores).forEach(([issueId, score]) => {
+                updateScore(issueId, score);
+            });
+        }
+        else if (Array.isArray(options.issueScores)) {
+            options.issueScores.forEach(({ issue, score }) => {
+                updateScore(issue, score);
+            });
+        }
+    }
+}
 // CYOA Variables
 var VP = 0;
 var DemNominee = 0;
@@ -13848,7 +14604,6 @@ cyoAdventure = function (a) {
 		switcheroo6();
     }
 
-
     // +1 VP
     if (ans == 5004) {
         VP += 1;
@@ -13875,6 +14630,9 @@ cyoAdventure = function (a) {
      if(ans == 20720){
             campaignTrail_temp.running_mate_last_name="Haley"
             campaignTrail_temp.running_mate_image_url="https://i.imgur.com/zK1KnXp.jpeg"
+}
+     if((ans == 20670) || (ans == 20671) || (ans == 21115) || (ans == 20672) || (ans == 20673) || (ans == 20820) || (ans == 20823) || (ans == 20824) || (ans == 20894) || (ans == 20986)){
+            campaignTrail_temp.candidate_image_url="https://i.imgur.com/O5cFJ8U.jpeg"
 }
 
 const observer = new MutationObserver(onGameWindowChanged);
@@ -14581,7 +15339,7 @@ campaignTrail_temp.jet_data = [{
             "endingSubtitle": "",
             "endingImage": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.Jy3d0zwAQHA-Whd9E2yEiAHaGL%3Fpid%3DApi&f=1&ipt=c93a44f2ebedbbbe02634b7c21fa124d5f685c8069ce1c2d9d692d95b2f22408&ipo=images",
             "endingText": "The white house was empty. Why would there be anyone there? There was no point anymore. America was no longer the same. It never would be. Mitt stood alone. The emptiness. The quiet. It was driving him insane. This was supposed to be the moment for him to prove himself. He walked across empty halls. He looked at the portraits hung on the walls. The forgotten presidents. This was his fate. He won it all but would just be forgotten. They would focus on what led to it. Not on him. He walked to the oval office. Not even the vice president was there. He took a deep breath and started writing his note. He wrote for hours, moving to more and more pages. To anyone who would've been there it might look like he's hard at work. The truth was that he was writing a note for every scenario. He thought about al the ways this could end. His mind was empty now, filled with the cheers he had hoped to hear. He knew that things would never be the same. No one cared anymore. No one was surprised that he won. He wasn't chosen because he was wanted but because there was no other choice. Ayers wasn't a candidate. He was a lamb. Mitt felt his hands tightening and tightening as he wrote. The page ripping as the pen broke. Ink smeared the papers. His notes ruined. Mitt looked at it, unfazed. His face was completely blank, nearly robotic. He stood up, pulled the chair to the table and walked out. Out of the office. Out of the White house. Out of America's mind.",
-            "endingSlidesJson": "[\n  {\n    \"variable\": 0,\n    \"operator\": \"==\",\n    \"amount\": 538,\n    \"outcomeCondition\": \"ignore\",\n    \"title\": \"Emptiness\",\n    \"subtitle\": \"\",\n    \"content\": \"The white house was empty. Why would there be anyone there? There was no point anymore. America was no longer the same. It never would be. Mitt stood alone. The emptiness. The quiet. It was driving him insane. This was supposed to be the moment for him to prove himself. He walked across empty halls. He looked at the portraits hung on the walls. The forgotten presidents. This was his fate. He won it all but would just be forgotten. They would focus on what led to it. Not on him. He walked to the oval office. Not even the vice president was there. He took a deep breath and started writing his note. He wrote for hours, moving to more and more pages. To anyone who would've been there it might look like he's hard at work. The truth was that he was writing a note for every scenario. He thought about al the ways this could end. His mind was empty now, filled with the cheers he had hoped to hear. He knew that things would never be the same. No one cared anymore. No one was surprised that he won. He wasn't chosen because he was wanted but because there was no other choice. Ayers wasn't a candidate. He was a lamb. Mitt felt his hands tightening and tightening as he wrote. The page ripping as the pen broke. Ink smeared the papers. His notes ruined. Mitt looked at it, unfazed. His face was completely blank, nearly robotic. He stood up, pulled the chair to the table and walked out. Out of the office. Out of the White house. Out of America's mind.\",\n    \"image\": \"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.Jy3d0zwAQHA-Whd9E2yEiAHaGL%3Fpid%3DApi&f=1&ipt=c93a44f2ebedbbbe02634b7c21fa124d5f685c8069ce1c2d9d692d95b2f22408&ipo=images\",\n    \"slideGroup\": \"main\",\n    \"variableConditions\": [],\n    \"variableConditionOperator\": \"AND\",\n    \"answerConditionType\": \"has\",\n    \"answerConditionAnswer\": \"20820\",\n    \"answerConditionAnswers\": \"20820\",\n    \"audio\": {\n      \"title\": \"...\",\n      \"artist\": \"-\",\n      \"cover\": \"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.g_gXbXKurCr0AfbCMxx-aQHaE7%3Fr%3D0%26pid%3DApi&f=1&ipt=66b0d12c5f40c1c39a0b911ee1f77e4c076dee74b4c2514686cae23ba3497004&ipo=images\",\n      \"url\": \"https://audio.jukehost.co.uk/019f6f5d-0a3f-7356-8df2-2f28260eeb5d\"\n    }\n  },\n  {\n    \"variable\": 0,\n    \"operator\": \"==\",\n    \"amount\": 0,\n    \"outcomeCondition\": \"ignore\",\n    \"title\": \"New Horizon\",\n    \"subtitle\": \"Admiral's America\",\n    \"content\": \"Not even Utah...\",\n    \"image\": \"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.EY-kBti3BCe0idPeKJVPlwHaDb%3Fr%3D0%26pid%3DApi&f=1&ipt=3e540e16e939bb6c887a8da6e3acfceff32f1967ac2b9613fdde744ac11f4094&ipo=images\",\n    \"slideGroup\": \"main\",\n    \"variableConditions\": [],\n    \"variableConditionOperator\": \"AND\",\n    \"answerConditionType\": \"has\",\n    \"answerConditionAnswer\": \"20986\",\n    \"answerConditionAnswers\": \"20986\",\n    \"audio\": {\n      \"title\": \"Horizon\",\n      \"artist\": \"Paweł Błaszczak\",\n      \"cover\": \"https://ia601802.us.archive.org/10/items/dying_light_ost/Cover.jpg?cnt=0\",\n      \"url\": \"https://audio.jukehost.co.uk/019f846e-e2a9-71c5-9268-ab1294a792b2\"\n    }\n  },\n  {\n    \"variable\": 0,\n    \"operator\": \">\",\n    \"amount\": 270,\n    \"outcomeCondition\": \"ignore\",\n    \"title\": \"America comes back\",\n    \"subtitle\": \"\",\n    \"content\": \"\",\n    \"image\": \"https://imgs.search.brave.com/Iq__HBCik76yRwwJiVMglKiMNv0uiB1V7Z1BpS4Y3yA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pY2hl/Zi5iYmNpLmNvLnVr/L2FjZS9zdGFuZGFy/ZC80NjQvbWNzL21l/ZGlhL2ltYWdlcy82/MzcxNTAwMC9qcGcv/XzYzNzE1MzEzXzYz/NzE1MzA4LmpwZw\",\n    \"slideGroup\": \"main\",\n    \"variableConditions\": [],\n    \"variableConditionOperator\": \"AND\",\n    \"answerConditionType\": \"has\",\n    \"answerConditionAnswer\": \"20672\",\n    \"answerConditionAnswers\": \"20672\",\n    \"audio\": {\n      \"title\": \"Terranova\",\n      \"artist\": \"Janina\",\n      \"cover\": \"https://imgs.search.brave.com/1bYTVQg8TsP95WWSKPlH_XFBl1_GJ6GNZwZ6-538pqw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9k/TjVSVk5hbm05WS9t/YXhyZXNkZWZhdWx0/LmpwZw\",\n      \"url\": \"https://audio.jukehost.co.uk/019f9b5c-a1c7-73c2-b273-161b081c8282\"\n    }\n  },\n  {\n    \"variable\": 0,\n    \"operator\": \"==\",\n    \"amount\": 538,\n    \"outcomeCondition\": \"ignore\",\n    \"title\": \"Mitt Romney's dissapearance\",\n    \"subtitle\": \"\",\n    \"content\": \"That's what the newspapers wrote. That's what was on the front page. It didn't matter. No one cared anymore. Most just sighed as if it was another Tuesday. For many it was. Mitt Romney was supposed to be a god in human clothing at a victory like this. But now. Now people just wanted to forget. Forget the past. Forget the mistakes. Forget America. This was no longer the country they loved. For many life lost its meaning. America was still the same on the outside but inside, it was hollow. It was no longer the same. It was lost.\",\n    \"image\": \"\",\n    \"slideGroup\": \"secondary\",\n    \"variableConditions\": [],\n    \"variableConditionOperator\": \"AND\",\n    \"answerConditionType\": \"has\",\n    \"answerConditionAnswer\": \"20820\",\n    \"answerConditionAnswers\": \"20820\"\n  },\n  {\n    \"variable\": 0,\n    \"operator\": \"==\",\n    \"amount\": 538,\n    \"outcomeCondition\": \"ignore\",\n    \"title\": \"2036- 20 years of the White House being abandonned\",\n    \"subtitle\": \"\",\n    \"content\": \"Every since Mitt Romney's disappearance in 2016 the White House has been left abandoned. No one wanted it. No one wanted to stay in it. It has been kept up by the new administrations but it is still filled with dust. The outside looks the same. The inside is empty. It has been. For 20 years\",\n    \"image\": \"\",\n    \"slideGroup\": \"extra-3\",\n    \"variableConditions\": [],\n    \"variableConditionOperator\": \"AND\",\n    \"answerConditionType\": \"ignore\",\n    \"answerConditionAnswer\": \"\",\n    \"answerConditionAnswers\": \"\"\n  }\n]",
+            "endingSlidesJson": "[\n  {\n    \"variable\": 0,\n    \"operator\": \"==\",\n    \"amount\": 538,\n    \"outcomeCondition\": \"ignore\",\n    \"title\": \"Emptiness\",\n    \"subtitle\": \"\",\n    \"content\": \"The white house was empty. Why would there be anyone there? There was no point anymore. America was no longer the same. It never would be. Mitt stood alone. The emptiness. The quiet. It was driving him insane. This was supposed to be the moment for him to prove himself. He walked across empty halls. He looked at the portraits hung on the walls. The forgotten presidents. This was his fate. He won it all but would just be forgotten. They would focus on what led to it. Not on him. He walked to the oval office. Not even the vice president was there. He took a deep breath and started writing his note. He wrote for hours, moving to more and more pages. To anyone who would've been there it might look like he's hard at work. The truth was that he was writing a note for every scenario. He thought about al the ways this could end. His mind was empty now, filled with the cheers he had hoped to hear. He knew that things would never be the same. No one cared anymore. No one was surprised that he won. He wasn't chosen because he was wanted but because there was no other choice. Ayers wasn't a candidate. He was a lamb. Mitt felt his hands tightening and tightening as he wrote. The page ripping as the pen broke. Ink smeared the papers. His notes ruined. Mitt looked at it, unfazed. His face was completely blank, nearly robotic. He stood up, pulled the chair to the table and walked out. Out of the office. Out of the White house. Out of America's mind.\",\n    \"image\": \"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.Jy3d0zwAQHA-Whd9E2yEiAHaGL%3Fpid%3DApi&f=1&ipt=c93a44f2ebedbbbe02634b7c21fa124d5f685c8069ce1c2d9d692d95b2f22408&ipo=images\",\n    \"slideGroup\": \"main\",\n    \"variableConditions\": [],\n    \"variableConditionOperator\": \"AND\",\n    \"answerConditionType\": \"has\",\n    \"answerConditionAnswer\": \"20820\",\n    \"answerConditionAnswers\": \"20820\",\n    \"audio\": {\n      \"title\": \"...\",\n      \"artist\": \"-\",\n      \"cover\": \"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.g_gXbXKurCr0AfbCMxx-aQHaE7%3Fr%3D0%26pid%3DApi&f=1&ipt=66b0d12c5f40c1c39a0b911ee1f77e4c076dee74b4c2514686cae23ba3497004&ipo=images\",\n      \"url\": \"https://audio.jukehost.co.uk/019f6f5d-0a3f-7356-8df2-2f28260eeb5d\"\n    }\n  },\n  {\n    \"variable\": 0,\n    \"operator\": \"==\",\n    \"amount\": 0,\n    \"outcomeCondition\": \"ignore\",\n    \"title\": \"New Horizon\",\n    \"subtitle\": \"Admiral's America\",\n    \"content\": \"Not even Utah...\",\n    \"image\": \"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.EY-kBti3BCe0idPeKJVPlwHaDb%3Fr%3D0%26pid%3DApi&f=1&ipt=3e540e16e939bb6c887a8da6e3acfceff32f1967ac2b9613fdde744ac11f4094&ipo=images\",\n    \"slideGroup\": \"main\",\n    \"variableConditions\": [],\n    \"variableConditionOperator\": \"AND\",\n    \"answerConditionType\": \"has\",\n    \"answerConditionAnswer\": \"20986\",\n    \"answerConditionAnswers\": \"20986\",\n    \"audio\": {\n      \"title\": \"Horizon\",\n      \"artist\": \"Paweł Błaszczak\",\n      \"cover\": \"https://ia601802.us.archive.org/10/items/dying_light_ost/Cover.jpg?cnt=0\",\n      \"url\": \"https://audio.jukehost.co.uk/019f846e-e2a9-71c5-9268-ab1294a792b2\"\n    }\n  },\n  {\n    \"variable\": 0,\n    \"operator\": \">\",\n    \"amount\": 270,\n    \"outcomeCondition\": \"ignore\",\n    \"title\": \"America comes back\",\n    \"subtitle\": \"\",\n    \"content\": \"You watched the election\",\n    \"image\": \"https://imgs.search.brave.com/Iq__HBCik76yRwwJiVMglKiMNv0uiB1V7Z1BpS4Y3yA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pY2hl/Zi5iYmNpLmNvLnVr/L2FjZS9zdGFuZGFy/ZC80NjQvbWNzL21l/ZGlhL2ltYWdlcy82/MzcxNTAwMC9qcGcv/XzYzNzE1MzEzXzYz/NzE1MzA4LmpwZw\",\n    \"slideGroup\": \"main\",\n    \"variableConditions\": [],\n    \"variableConditionOperator\": \"AND\",\n    \"answerConditionType\": \"has\",\n    \"answerConditionAnswer\": \"20672\",\n    \"answerConditionAnswers\": \"20672\",\n    \"audio\": {\n      \"title\": \"Terranova\",\n      \"artist\": \"Janina\",\n      \"cover\": \"https://imgs.search.brave.com/1bYTVQg8TsP95WWSKPlH_XFBl1_GJ6GNZwZ6-538pqw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9k/TjVSVk5hbm05WS9t/YXhyZXNkZWZhdWx0/LmpwZw\",\n      \"url\": \"https://audio.jukehost.co.uk/019f9b5c-a1c7-73c2-b273-161b081c8282\"\n    }\n  },\n  {\n    \"variable\": 0,\n    \"operator\": \"==\",\n    \"amount\": 538,\n    \"outcomeCondition\": \"ignore\",\n    \"title\": \"Mitt Romney's dissapearance\",\n    \"subtitle\": \"\",\n    \"content\": \"That's what the newspapers wrote. That's what was on the front page. It didn't matter. No one cared anymore. Most just sighed as if it was another Tuesday. For many it was. Mitt Romney was supposed to be a god in human clothing at a victory like this. But now. Now people just wanted to forget. Forget the past. Forget the mistakes. Forget America. This was no longer the country they loved. For many life lost its meaning. America was still the same on the outside but inside, it was hollow. It was no longer the same. It was lost.\",\n    \"image\": \"\",\n    \"slideGroup\": \"secondary\",\n    \"variableConditions\": [],\n    \"variableConditionOperator\": \"AND\",\n    \"answerConditionType\": \"has\",\n    \"answerConditionAnswer\": \"20820\",\n    \"answerConditionAnswers\": \"20820\"\n  },\n  {\n    \"variable\": 0,\n    \"operator\": \"==\",\n    \"amount\": 538,\n    \"outcomeCondition\": \"ignore\",\n    \"title\": \"2036- 20 years of the White House being abandonned\",\n    \"subtitle\": \"\",\n    \"content\": \"Every since Mitt Romney's disappearance in 2016 the White House has been left abandoned. No one wanted it. No one wanted to stay in it. It has been kept up by the new administrations but it is still filled with dust. The outside looks the same. The inside is empty. It has been. For 20 years\",\n    \"image\": \"\",\n    \"slideGroup\": \"extra-3\",\n    \"variableConditions\": [],\n    \"variableConditionOperator\": \"AND\",\n    \"answerConditionType\": \"ignore\",\n    \"answerConditionAnswer\": \"\",\n    \"answerConditionAnswers\": \"\"\n  }\n]",
             "audioTitle": "...",
             "audioArtist": "-",
             "audioCover": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.g_gXbXKurCr0AfbCMxx-aQHaE7%3Fr%3D0%26pid%3DApi&f=1&ipt=66b0d12c5f40c1c39a0b911ee1f77e4c076dee74b4c2514686cae23ba3497004&ipo=images",
