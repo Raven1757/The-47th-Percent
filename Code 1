@@ -67,7 +67,7 @@ campaignTrail_temp.candidate_json = [
             "party": "Republican",
             "state": "Massachussets",
             "priority": 1,
-            "description": "<p>Willard Mitt Romney has had a surprisingly successful career in politics. He has ran both successfully and unsuccessfully in his home state of Massachusetts. He put up a scarily good fight against Ted Kennedy in what was his first ever race. Romney has held a high standard for himself and as such never gave up on what was considered a long shot candidacy against the now popular Barrack Obama in 2012. Everything came to a head in Colorado and soon gave him just enough Electors to win the presidency.</p> \n<p>Things have changed now. Things are real. Romney is now at the helm and needs to focus to keep himself afloat. He is now the leader of the free world and as such needs to work hard to keep it free. Legitamacy might however be the least of his problems, the economy is still in the gutter and foreign affairs are in a state of flux. The nation has never been as divided as it is now and he is the only man to fix it all.</p> ",
+            "description": "<p><strong>Willard Mitt Romney</p></strong> <p>This man has had a surprisingly successful career in politics. He has ran both successfully and unsuccessfully in his home state of Massachusetts. He put up a scarily good fight against Ted Kennedy in what was his first ever race. Romney has held a high standard for himself and as such never gave up on what was considered a long shot candidacy against the now popular Barrack Obama in 2012. Everything came to a head in Colorado and soon gave him just enough Electors to win the presidency.</p> \n<p>Things have changed now. Things are real. Romney is now at the helm and needs to focus to keep himself afloat. He is now the leader of the free world and as such needs to work hard to keep it free. Legitamacy might however be the least of his problems, the economy is still in the gutter and foreign affairs are in a state of flux. The nation has never been as divided as it is now and he is the only man to fix it all.</p> ",
             "color_hex": "#740f16",
             "secondary_color_hex": "#9c1b1b",
             "is_active": 1,
@@ -212,7 +212,7 @@ campaignTrail_temp.opponents_weighted_json = [
 jet_data = {
     "headerColor": "#c01c28",
     "headerTextColor": "#ffffff",
-    "windowColor": "#bfe6ff",
+    "windowColor": "#694444",
     "containerColor": "#e01b24",
     "innerWindowColor": "#e8fbff",
     "innerWindowTextColor": "#000000",
@@ -1319,6 +1319,11 @@ campaignTrail_temp.achievements = {
     "description": "Get a state to vote for the golden party",
     "cannotBeCheated": true
   },
+  "The Webhead's voice":{
+    "image": "https://file.garden/ajctXfqJL0tJxyhI/Webhead",
+    "description": "Lose despite a clear advantage",
+    "cannotBeCheated": true
+  },
   "Get The Fucker Back Home":{
     "image": "https://file.garden/ajctXfqJL0tJxyhI/jEF9a798rVMk89K6s4vXwH.png",
     "description": "Bring Snowden back",
@@ -1339,9 +1344,9 @@ campaignTrail_temp.achievements = {
     "description": "Lose with less than 100 electoral votes against anyone but the admiral",
     "cannotBeCheated": true
   },
-   "Make a New Deseret": {
-    "image": "https://file.garden/ajctXfqJL0tJxyhI/IYGxUD1.png",
-    "description": "Win it all",
+    "End of the Line": {
+    "image": "https://file.garden/ajctXfqJL0tJxyhI/12ByTheBook-square320.png",
+    "description": "Lose it all against a respected man",
     "cannotBeCheated": true
   },
   "American Nightmare": {
@@ -1349,11 +1354,11 @@ campaignTrail_temp.achievements = {
     "description": "See the enemy lose again",
     "cannotBeCheated": true
   },
-  "End of the Line": {
-    "image": "https://file.garden/ajctXfqJL0tJxyhI/12ByTheBook-square320.png",
-    "description": "Lose it all against a respected man",
+   "Make a New Deseret": {
+    "image": "https://file.garden/ajctXfqJL0tJxyhI/IYGxUD1.png",
+    "description": "Win it all",
     "cannotBeCheated": true
-  }
+  },
 }
 
 const style = document.createElement("style");
@@ -1922,14 +1927,15 @@ tooltipList = [
     {searchString: "Democrats", explanationText: "<img src=https://i.imgur.com/IchSCgH.jpeg> Ennemies of the state"},
     {searchString: "Colorado", explanationText: "<img src=> The unfaithful chose you"},
     {searchString: "Obamacare", explanationText: "<img src=> A cheap knockoff"},
-    {searchString: "Romney", explanationText: "<img src=> You look at the mirror and wonder what had happened"},
+    {searchString: "Romney", explanationText: "<img src=https://imgs.search.brave.com/IekOUM2RM9OyRNc4KHIpbViVopXZVCwrW-4A7Xmz8T8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvOTQ2/MTk2MzUvcGhvdG8v/dW5pdGVkLXN0YXRl/cy1taXR0LXJvbW5l/eS1sZWZ0LWZvcm1l/ci1nb3Zlcm5vci1v/Zi1tYXNzYWNodXNl/dHRzLWFuZC1hLTIw/MDgtcmVwdWJsaWNh/bi5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9LWE4aktUUkxM/eDY3MUk2OVRjeWRf/SVkwVEtkV2ZSMlph/NUpHMXVrbUExaz0> You look at the picture and wonder what happened"},
     {searchString: "Ryan", explanationText: "<img src=> A needed nuiscence"},
-    {searchString: "Pawlenty", explanationText: "<img src=> A ray of hope for a red midwest"},
-    {searchString: "Christie", explanationText: "<img src=> Pufferfish"},
-    {searchString: "Haley", explanationText: "<img src=> New governor,may be useful"},  
-    {searchString: "Sanders", explanationText: "<img src=> A 'communist'"},
+    {searchString: "Pawlenty", explanationText: "<img src=https://imgs.search.brave.com/rWS3td13cRFt6FEbp9R_JGAk2LxwrHlJ_otPgwcjBJw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTA4/MDI0ODA5L3Bob3Rv/L3dhc2hpbmd0b24t/Zm9ybWVyLXJlcHVi/bGljYW4tbWlubmVz/b3RhLWdvdi10aW0t/cGF3bGVudHktbGlz/dGVucy10by1oaXMt/aW50cm9kdWN0aW9u/LWR1cmluZy1hbi5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/LXFIQk1GVktOSUxn/dmhXUDhDTnZoaGFL/THVPNHh2VjdaRmRr/Zm00M1NyZz0> A ray of hope for a red midwest"},
+    {searchString: "Christie", explanationText: "<img src=https://imgs.search.brave.com/nQrlbWV0TOnooe1YTaPUydYPEWtcmwIQ8uqreh2NePs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNzQx/MDM5MjgvcGhvdG8v/Y2FtZGVuLW5qdS1z/LWF0dG9ybmV5LWNo/cmlzdG9waGVyLWNo/cmlzdGllLXNwZWFr/cy13aXRoLXRoZS1t/ZWRpYS1vdXRzaWRl/LWNhbWRlbi1mZWRl/cmFsLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1RWFdrYklL/T0ZBSDB6VUp1M1U4/N3dsOEpFOEtiQTlI/RFFzeVhBanFxd0RB/PQ> Pufferfish"},
+    {searchString: "Haley", explanationText: "<img src=https://imgs.search.brave.com/YE3XZD8EEmqpPSFJTZsFLb4P7TDh7MhqM62mIiKYd-Y/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9uaWtr/aS1oYWxleS1maXJl/cy11cC1jcm93ZC0y/MTA5MzQ4MC5qcGc> New governor,may be useful"},  
+    {searchString: "Sanders", explanationText: "<img src=https://imgs.search.brave.com/Gz2SreNRl4yLQaWoNH2QckWhTZpsoqj-xgX4Ei2MM1g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvOTk1/NzY1NDMvcGhvdG8v/dW5pdGVkLXN0YXRl/cy1zZW4tYmVybmll/LXNhbmRlcnMtaS12/dC1zcGVha3Mtd2l0/aC1yZXBvcnRlcnMt/aW4tdGhlLXNlbmF0/ZS1wcmVzcy1nYWxs/ZXJ5LWFib3V0Lmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz12/WWc4RkhFY25oTkQz/Vjl1c2JmcHlIR0tu/c0VLSHdYdTlBYUJ3/dElJdmhRPQ> A 'communist'"},
     {searchString: "Ayers", explanationText: "<img src=https://i.imgur.com/nSX3MDh.jpeg> What the fuck is happening to America..."},
-    {searchString: "Russia", explanationText: "<img src=https://i.imgur.com/zamcmgS.jpeg> America's biggest ennemy"}
+    {searchString: "Russia", explanationText: "<img src=https://i.imgur.com/zamcmgS.jpeg> America's biggest ennemy"},
+    {searchString: "Obama", explanationText: "<img src=https://imgs.search.brave.com/75vJ7fyjQQ029LRvtPfO2h046kM12XD95Eis29BVPFA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTcy/OTM2NjU3MS9waG90/by90b3BzaG90LXVz/LXByZXNpZGVudC1i/YXJhY2stb2JhbWEt/c3BlYWtzLWFib3V0/LWpvYi1jcmVhdGlv/bi1hbmQtdGhlLWVj/b25vbXktYXQtdGhl/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz00MmdGREJvb0Fu/OEtndm9WTlkxOXdF/NE1TZmEwSU5wTkxI/NXBSYmVWUFVZPQ> The rightful winner"},
 ];
 // The data visualizer from 2012LBM
 // many thanks to routevenus for their work here!
@@ -3573,3 +3579,4 @@ var changeGameDisp = (hide) => {
   document.getElementsByClassName("inner_window_w_desc")[0].style.display = disp
 };
 campaignTrail_temp.modBoxTheme = { "header_color": "#000000", "header_image_url": "https://file.garden/ajctXfqJL0tJxyhI/Header.jpg", "header_text_color": "#292121", "description_text_color": "#ffffff", "description_background_color": "#685c5c", "main_color": "#a30000", "secondary_color": "#000000", "ui_text_color": "#442323" }
+$("#game_window")[0].style.backgroundImage = "url(https://file.garden/ajctXfqJL0tJxyhI/360_F_193647861_HdI1AN1Jp6hmbjb8%20(1).webp)";
