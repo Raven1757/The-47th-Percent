@@ -22,13 +22,6 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
-        "pk": 1001,
-        "fields": {
-            "description": "You rewatched footage of your campaign in 2012, you were smiling and thought that nothing could pull you down. Oh just how wrong you were. You wished that you'd be able to go back to those days but now...now it was too late. You saw Ryan next to you and wished you had chosen someone else. Maybe then the drama of 2012 wouldn't have happened. You and Ann and had talked about it a few times but you were never sure of yourself. You picked up the phone and called him to finally make the important choice. Would you keep him in 2016?"
-        }
-    },
-    {
-        "model": "campaign_trail.question",
         "pk": 1019,
         "fields": {
             "description": "(tax cut fail)You had talked with your advisors for days, weeks, about if it would be possible to do the repeal immediately but the conclusion was always the same. It would be very risky. While you technically held a majority in both chambers, the risk of a rogue vote was very evident. You were advised against it but you still needed to do something. Most recommended a tax cut but it isn't the only possible path. You knew that it was one of the many promises you made but would you be able to follow through on it",
@@ -156,6 +149,13 @@ campaignTrail_temp.questions_json = [
         "fields": {
             "priority": -3,
             "description": "A leaked transcript from Wikileaks shows the Clinton campaign working with members of the DNC to collaborate against the campaign of Bernie Sanders in subtle but definite ways, such as the sharing of some debate questions before a primary debate. How do you respond?"
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 1001,
+        "fields": {
+            "description": "You rewatched footage of your campaign in 2012, you were smiling and thought that nothing could pull you down. Oh just how wrong you were. You wished that you'd be able to go back to those days but now...now it was too late. You saw Ryan next to you and wished you had chosen someone else. Maybe then the drama of 2012 wouldn't have happened. You and Ann and had talked about it a few times but you were never sure of yourself. You picked up the phone and called him to finally make the important choice. Would you keep him in 2016?"
         }
     },
     {
@@ -12985,7 +12985,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5000,
             "candidate": 200,
-            "answer_feedback": "Obama conceded soon after the victory was declared and Mitt using one of his quotes seemingly makes people more comfortable about his victory."
+            "answer_feedback": "Obama conceded soon after your victory was declared. Your use of one of his quotes helps fears of division but it isn't nearly enough."
         }
     },
     {
@@ -14634,7 +14634,7 @@ cyoAdventure = function (a) {
      if((ans == 20670) || (ans == 20671) || (ans == 21115) || (ans == 20672) || (ans == 20673) || (ans == 20820) || (ans == 20823) || (ans == 20824) || (ans == 20894) || (ans == 20986)){
             campaignTrail_temp.candidate_image_url="https://i.imgur.com/O5cFJ8U.jpeg"
 }
-     if(ans == 5003){
+     if((ans == 5003) && ((ans == 20670) || (ans == 20671) || (ans == 21115) || (ans == 20672) || (ans == 20673) || (ans == 20820) || (ans == 20823) || (ans == 20824) || (ans == 20894) || (ans == 20986))){
             campaignTrail_temp.running_mate_image_url="https://file.garden/ajctXfqJL0tJxyhI/_86392918_86388175%20(1).webp"
 }
 
