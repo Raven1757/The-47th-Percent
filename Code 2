@@ -14634,7 +14634,7 @@ cyoAdventure = function (a) {
      if((ans == 20670) || (ans == 20671) || (ans == 21115) || (ans == 20672) || (ans == 20673) || (ans == 20820) || (ans == 20823) || (ans == 20824) || (ans == 20894) || (ans == 20986)){
             campaignTrail_temp.candidate_image_url="https://i.imgur.com/O5cFJ8U.jpeg"
 }
-     if((ans == 5003) && ((ans == 20670) || (ans == 20671) || (ans == 21115) || (ans == 20672) || (ans == 20673) || (ans == 20820) || (ans == 20823) || (ans == 20824) || (ans == 20894) || (ans == 20986))){
+     if((ans == 5003 && ans == 20670) || (ans == 5003 && ans == 20671) || (ans == 5003 && ans == 21115) || (ans == 5003 && ans == 20672) || (ans == 5003 && ans == 20673) || (ans == 5003 && ans == 20820) || (ans == 5003 && ans == 20823) || (ans == 5003 && ans == 20824) || (ans == 5003 && ans == 20894) || (ans == 5003 && ans == 20986)){
             campaignTrail_temp.running_mate_image_url="https://file.garden/ajctXfqJL0tJxyhI/_86392918_86388175%20(1).webp"
 }
 
@@ -15379,5 +15379,7 @@ if (campaignTrail_temp.player_answers.includes(5004) || campaignTrail_temp.playe
 if (quickstats[0] >= 270  && campaignTrail_temp.player_answers.includes(20820)) {
     unlockAchievement("American Nightmare");
     }
-
+if (quickstats[0] >=499 && campaignTrail_temp.player_answers.excludes(20820)) {
+    unlockAchievement("Ronald Romney");
+    }
 };
