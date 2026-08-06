@@ -1,6 +1,9 @@
 campaignTrail_temp.questions_json = [
     {
         "model": "campaign_trail.question",
+        "pk": 1000,campaignTrail_temp.questions_json = [
+    {
+        "model": "campaign_trail.question",
         "pk": 1000,
         "fields": {
             "description": "You and Ann were watching the news coverage of the election. The polls were a dead heat for now but you were confident. Ryan called you, he was worried but you weren't. The electoral votes started swinging your way but before you could celebrate they swung towards Obama. In the end you had won exactly 270. However it wasn't a happy moment. You knew you'd be crucified because of Colorado. You need to fix this. What can you do? What can you say?"
@@ -1333,6 +1336,14 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 20893,
             "description": "We should focus on gaining as much as possible in Liberal regions. Visiting California and New York could help us in the popular vote and with our general chances"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 21437,
+        "fields": {
+            "question": 21255,
+            "description": "New answer option"
         }
     }
 ];
@@ -16483,14 +16494,7 @@ campaignTrail_temp.jet_data = [{
             "variableConditionValue": "",
             "endingMode": "simple"
         }
-    },
-    "cyoa_data": {
-        "1785964928562": {
-            "answer": 5000,
-            "question": 1000,
-            "id": 1785964928562,
-            "conditionOperator": "AND"
-        }
     }
 }
 ]
+
