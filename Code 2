@@ -1,9 +1,6 @@
 campaignTrail_temp.questions_json = [
     {
         "model": "campaign_trail.question",
-        "pk": 1000,campaignTrail_temp.questions_json = [
-    {
-        "model": "campaign_trail.question",
         "pk": 1000,
         "fields": {
             "description": "You and Ann were watching the news coverage of the election. The polls were a dead heat for now but you were confident. Ryan called you, he was worried but you weren't. The electoral votes started swinging your way but before you could celebrate they swung towards Obama. In the end you had won exactly 270. However it wasn't a happy moment. You knew you'd be crucified because of Colorado. You need to fix this. What can you do? What can you say?"
@@ -15615,7 +15612,7 @@ var RussianAgression = 0;
 cyoAdventure = function (a) {
     const ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1];
     e.noCounter = campaignTrail_temp.player_answers.length;
-
+    
     // [JETS_CYOA_VARIABLE_EFFECTS_START]
     // -5 GovernmentApproval
     if (ans == 20770) {
@@ -16115,6 +16112,7 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
 //#endcode
 
 campaignTrail_temp.jet_data = [{
+
     "banner_data": {
         "canName": "Romney",
         "canImage": "https://i.imgur.com/VaqFOaM.jpeg",
