@@ -31,7 +31,7 @@ campaignTrail_temp.questions_json = [
         "model": "campaign_trail.question",
         "pk": 21255,
         "fields": {
-            "description": "put description here"
+            "description": "You are brought to the situation room. The first time since you became president. The generals greet you and immediately begin briefing you. The Middle East has been a source of international tensions for decades but today it's gotten to another level. A group from the central levant called themselves the Islamic State have started an uprising, a shockingly successful one. They've already taken over nearly half of Syria and Iraq without any signs of stopping. Your generals are offering different solutions to this problem. If you leave the Islamic State alone, they will no doubt promote terrorism on an international scale. Which plan do you choose?"
         }
     },
     {
@@ -75,20 +75,6 @@ campaignTrail_temp.questions_json = [
         "pk": 1020,
         "fields": {
             "description": "(Bluewave)It's the day. The midterms are tonight. Your candidates are ready and have fought for months to reach this moment. Tonight you need to win, otherwise your administration might as well be over. You sit with Ann, watching the news, waiting for the first calls to be made."
-        }
-    },
-    {
-        "model": "campaign_trail.question",
-        "pk": 21320,
-        "fields": {
-            "description": "(LibertarianWin)It's the day. The midterms are tonight. Your candidates are ready and have fought for months to reach this moment. Tonight you need to win, otherwise your administration might as well be over. You sit with Ann, watching the news, waiting for the first calls to be made."
-        }
-    },
-    {
-        "model": "campaign_trail.question",
-        "pk": 21256,
-        "fields": {
-            "description": "(Republican win)It's the day. The midterms are tonight. Your candidates are ready and have fought for months to reach this moment. Tonight you need to win, otherwise your administration might as well be over. You sit with Ann, watching the news, waiting for the first calls to be made."
         }
     },
     {
@@ -183,7 +169,7 @@ campaignTrail_temp.questions_json = [
         "model": "campaign_trail.question",
         "pk": 1001,
         "fields": {
-            "description": "You rewatched footage of your campaign in 2012, you were smiling and thought that nothing could pull you down. Oh just how wrong you were. You wished that you'd be able to go back to those days but now...now it was too late. You saw Ryan next to you and wished you had chosen someone else. Maybe then the drama of 2012 wouldn't have happened. You and Ann and had talked about it a few times but you were never sure of yourself. You picked up the phone and called him to finally make the important choice. Would you keep him in 2016?"
+            "description": "(23)You rewatched footage of your campaign in 2012, you were smiling and thought that nothing could pull you down. Oh just how wrong you were. You wished that you'd be able to go back to those days but now...now it was too late. You saw Ryan next to you and wished you had chosen someone else. Maybe then the drama of 2012 wouldn't have happened. You and Ann and had talked about it a few times but you were never sure of yourself. You picked up the phone and called him to finally make the important choice. Would you keep him in 2016?"
         }
     },
     {
@@ -191,7 +177,7 @@ campaignTrail_temp.questions_json = [
         "pk": 1034,
         "fields": {
             "priority": -3,
-            "description": "A leaked transcript from Wikileaks shows Hillary Clinton saying in a closed-door speech at Goldman Sachs that she is \"center-left, center-right\" and that she supports \"open trade and open borders\". How do you respond?"
+            "description": "(24)The Democrats have officially gotten through their primaries. There's not much else to be nut watch the screen"
         }
     },
     {
@@ -222,6 +208,27 @@ campaignTrail_temp.questions_json = [
         "pk": 20952,
         "fields": {
             "description": "(Tax cut passed)You had talked with your advisors for days, weeks, about if it would be possible to do the repeal immediately but the conclusion was always the same. It would be very risky. While you technically held a majority in both chambers, the risk of a rogue vote was very evident. You were advised against it but you still needed to do something. Most recommended a tax cut but it isn't the only possible path. You knew that it was one of the many promises you made but would you be able to follow through on it"
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 21439,
+        "fields": {
+            "description": "Snowden(fail)"
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 21320,
+        "fields": {
+            "description": "(LibertarianWin)It's the day. The midterms are tonight. Your candidates are ready and have fought for months to reach this moment. Tonight you need to win, otherwise your administration might as well be over. You sit with Ann, watching the news, waiting for the first calls to be made."
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 21256,
+        "fields": {
+            "description": "(Republican win)It's the day. The midterms are tonight. Your candidates are ready and have fought for months to reach this moment. Tonight you need to win, otherwise your administration might as well be over. You sit with Ann, watching the news, waiting for the first calls to be made."
         }
     },
     {
@@ -900,31 +907,7 @@ campaignTrail_temp.answers_json = [
         "pk": 5114,
         "fields": {
             "question": 1034,
-            "description": "As usual, Hillary has been caught telling lies. For all we know, this is just the beginning. Do we really want a President, and then a month after they're elected we find out they're being blackmailed by Russia or China?"
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 5115,
-        "fields": {
-            "question": 1034,
-            "description": "No wonder she was working so hard to cheat Bernie Sanders out of the nomination. She's the Goldman Sachs candidate, folks, plain and simple."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 5116,
-        "fields": {
-            "question": 1034,
-            "description": "If it's really true that Russia collaborated to release this information about Hillary Clinton's private speeches to Goldman Sachs, then I totally disavow and denounce these illegal leaks."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 5117,
-        "fields": {
-            "question": 1034,
-            "description": "They keep saying \"Russia Russia Russia\". I've heard other people say this was an inside job from a DNC whistleblower. You know, the guy that assassinated or something like that. Strange!"
+            "description": "We will hope for the best"
         }
     },
     {
@@ -1340,6 +1323,14 @@ campaignTrail_temp.answers_json = [
         "pk": 21437,
         "fields": {
             "question": 21255,
+            "description": "We need to establish a global coalition. There isn't a single country in the world that will disagree and those who do will be isolated. We will make sure that those who reject will be investigated for being a foreign threat"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 21440,
+        "fields": {
+            "question": 21439,
             "description": "New answer option"
         }
     }
@@ -7285,36 +7276,6 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 3124,
-        "fields": {
-            "answer": 5115,
-            "candidate": 200,
-            "affected_candidate": 205,
-            "global_multiplier": -0.02
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 3125,
-        "fields": {
-            "answer": 5116,
-            "candidate": 200,
-            "affected_candidate": 205,
-            "global_multiplier": -0.015
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 3126,
-        "fields": {
-            "answer": 5117,
-            "candidate": 200,
-            "affected_candidate": 205,
-            "global_multiplier": -0.0125
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
         "pk": 3127,
         "fields": {
             "answer": 5119,
@@ -7431,16 +7392,6 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 200,
             "affected_candidate": 203,
             "global_multiplier": 0.015
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 3198,
-        "fields": {
-            "answer": 5115,
-            "candidate": 200,
-            "affected_candidate": 203,
-            "global_multiplier": 0.02
         }
     },
     {
@@ -8843,16 +8794,6 @@ campaignTrail_temp.answer_score_issue_json = [
             "answer": 5102,
             "issue": 100,
             "issue_score": -0.575,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 2621,
-        "fields": {
-            "answer": 5116,
-            "issue": 102,
-            "issue_score": -0.5,
             "issue_importance": 1
         }
     },
@@ -14525,34 +14466,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 5114,
             "candidate": 200,
-            "answer_feedback": "This is a good opening to attack Hillary Clinton after some of the recent mayhem."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 2599,
-        "fields": {
-            "answer": 5115,
-            "candidate": 200,
-            "answer_feedback": "Keep pressing your outsider credentials and tying Hillary to Goldman Sachs, Saudi Arabia, and so on."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 2600,
-        "fields": {
-            "answer": 5116,
-            "candidate": 200,
-            "answer_feedback": "Advisors definitely feel that, while your motives are admirable, you are leaving an opportunity on the table."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 2601,
-        "fields": {
-            "answer": 5117,
-            "candidate": 200,
-            "answer_feedback": "Your complaint about Russia Russia seems a little unprompted based on what has happened thus far. Is there something else?"
+            "answer_feedback": "The winner is soon declared to be..."
         }
     },
     {
@@ -14940,6 +14854,15 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 21346,
             "candidate": 200,
             "answer_feedback": "You go back to the Oval Office and hope they see the mistakes in their ways"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 21438,
+        "fields": {
+            "answer": 21437,
+            "candidate": 200,
+            "answer_feedback": "This is a very aggressive response but maybe one that's needed. You talk at the extraordinary meeting of NATO and your coalition is accepted without opposition. The entirety of NATO agrees to begin supplying Iraq and Syria with weaponry while providing air support"
         }
     }
 ];
@@ -15425,29 +15348,6 @@ endingPicker = (out, totv, aa, quickstats) => {
     }
 
     return "";
- endingPicker = (out, totv, aa, quickstats) => {
-    const finalStates = Array.isArray(campaignTrail_temp.final_state_results) ? campaignTrail_temp.final_state_results : [];
-    const stateWinnersByAbbr = new Map(
-      finalStates.map(st => [st.abbr, st.result?.candidate])
-    );
-    const playerWonStates = (...abbrs) => abbrs.every(abbr => stateWinnersByAbbr.get(abbr) === campaignTrail_temp.candidate_id);
-
-if (quickstats[0] == 538 ) {
-    unlockAchievement("Make a New Deseret");
-    }
-if (campaignTrail_temp.player_answers.includes(5004) || campaignTrail_temp.player_answers.includes(20708) || campaignTrail_temp.player_answers.includes(20720)) {
-    unlockAchievement("You're Fired!");
-    }
-if (quickstats[0] >= 270  && campaignTrail_temp.player_answers.includes(20820)) {
-    unlockAchievement("American Nightmare");
-    }
-if (quickstats[0] >=499 && campaignTrail_temp.player_answers.excludes(20820)) {
-    unlockAchievement("Ronald Romney");
-    }
-if (quickstats[0] == 0 && campaignTrail_temp.player_answers.includes(20986) ) {
-    unlockAchievement("End of the Line");
-    }
-};
 };
 
 // [JETS_ENDINGS_END]
@@ -15612,7 +15512,10 @@ var RussianAgression = 0;
 cyoAdventure = function (a) {
     const ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1];
     e.noCounter = campaignTrail_temp.player_answers.length;
-    
+    if (ans == 5114) {
+    campaignTrail_temp.question_number = getQuestionNumberFromPk(20821);
+    }
+
     // [JETS_CYOA_VARIABLE_EFFECTS_START]
     // -5 GovernmentApproval
     if (ans == 20770) {
@@ -15935,23 +15838,23 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
             position: fixed;
             bottom: 20px;
             right: 20px;
-            width: 320px;
-            background-color: #0f172a;
-            border: 2px solid #334155;
-            border-radius: 2px;
+            width: 334px;
+            background-color: #000000;
+            border: 2px solid #ac1515;
+            border-radius: 19px;
             padding: 10px 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
             z-index: 10000;
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-size: 14px;
-            color: #e2e8f0;
+            color: #ffffff;
             cursor: move;
         }
         #gameStatsContent { pointer-events: none; }
         #gameStatsPopup h3 {
             margin: 0 0 8px;
             font-weight: bold;
-            border-bottom: 1px solid #475569;
+            border-bottom: 1px solid #0051c2;
             padding-bottom: 4px;
             font-size: 16px;
         }
@@ -15960,8 +15863,13 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
     `;
     document.head.appendChild(styleEl);
 
+    const cyoaTitle = "Your Kingdom";
+
     const bold = (text, color) =>
         `<span style="color: ${color}; font-weight: bold">${text}</span>`;
+
+    const escapeHtml = (text) =>
+        String(text ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
     function matchTier(value, tiers) {
         for (const [max, text, color] of tiers) {
@@ -15971,50 +15879,73 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
         return [fallback?.[1] || "", fallback?.[2] || "#e6e6e6"];
     }
 
+    // parts wrapped in asterisks (*word*) are colored, while unmarked parts stay plain
+    // if the text has no asterisks, the whole sentence is colored
+    function highlight(text, color) {
+        const parts = String(text || "").split("*");
+        if (parts.length <= 1) return bold(text || "", color);
+        let out = "";
+        for (let i = 0; i < parts.length; i++) {
+            const seg = parts[i];
+            if (!seg) continue;
+            if (i % 2 === 1) {
+                out += bold(seg, color);
+            } else {
+                out += escapeHtml(seg);
+            }
+        }
+        return out;
+    }
+
     const STATS = [
     {
             getValue: () => GovernmentApproval,
             label: `People's Support`,
+            showLabel: false,
             tiers: [
-                [45, `The Mandate is Failing`, "#ef4444"],
-                [55, `The Mandate is going steady.`, "#475569"],
-                [Infinity, `The Mandate is flourishing`, "#22c55e"],
+                [45, `The Mandate is Failing`, "#c31818"],
+                [55, `The Mandate is going steady.`, "#565010"],
+                [Infinity, `The Mandate is flourishing`, "#17ab4d"],
             ],
         },
     {
             getValue: () => Wins,
             label: `The Mandate's Success`,
+            showLabel: false,
             tiers: [
-                [2, `Lame Duck`, "#ef4444"],
-                [5, `Slow and Steady`, "#475569"],
-                [Infinity, `Transformative Madate`, "#22c55e"],
+                [1, `Lame Duck`, "#c31818"],
+                [2, `Slow and Steady`, "#565010"],
+                [Infinity, `Strong Mandate`, "#17ab4d"],
             ],
         },
     {
             getValue: () => RussianAgression,
             label: `Pressure on the Enemies`,
+            showLabel: false,
             tiers: [
-                [0, `Your authority is weak`, "#ef4444"],
-                [2, `Their nerves are rising`, "#475569"],
-                [Infinity, `They have bowed to you`, "#22c55e"],
+                [0, `Your authority is weak`, "#c31818"],
+                [2, `Their nerves are rising`, "#565010"],
+                [Infinity, `They have bowed to you`, "#17ab4d"],
             ],
         },
     {
             getValue: () => Americandivision,
             label: `The State Of The Union`,
+            showLabel: false,
             tiers: [
-                [1, `America is growing dangerously divided`, "#ef4444"],
-                [10, `America is uneasy`, "#475569"],
-                [Infinity, `America is healing`, "#22c55e"],
+                [1, `America is growing dangerously divided`, "#c31818"],
+                [10, `America is uneasy`, "#565010"],
+                [Infinity, `America is healing`, "#17ab4d"],
             ],
         },
     {
             getValue: () => Congressionalrelations,
             label: `Congress`,
+            showLabel: false,
             tiers: [
-                [3, `Congress hates Romney`, "#ef4444"],
-                [5, `Congress is Neutral`, "#475569"],
-                [Infinity, `Congress is open to negociations`, "#22c55e"],
+                [3, `Congress hates Romney`, "#c31818"],
+                [5, `Congress is Neutral`, "#565010"],
+                [Infinity, `Congress is open to negociations`, "#17ab4d"],
             ],
         }
     ];
@@ -16023,15 +15954,16 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
         const content = document.getElementById("gameStatsContent");
         if (!content) return;
 
-        const lines = STATS.map(({ getValue, tiers, label }) => {
+        const lines = STATS.map(({ getValue, tiers, label, showLabel }) => {
             const value = Number(getValue?.());
             const score = Number.isFinite(value) ? value : 0;
             const [text, color] = matchTier(score, tiers);
-            return `• ${label}: ${bold(text, color)} (${score})`;
+            const prefix = showLabel && label ? escapeHtml(label) + ": " : "";
+            return "• " + prefix + highlight(text, color) + " " + bold("(" + score + ")", color);
         });
 
         content.innerHTML = `
-            <h3>Campaign Data</h3>
+            <h3>${cyoaTitle}</h3>
             <div class="stats-list">${lines.join("<br>")}</div>
         `;
     }
@@ -16112,7 +16044,6 @@ applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
 //#endcode
 
 campaignTrail_temp.jet_data = [{
-
     "banner_data": {
         "canName": "Romney",
         "canImage": "https://i.imgur.com/VaqFOaM.jpeg",
@@ -16180,11 +16111,11 @@ campaignTrail_temp.jet_data = [{
             "id": 1783409168655,
             "variable": "Wins",
             "label": "The Mandate's Success",
-            "lowMax": 2,
-            "midMax": 5,
+            "lowMax": 1,
+            "midMax": 2,
             "lowText": "Lame Duck",
             "midText": "Slow and Steady",
-            "highText": "Transformative Madate"
+            "highText": "Strong Mandate"
         },
         "1783409240069": {
             "id": 1783409240069,
@@ -16492,6 +16423,18 @@ campaignTrail_temp.jet_data = [{
             "variableConditionValue": "",
             "endingMode": "simple"
         }
+    },
+    "campaign_data_style": {
+        "tierMid": "#565010",
+        "title": "Your Kingdom",
+        "width": "334",
+        "cornerRadius": "19",
+        "h3Border": "#0051c2",
+        "bg": "#000000",
+        "border": "#ac1515",
+        "tierLow": "#c31818",
+        "text": "#ffffff",
+        "tierHigh": "#17ab4d"
     }
 }
 ]
