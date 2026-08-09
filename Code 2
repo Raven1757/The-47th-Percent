@@ -15511,11 +15511,30 @@ var RussianAgression = 0;
 
 cyoAdventure = function (a) {
     const ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1];
-    e.noCounter = campaignTrail_temp.player_answers.length;
-    if (ans == 5114) {
-    campaignTrail_temp.question_number = getQuestionNumberFromPk(20821);
-    }
+    function questionSwapper(pk1, pk2) {
+const questionData = campaignTrail_temp.questions_json;
 
+// find indices of the questions
+const index1 = getQuestionIndexFromPk(pk1);
+const index2 = getQuestionIndexFromPk(pk2);
+
+// validate both questions exist
+if (index1 === -1 || index2 === -1) {
+console.warn(`questionSwapper: Could not find question(s) with pk ${pk1} and/or ${pk2}`);
+return false;
+}
+
+// swap the entire question objects
+[questionData[index1], questionData[index2]] = [questionData[index2], questionData[index1]];
+
+// rebuild the index map since positions changed
+_rebuildQuestionIdxMap();
+
+return true;
+}
+if (ans == 5114) {
+questionSwapper(1036, 20821);
+}
     // [JETS_CYOA_VARIABLE_EFFECTS_START]
     // -5 GovernmentApproval
     if (ans == 20770) {
@@ -16438,4 +16457,5 @@ campaignTrail_temp.jet_data = [{
     }
 }
 ]
+
 
